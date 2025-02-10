@@ -1,5 +1,14 @@
 .mi-texto {
   color: green;
   font-family:  'Poppins', monospace;
-  font-size: 35px;
+  font-size: 100px;
+}
+#id1 {
+  color: red;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 40px;
+}
+#id2 {
+  color: blue;
+  font-family:'comic sans';
 }
