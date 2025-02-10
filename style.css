@@ -1,8 +1,0 @@
-<img src="imagenes/logo1" class="mover">
-<style>
-  .mover {
-    position: absolute;
-    left: 9900px; /* Mueve la imagen a la derecha */
-    top: 50px; /* Mueve la imagen hacia abajo */
-  }
-</style>
