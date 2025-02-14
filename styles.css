@@ -88,3 +88,27 @@ body {
   color: var(--color-primario);
   text-decoration: none;
 }
+
+
+/*estilos de la pagina COMPONENTES*/
+#filtroBusqueda {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#lista {
+  list-style-type: none;
+  padding: 0;
+}
+
+#lista li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+#lista li:last-child {
+  border-bottom: none;
+}
