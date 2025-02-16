@@ -19,7 +19,7 @@ body {
   font-size: 80px;
   color: var(--color-primario);
   text-align: center;
-  margin-top: 10px; /* Ajuste opcional */
+  margin-top: 10px;
 }
 
 /* Barra de navegación */
@@ -27,6 +27,13 @@ body {
   padding: 30px;
   background-color: #000000;
   border-bottom: 2px solid var(--color-primario);
+}
+/*estilo de la imgaen de logo*/
+.header img {
+  width: 70px; /* Ajusta el ancho de la imagen */
+  height: 70px; /* Mantiene la proporción de la imagen */
+  float: left; /* Alinea la imagen a la izquierda */
+  margin-right: 0px;
 }
 
 .nav {
@@ -89,8 +96,7 @@ body {
   text-decoration: none;
 }
 
-
-/*estilos de la pagina COMPONENTES*/
+/*filtro de busqueda*/
 #filtroBusqueda {
   width: 100%;
   padding: 10px;

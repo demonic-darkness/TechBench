@@ -7,6 +7,39 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Encabezado con barra de navegación -->
+    <header class="header">
+        <!--logo y vinculo a index-->
+        <a href="index.html">
+        <img src="imagenes/logo1.jpg" alt="logo1"></src></a>
+        <!--estilo de la barra de navegacion-->
+        <nav class="nav">
+            <!--vinculo de y a index-->
+            <a href="index.html">Inicio</a>
+            <!--vinculo de componentes-->
+            <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Componentes</a>
+            <div class="dropdown-menu">
+                <a href="Graficas.html">Tarjetas Graficas</a>
+                <a href="Procesadores.html">Procesadores</a>
+                <a href="Motherboards.html">Tarjetas Madre</a>
+                <a href="Almacenamiento.html">Dispositivos de Almacenamiento</a>
+                <a href="Fuentes.html">Fuentes de poder</a>
+                <a href="Memoria.html">Memoria RAM</a>
+            </div>
+        </div>
+            <a>Ensambles</a>
+            <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Empresas</a>
+            <div class="dropdown-menu">
+                <a href="nvidiaInfo.html">Nvidia</a>
+                <a href="IntelInfo.html">Intel</a>
+                <a href="AMDInfo.html">AMD</a>
+            </div>
+        </div>
+        </nav>
+    </header>
+    <br>
     <input type="text" id="filtroBusqueda" placeholder="Buscar...">
     <ul id="lista">
         <li>Intel core i3 </li>
@@ -15,6 +48,5 @@
         <li>Intel core i9</li>
         <li>Intel core i3</li>
     </ul>
-    <script src="scripts.js"></script>
 </body>
 </html>
