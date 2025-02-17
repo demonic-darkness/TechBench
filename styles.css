@@ -28,11 +28,12 @@ body {
   background-color: #000000;
   border-bottom: 2px solid var(--color-primario);
 }
-/*estilo de la imgaen de logo*/
+
+/* Estilo de la imagen del logo */
 .header img {
-  width: 70px; /* Ajusta el ancho de la imagen */
-  height: 70px; /* Mantiene la proporción de la imagen */
-  float: left; /* Alinea la imagen a la izquierda */
+  width: 70px;
+  height: 70px;
+  float: left;
   margin-right: 0px;
 }
 
@@ -46,17 +47,20 @@ body {
 
 /* Estilo de los enlaces */
 .nav a {
-  color: white; /* Color inicial */
+  color: white;
   text-decoration: none;
   padding: 8px 16px;
   font-size: 18px;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
 }
+
+/* Menú desplegable */
 .dropdown {
-  position: relative; /* Para que el submenú se posicione relativo a este */
+  position: relative;
   display: inline-block;
 }
+
 /* Submenú oculto por defecto */
 .dropdown-menu {
   display: none;
@@ -70,6 +74,7 @@ body {
   padding: 10px 0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
+
 /* Estilo de los enlaces del submenú */
 .dropdown-menu a {
   display: block;
@@ -78,15 +83,34 @@ body {
   text-align: center;
   transition: background 0.3s ease-in-out;
 }
-/* Efecto hover: Mostrar el submenú cuando el mouse está sobre el contenedor */
-.dropdown:hover .dropdown-menu {
+
+/* Mostrar el submenú al hacer hover */
+.dropdown:hover > .dropdown-menu {
   display: flex;
   flex-direction: column;
 }
-/* Cambiar color de los enlaces al pasar el mouse */
-.dropdown-menu a:hover {
-  background-color: var(--color-primario);
-  color: black !important;
+
+/* Estilos para submenús anidados */
+.dropdown-menu .dropdown {
+  position: relative;
+}
+
+/* Ocultar los submenús anidados por defecto */
+.dropdown-menu .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: black;
+  border: 1px solid var(--color-primario);
+  width: 200px;
+  padding: 10px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Mostrar los submenús anidados al hacer hover sobre su contenedor */
+.dropdown-menu .dropdown:hover > .dropdown-menu {
+  display: block;
 }
 
 /* Cambio de color al pasar el mouse o si está activo */
@@ -95,6 +119,14 @@ body {
   color: var(--color-primario);
   text-decoration: none;
 }
+
+/* Cambiar color de los enlaces del submenú al pasar el mouse */
+.dropdown-menu a:hover {
+  background-color: var(--color-primario);
+  color: black !important;
+}
+
+
 
 /*filtro de busqueda*/
 #filtroBusqueda {
