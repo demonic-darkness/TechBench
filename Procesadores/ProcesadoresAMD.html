@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBench</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-amd.css">
+
+</head>
+<body>
+
+    <!-- Encabezado con barra de navegación -->
+    <header class="header">
+        <!-- Logo y vínculo a index -->
+        <a href="../index.html">
+            <img src="../imagenes/logo1.jpg" alt="logo1">
+        </a>
+        <!-- Barra de navegación -->
+        <nav class="nav">
+            <!-- Vínculo a Inicio -->
+            <div class="dropdown">
+            <a href="../index.html" class="dropdown-toggle">Inicio</a>
+            <!-- Menú desplegable de Componentes -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Componentes</a>
+                <div class="dropdown-menu">
+                    <!-- Submenú para Tarjetas Gráficas -->
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Tarjetas Gráficas <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Graficas/GraficasNvidia.html">Nvidia</a>
+                            <a href="../Graficas/GraficasAMD.html">AMD</a>
+                            <a href="../Graficas/GraficasIntel.html">Intel</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Procesadores <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Procesadores/ProcesadoresAMD.html">AMD</a>
+                            <a href="../Procesadores/ProcesadoresIntel.html">Intel</a>
+                        </div>
+                    </div> 
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Tarjetas Madre <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Motherboards/E-ATX.html">E-ATX</a>
+                            <a href="../Motherboards/ATX.html">ATX</a>
+                            <a href="../Motherboards/M-ATX.html">M-ATX</a>
+                            <a href="../Motherboards/mini-ITX.html">mini-ITX</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Dispositivos de Almacenamiento <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../almacenamiento/SSD.html">SSD</a>
+                            <a href="../almacenamiento/HDD.html">HDD</a>
+                            <a href="../almacenamiento/Nvme.html">NVME</a>
+                        </div>
+                    </div>
+
+                    <a href="../Fuentes.html">Fuentes de poder</a>
+
+                    <div class="dropdown">
+                    <a href="#">Memoria RAM <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../RAM/DDR4.html">DDR4</a>
+                            <a href="../RAM/DDR5.html">DDR5</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Ensambles</a>
+                <div class="dropdown-menu">
+                    <a href="../Ensambles/Gama-alta.html">Alto rendimiento</a>
+                    <a href="../Ensambles/Gama-media.html">Gama media</a>
+                    <a href="../Ensambles/Gama-baja.html">Tareas domesticas</a>
+                    <a href="../Ensambles/mis-ensambles.html">Mis ensambles</a>
+                </div>
+            </div>
+            <!-- Menú desplegable de Empresas -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Empresas</a>
+                <div class="dropdown-menu">
+                    <a href="../Empresas/nvidiaInfo.html">Nvidia</a>
+                    <a href="../Empresas/IntelInfo.html">Intel</a>
+                    <a href="../Empresas/AMDInfo.html">AMD</a>
+                </div>
+            </div>
+
+            <a href="../preguntas.html">Preguntas frecuentes</a>
+        </nav>
+        <div class="contenedor-buscador">
+            <input type="text" id="busqueda" placeholder="Buscar productos...">
+            <ul id="lista-sugerencias"></ul>
+        </div>
+        
+          <div class="contenido" id="resultado"></div>
+          <script src="../buscador.js"></script>
+    </header>
+    
+    <p class="titulo">Procesadores de AMD</p>
+
+
+
+    <!-- Fondo gris con el título -->
+    <section class="barra2">
+    <p>En sus principios AMD no era muy reconocida ya que sus procesadores no tenían tanta potencia o eran lentos,
+        pero desde la llegada de los procesadores Ryzen, AMD ha tenido un gran auge en el mercado compitiendo con Intel, 
+        incluso llegando a superarlo en cuanto a procesadores para gaming y rendimiento mononúcleo.
+    </p>
+
+    <div class="component2">
+        <input type="checkbox" id="Explicacion">
+        <label for="Explicacion">Explicación de especificaciones <span class="arrow">▶</span></label>
+        <div class="description2">
+            <div class="component3">
+                <input type="checkbox" id="Leer">
+                <label for="Leer">Como leer los procesadores<span class="arrow">▶</span></label>
+                <div class="description3">
+                    <p><b>Ejemplo: Ryzen 9 9950X</b><ul>
+                        <li><b>Ryzen</b> → <spam class="letrach">Nombre de la serie de procesadores.</spam><br></li>
+                        <li><b>9</b> → <spam class="letrach">Gama del procesador (más alto = mejor rendimiento).</spam><br></li>
+                        <li><b>9x50</b> → <spam class="letrach">Generación y modelo (9 = 9ª gen, 50 = versión dentro de la generación).</spam><br></li> 
+                        <li><b>X</b> → <spam class="letrach">Indica mayor rendimiento y mejor capacidad de overclock (sin X = versión estándar).</spam><br></li>
+                        <li><b>G</b> → <spam class="letrach">Incluye gráficos integrados.</spam><br></li>
+                        <li><b>HS</b> → <spam class="letrach">Optimizado para laptops.</spam><br></li>
+                        <li><b>U</b> → <spam class="letrach">Consumo eficiente (principalmente en laptops).</spam></li>
+                </ul></div>
+            </div>
+            <div class="component3">
+                <input type="checkbox" id="nucleos">
+                <label for="nucleos">nucleos<span class="arrow">▶</span></label>
+                <div class="description3">
+                    ✔ Son los “cerebros” del procesador.<br>
+                    ✔ Más núcleos permiten ejecutar más tareas al mismo tiempo.<br>
+                    ✔ Ejemplo: Ryzen 7 7800X tiene 8 núcleos.<br>
+
+                    📌 <b>Para gaming:</b> 6-8 núcleos son ideales.<br>
+                    📌 <b>Para edición de video/renderizado:</b> 8-16 núcleos o más.</p>
+                </div>
+            </div>
+            <div class="component3">
+                <input type="checkbox" id="Hilos">
+                <label for="Hilos">Hilos (Threads)<span class="arrow">▶</span></label>
+                <div class="description3">
+                    ✔ Son los procesos que un núcleo puede manejar a la vez.<br>
+                    ✔ Más hilos = mejor multitarea.<br>
+                    ✔ SMT (Simultaneous Multithreading) permite que un núcleo maneje 2 hilos.<br>
+                    <b>Ejemplo:</b> Un Ryzen 7 7700X tiene 8 núcleos y 16 hilos.</p>
+                </div>
+            </div>
+            <div class="component3">
+                <input type="checkbox" id="Velocidad de reloj">
+                <label for="Velocidad de reloj">Velocidad de reloj (Clock Speed)<span class="arrow">▶</span></label>
+                <div class="description3">
+                    ✔ Medida en GHz (gigahercios).<br>
+                    ✔ Indica cuántas operaciones hace el procesador por segundo.<br>
+                    ✔ Más GHz = mayor velocidad en tareas individuales.<br>
+                    📌 <b>Ejemplo:</b> "3.5 GHz" significa que el procesador realiza 3,500 millones de ciclos por segundo.</p>
+                </div>
+            </div>
+            <div class="component3">
+                <input type="checkbox" id="Caché">
+                <label for="Caché">Caché<span class="arrow">▶</span></label>
+                <div class="description3">
+                    ✔ Memoria ultrarrápida dentro del procesador para acceder a datos sin usar la RAM.<br>
+                    ✔ Se divide en L1, L2 y L3 (L3 es la más grande).<br>
+                    ✔ Más caché mejora el rendimiento en juegos y apps exigentes.<br>
+                    <b>Ejemplo:</b> Ryzen 7 7800X3D tiene 96MB de caché L3, lo que mejora el gaming.</p>
+                </div>
+            </div>
+            <div class="component3">
+                <input type="checkbox" id="TDP">
+                <label for="TDP">TDP (Thermal Design Power)<span class="arrow">▶</span></label>
+                <div class="description3">
+                    ✔ Consumo y calor generado por el procesador, medido en watts (W).<br>
+                    ✔ Un TDP alto significa que necesita mejor disipación térmica.<br>
+                    ✔ Más caché mejora el rendimiento en juegos y apps exigentes.<br>
+                    📌 <b>Ejemplo:</b> Un Ryzen 9 7950X tiene 170W, requiere un buen enfriamiento.</p>
+                </div>
+            </div>
+            <div class="component3">
+                <input type="checkbox" id="Overclocking">
+                <label for="Overclocking">Overclocking (OC)<span class="arrow">▶</span></label>
+                <div class="description3">
+                    ✔ Aumenta la velocidad del procesador manualmente para mejorar el rendimiento.<br>
+                    ✔ Procesadores con "X" en su nombre están optimizados para esto.<br>
+                    ✔ Necesita un buen disipador y una fuente de poder estable.<br>
+                    📌 <b>Ejemplo:</b> Un Ryzen 5 7600X puede overclockearse para mejorar FPS en juegos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section class="barra3">
+        <div class="contenedor">
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 9 9950x3d.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen 9 9950X3d</b></p>
+            <p>El ultimo procesador de AMD ryzen dirigido no a juegos si no a tareas extremas<br><br><b>~$699 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 9 9950X3d">
+                <label for="ryzen 9 9950X3d">9 9950X3d <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.3 GHz hasta 5.7 GHz</li> 
+                            <li>TDP predeterminada 170W</li>
+                            <li>16 nucleos y 32 hilos</li>
+                            <li>Infinity cache 80 MB</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 9 9950X.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  9 9950X</b></p>
+            <p>Nos ofrece un alto rendimiento en gaming, creacion de contenido y en la productividad.<br><br><b>~$649 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 9 9950x">
+                <label for="ryzen 9 9950x">9 9950X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.3 GHz hasta 5.7 GHz</li> 
+                            <li>TDP predeterminada 170W</li>
+                            <li>16 núcleos / 32 hilos</li>
+                            <li>Cache 80 MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 9 9950x3d.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  9 9900X</b></p>
+            <p>Potente, versátil, ideal para entusiastas.<br><br><b>~$499 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 9 9900X">
+                <label for="ryzen 9 9900X"> 9 9900X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.4 GHz hasta 5.6 GHz</li> 
+                            <li>TDP predeterminada 120W</li>
+                            <li>12 núcleos / 24 hilos</li>
+                            <li>Cache 76 MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 7 9800x3d.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen 7 9800X3D</b></p>
+            <p>Optimizado para gaming, eficiente.<br><br><b>~$479 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 7 9800X3D">
+                <label for="ryzen 7 9800X3D">7 9800X3D <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.7 GHz hasta 5.2 GHz</li> 
+                            <li>TDP predeterminada 120W</li>
+                            <li>8 núcleos / 16 hilos</li>
+                            <li>Infinity cache 104 MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 7 9700x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen 7 9700X</b></p>
+            <p>Equilibrado, buen desempeño en general.<br><br><b>~$359 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 7 9700X">
+                <label for="ryzen 7 9700X">7 9700X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.8 GHz hasta 5.5 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>8 núcleos / 16 hilos</li>
+                            <li>Cache 40 MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 5 9600x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen 5 9600X  </b></p>
+            <p>Accesible, pensado para tareas cotidianas.<br><br><b>~$279 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 5 9600X">
+                <label for="ryzen 5 9600X">5 9600X<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.9 GHz hasta 5.4 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>6 núcleos / 12 hilos</li>
+                            <li>Cache 38 MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 9 7950x3d.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen 9 7950X3D</b></p>
+            <p>Tope de gama, excelente para creadores.<br><br><b>~$699 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 9 7950X3D">
+                <label for="ryzen 9 7950X3D">9 7950X3D <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.2 GHz hasta 5.7 GHz</li> 
+                            <li>TDP predeterminada 120W</li>
+                            <li>16 núcleos / 32 hilos</li>
+                            <li>Infinity cache 128 MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 9 7900x3d.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen 9 7900X3D</b></p>
+            <p>Rendimiento mejorado en juegos, ágil.<br><br><b>~$599 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 9 7900X3D">
+                <label for="ryzen 9 7900X3D">9 7900X3D <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.4 GHz hasta 5.6 GHz</li> 
+                            <li>TDP predeterminada 120W</li>
+                            <li>12núcleos / 24 hilos</li>
+                            <li>Infinity cache 140MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 9 7900x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen 9 7900X</b></p>
+            <p>Potente y confiable para múltiples tareas.<br><br><b>~$549 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 9 7900X">
+                <label for="ryzen 9 7900X">9 7900X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.7 GHz hasta 5.6 GHz</li> 
+                            <li>TDP predeterminada 170W</li>
+                            <li>12núcleos / 24 hilos</li>
+                            <li>Cache 76MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 9 7900.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  9 7900</b></p>
+            <p>Alto rendimiento, ideal para productividad.<br><br><b>~$429 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 9 7900">
+                <label for="ryzen 9 7900">9 7900 <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.7 GHz hasta 5.4 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>12núcleos / 24 hilos</li>
+                            <li>Cache 76MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 7 7800x3d.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  7 7800X3D</b></p>
+            <p>Gaming optimizado, gran rendimiento, y el mejor procesador hecho para juegos.<br><br><b>~$449 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 7 7800X3D">
+                <label for="ryzen 7 7800X3D">7 7800X3D <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.2 GHz hasta 5.0 GHz</li> 
+                            <li>TDP predeterminada 120W</li>
+                            <li>8 núcleos / 16 hilos</li>
+                            <li>Infinity cache 104MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 7 7700x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  7 7700X</b></p>
+            <p>Fuerte en juegos y trabajo exigente.<br><br><b>~$399 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 7 7700X">
+                <label for="ryzen 7 7700X">7 7700X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.5 GHz hasta 5.4 GHz</li> 
+                            <li>TDP predeterminada 105W</li>
+                            <li>8 núcleos / 16 hilos</li>
+                            <li>Cache 40MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 7 7700.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  7 7700</b></p>
+            <p>Versátil, adecuado para diversas tareas.<br><br><b>~$329 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 7 7700">
+                <label for="ryzen 7 7700">7 7700 <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.8 GHz hasta 5.3 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>8 núcleos / 16 hilos</li>
+                            <li>Cache 40MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 5 7600x3d.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  5 7600X3D</b></p>
+            <p>Buen rendimiento con tecnología avanzada.<br><br><b>~$299 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 5 7600X3D">
+                <label for="ryzen 5 7600X3D">5 7600X3D <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.1 GHz hasta 4.7 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>6 núcleos / 12 hilos</li>
+                            <li>Infinity cache 96MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 5 7600x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  5 7600X</b></p>
+            <p>Eficiente y rápido para gaming.<br><br><b>~$299 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 5 7600X">
+                <label for="ryzen 5 7600X">5 7600X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.7 GHz hasta 5.3 GHz</li> 
+                            <li>TDP predeterminada 105W</li>
+                            <li>6 núcleos / 12 hilos</li>
+                            <li>Cache 38MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 5 7600.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  5 7600</b></p>
+            <p>Opción equilibrada para usuarios generales.<br><br><b>~$229 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 5 7600">
+                <label for="ryzen 5 7600">5 7600 <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.8 GHz hasta 5.1 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>6 núcleos / 12 hilos</li>
+                            <li>Cache 38MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 7 8700g.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  7 8700G</b></p>
+            <p>Buen desempeño con gráficos integrados.<br><br><b>~$322 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 7 8700G">
+                <label for="ryzen 7 8700G">7 8700G <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.2 GHz hasta 5.1 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>8 núcleos / 16 hilos</li>
+                            <li>Cache 16MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 5 8600g.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  5 8600G</b></p>
+            <p>Asequible, ideal para usuarios sin GPU dedicada.<br><br><b>~$350 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 5 8600G">
+                <label for="ryzen 5 8600G">5 8600G <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.3 GHz hasta 5.0 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>6 núcleos / 12 hilos</li>
+                            <li>Cache 16MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 5 8500g.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  5 8500G</b></p>
+            <p>Funcional, pensado para tareas diarias.<br><br><b>~$229 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 5 8500G">
+                <label for="ryzen 5 8500G">5 8500G <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.5 GHz hasta 5.0 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>6 núcleos / 12 hilos</li>
+                            <li>Cache 16MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 9 5950x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  9 5950X</b></p>
+            <p>Poder extremo, ideal para profesionales.<br><br><b>~$799 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 9 5950X">
+                <label for="ryzen 9 5950X">9 5950X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.4 GHz hasta 4.9 GHz</li> 
+                            <li>TDP predeterminada 105W</li>
+                            <li>16 núcleos / 32 hilos</li>
+                            <li>Cache 72MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 9 5900x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  9 5900X</b></p>
+            <p>Fuerte en productividad y gaming.<br><br><b>~$749 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 9 5900X">
+                <label for="ryzen 9 5900X">9 5900X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.7 GHz hasta 4.8 GHz</li> 
+                            <li>TDP predeterminada 105W</li>
+                            <li>12 núcleos / 24 hilos</li>
+                            <li>ICache 70MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 7 5800x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  7 5800X</b></p>
+            <p>Buen desempeño en gaming y trabajo.<br><br><b>~$449 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 7 5800X">
+                <label for="ryzen 7 5800X">7 5800X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.8 GHz hasta 4.7 GHz</li> 
+                            <li>TDP predeterminada 105W</li>
+                            <li>8 núcleos / 16 hilos</li>
+                            <li>Cache 36MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 7 5700.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  7 5700</b></p>
+            <p>Rendimiento aceptable, buena relación calidad-precio.<br><br><b>~$179 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 7 5700">
+                <label for="ryzen 7 5700">7 5700 <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.7 GHz hasta 4.6 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>8 núcleos / 16 hilos</li>
+                            <li>Cache 16MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 5 5600x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  5 5600X</b></p>
+            <p>Gran opción gaming con excelente rendimiento en juegos y productividad.<br><br><b>~$199 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 5 5600X">
+                <label for="ryzen 5 5600X">5 5600X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.7 GHz hasta 4.6 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>6 núcleos / 12 hilos</li>
+                            <li>Cache 32MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 5 5600x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  5 5600</b></p>
+            <p>Similar al 5600X pero con menor frecuencia, ideal para gaming y multitarea.<br><br><b>~$169 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 5 5600">
+                <label for="ryzen 5 5600">5 5600 <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.5 GHz hasta 4.4 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>6 núcleos / 12 hilos</li>
+                            <li>Cache 36MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 5 5500.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  5 5500</b></p>
+            <p>Más económico, buen rendimiento para juegos y tareas diarias.<br><br><b>~$139 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 5 5500">
+                <label for="ryzen 5 5500">5 5500 <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.6 GHz hasta 4.2 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>6 núcleos / 12 hilos</li>
+                            <li>Cache 19MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 3 5300g.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  3 5300G</b></p>
+            <p>Gráficos integrados Vega 6, ideal para PC sin tarjeta de video.<br><br><b>~$499 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 3 5300G">
+                <label for="ryzen 3 5300G">3 5300G <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 4.0 GHz hasta 4.2 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>4 núcleos / 8 hilos</li>
+                            <li>Cache 8MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 9 3900x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  9 3900X</b></p>
+            <p>Potencia bruta, ideal para edición de video y multitarea extrema.<br><br><b>~$399 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 9 3900X">
+                <label for="ryzen 9 3900X">9 3900X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.8 GHz hasta 4.6 GHz</li> 
+                            <li>TDP predeterminada 105W</li>
+                            <li>12 núcleos / 24 hilos</li>
+                            <li>Cache 70MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 7 3800x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  7 3800X</b></p>
+            <p>Buen equilibrio entre gaming y tareas exigentes.<br><br><b>~$139 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 7 3800X">
+                <label for="ryzen 7 3800X">7 3800X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.9 GHz hasta 4.5 GHz</li> 
+                            <li>TDP predeterminada 105W</li>
+                            <li>8 núcleos / 16 hilos</li>
+                            <li>Cache 35MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 7 3700x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  7 3700X</b></p>
+            <p>Eficiente y potente, gran opción para gaming y trabajo.<br><br><b>~$329 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 7 3700X">
+                <label for="ryzen 7 3700X">7 3700X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.6 GHz hasta 4.4 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>8 núcleos / 16 hilos</li>
+                            <li>Cache 36MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 5 3600x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  5 3600X</b></p>
+            <p>Rendimiento sólido en juegos y productividad.<br><br><b>~$249 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 5 3600X">
+                <label for="ryzen 5 3600X">5 3600X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.8 GHz hasta 4.4 GHz</li> 
+                            <li>TDP predeterminada 95W</li>
+                            <li>6 núcleos / 12 hilos</li>
+                            <li>Cache 36MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 5 3500x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  5 3500X</b></p>
+            <p>Opción económica para gaming sin hyperthreading.<br><br><b>~$150 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 5 3500X">
+                <label for="ryzen 5 3500X">5 3500X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.6 GHz hasta 4.1 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>6 núcleos / 12 hilos</li>
+                            <li>Cache 32MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 3 3300x.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  3 3300X</b></p>
+            <p>Gaming de entrada, buen desempeño con 4 núcleos y 8 hilos.<br><br><b>~$120USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 3 3300X">
+                <label for="ryzen 3 3300X">3 3300X <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.8 GHz hasta 4.3 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>4 núcleos / 8 hilos</li>
+                            <li>Cache 16MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/procesadores/ryzen 3 3200g.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>ryzen  3 3200G</b></p>
+            <p>básica con gráficos Vega 8 para tareas ligeras y juegos casuales.<br><br><b>~$99USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="ryzen 3 3200G">
+                <label for="ryzen 3 3200G">3 3200G <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>Velocidad de reloj de 3.6 GHz hasta 4.0 GHz</li> 
+                            <li>TDP predeterminada 65W</li>
+                            <li>4 núcleos / 8 hilos</li>
+                            <li>Cache 6MB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+    </section>  
+    <button id="btnArriba" title="Volver arriba">⬆</button>
+    <!-- Derechos de autor -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 TechBench. Todos los derechos reservados.</p>
+    </div>
+</footer>
+    <script src="scripts-ProcesadoresAMD.js"></script>
+</body>
+</html>

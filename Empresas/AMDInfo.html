@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBench</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-AMD.css">
+    
+</head>
+<body>
+
+    <!-- Encabezado con barra de navegación -->
+    <header class="header">
+        <!-- Logo y vínculo a index -->
+        <a href="../index.html">
+            <img src="../imagenes/logo1.jpg" alt="logo1">
+        </a>
+        <!-- Barra de navegación -->
+        <nav class="nav">
+            <!-- Vínculo a Inicio -->
+            <div class="dropdown">
+            <a href="../index.html" class="dropdown-toggle">Inicio</a>
+            <!-- Menú desplegable de Componentes -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Componentes</a>
+                <div class="dropdown-menu">
+                    <!-- Submenú para Tarjetas Gráficas -->
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Tarjetas Gráficas <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Graficas/GraficasNvidia.html">Nvidia</a>
+                            <a href="../Graficas/GraficasAMD.html">AMD</a>
+                            <a href="../Graficas/GraficasIntel.html">Intel</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Procesadores <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Procesadores/ProcesadoresAMD.html">AMD</a>
+                            <a href="../Procesadores/ProcesadoresIntel.html">Intel</a>
+                        </div>
+                    </div> 
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Tarjetas Madre <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Motherboards/E-ATX.html">E-ATX</a>
+                            <a href="../Motherboards/ATX.html">ATX</a>
+                            <a href="../Motherboards/M-ATX.html">M-ATX</a>
+                            <a href="../Motherboards/mini-ITX.html">mini-ITX</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Dispositivos de Almacenamiento <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../almacenamiento/SSD.html">SSD</a>
+                            <a href="../almacenamiento/HDD.html">HDD</a>
+                            <a href="../almacenamiento/Nvme.html">NVME</a>
+                        </div>
+                    </div>
+
+                    <a href="../Fuentes.html">Fuentes de poder </a>
+
+                    <div class="dropdown">
+                    <a href="#">Memoria RAM <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../RAM/DDR4.html">DDR4</a>
+                            <a href="../RAM/DDR5.html">DDR5</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Ensambles</a>
+                <div class="dropdown-menu">
+                    <a href="../Ensambles/Gama-alta.html">Alto rendimiento</a>
+                    <a href="../Ensambles/Gama-media.html">Gama media</a>
+                    <a href="../Ensambles/Gama-baja.html">Tareas domesticas</a>
+                    <a href="../Ensambles/mis-ensambles.html">Mis ensambles</a>
+                </div>
+            </div>
+            <!-- Menú desplegable de Empresas -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Empresas</a>
+                <div class="dropdown-menu">
+                    <a href="../Empresas/nvidiaInfo.html">Nvidia</a>
+                    <a href="../Empresas/IntelInfo.html">Intel</a>
+                    <a href="../Empresas/AMDInfo.html">AMD</a>
+                </div>
+            </div>
+
+            <a href="../preguntas.html">Preguntas frecuentes</a>
+        </nav>
+    </header>
+    
+    
+    <!-- Fondo gris con el título -->
+    <p class="titulo">Pagina de AMD</p>
+    <section class="carrucel">
+        <section class="barra2">
+            <p class="subtitulo"><b>Sobre AMD</b></p>
+            <p>Desde su fundación en 1969, Advanced Micro Devices (AMD) se ha consolidado como uno de los gigantes de la tecnología, desarrollando procesadores, tarjetas gráficas y soluciones para centros de datos. Su misión es ofrecer rendimiento, eficiencia y accesibilidad, liderando el mercado con productos innovadores.  
+                Con su línea de procesadores Ryzen y tarjetas gráficas Radeon, AMD ha revolucionado el mundo del gaming, la edición de contenido y la computación de alto rendimiento.  .</p>
+        </section>
+    
+        <div class="contenedor">
+            <button class="boton izquierda" onclick="moverCarrusel(-1)">❮</button>
+            <div class="carrusel" id="carrusel">
+                <div class="cuadro2">
+                    <p class="mini-titulo"><b>Noticias Recientes</b></p>
+                    <p><b>Lanzamiento de Ryzen 9000<br></p>
+                    <p>Radeon RX 8000 en camino</p>
+                    <p>Colaboración con Microsoft y Sony</b></p>
+                </div>
+                <div class="cuadro3">
+                    <p class="mini-titulo"><b>Gaming y Tecnología Gráfica</b></p>
+                    <p><b>Tecnología de escalado <br>que mejora la calidad gráfica<br></p>
+                    <p>Suite de herramientas <br>para optimizar juegos</b></p>
+                </div>
+            </div>
+            <button class="boton derecha" onclick="moverCarrusel(1)">❯</button>
+        </div>
+    </section>
+    
+    <section class="barra3">
+        <div class="contenedor">
+        <div class="cuadro">
+            <p class="mini-titulo"><b>Procesadores de Alto Rendimiento</b></p>
+            <p><b>AMD ha redefinido la industria con su arquitectura Zen, ofreciendo CPUs con más núcleos, eficiencia y potencia.   <br><br></b>
+                🔸 <b>Ryzen para Gaming:</b> Procesadores con gran rendimiento en juegos gracias a altas frecuencias y múltiples núcleos.</b><br> <br>
+                🔸 <b>Threadripper para Creadores:</b> CPUs con hasta 96 núcleos para edición de video y renderizado.  <br><br>
+                🔸 <b>EPYC para Servidores:</b> Soluciones para centros de datos con alto poder de cómputo y eficiencia energética.</b></p>
+        </div>
+        <div class="cuadro">
+            <p class="mini-titulo"><b>¿Quieres conocer más? </b></p>
+            <p><b>AMD continúa innovando en gaming, productividad y centros de datos, ofreciendo hardware competitivo con una excelente relación calidad-precio.<br>
+                <br>Visita la pagina oficial de AMD <a href="https://www.amd.com" target="_blank" rel="noopener noreferrer">https://www.amd.com</a> y mantente al día con sus lanzamientos.</b> <br></p>
+        </div>
+    </div>
+    </section>
+        
+    </section>
+    <button id="btnArriba" title="Volver arriba">⬆</button>
+    <script src="../scripts.js"></script>
+</body>
+</html>

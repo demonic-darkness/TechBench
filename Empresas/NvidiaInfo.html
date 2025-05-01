@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBench</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-Nvidia.css">
+</head>
+<body>
+
+    <!-- Encabezado con barra de navegación -->
+    <header class="header">
+        <!-- Logo y vínculo a index -->
+        <a href="../index.html">
+            <img src="../imagenes/logo1.jpg" alt="logo1">
+        </a>
+        <!-- Barra de navegación -->
+        <nav class="nav">
+            <!-- Vínculo a Inicio -->
+            <div class="dropdown">
+            <a href="../index.html" class="dropdown-toggle">Inicio</a>
+            <!-- Menú desplegable de Componentes -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Componentes</a>
+                <div class="dropdown-menu">
+                    <!-- Submenú para Tarjetas Gráficas -->
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Tarjetas Gráficas <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Graficas/GraficasNvidia.html">Nvidia</a>
+                            <a href="../Graficas/GraficasAMD.html">AMD</a>
+                            <a href="../Graficas/GraficasIntel.html">Intel</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Procesadores <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Procesadores/ProcesadoresAMD.html">AMD</a>
+                            <a href="../Procesadores/ProcesadoresIntel.html">Intel</a>
+                        </div>
+                    </div> 
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Tarjetas Madre <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Motherboards/E-ATX.html">E-ATX</a>
+                            <a href="../Motherboards/ATX.html">ATX</a>
+                            <a href="../Motherboards/M-ATX.html">M-ATX</a>
+                            <a href="../Motherboards/mini-ITX.html">mini-ITX</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Dispositivos de Almacenamiento <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../almacenamiento/SSD.html">SSD</a>
+                            <a href="../almacenamiento/HDD.html">HDD</a>
+                            <a href="../almacenamiento/Nvme.html">NVME</a>
+                        </div>
+                    </div>
+
+                    <a href="../Fuentes.html">Fuentes de poder </a>
+
+                    <div class="dropdown">
+                    <a href="#">Memoria RAM <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../RAM/DDR4.html">DDR4</a>
+                            <a href="../RAM/DDR5.html">DDR5</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Ensambles</a>
+                <div class="dropdown-menu">
+                    <a href="../Ensambles/Gama-alta.html">Alto rendimiento</a>
+                    <a href="../Ensambles/Gama-media.html">Gama media</a>
+                    <a href="../Ensambles/Gama-baja.html">Tareas domesticas</a>
+                    <a href="../Ensambles/mis-ensambles.html">Mis ensambles</a>
+                </div>
+            </div>
+            <!-- Menú desplegable de Empresas -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Empresas</a>
+                <div class="dropdown-menu">
+                    <a href="../Empresas/nvidiaInfo.html">Nvidia</a>
+                    <a href="../Empresas/IntelInfo.html">Intel</a>
+                    <a href="../Empresas/AMDInfo.html">AMD</a>
+                </div>
+            </div>
+
+            <a href="../preguntas.html">Preguntas frecuentes</a>
+        </nav>
+    </header>
+    <p class="titulo">Pagina de Nvidia</p>
+    <section class="carrucel">
+    <section class="barra2">
+        <p class="subtitulo"><b>Sobre NVIDIA</b></p>
+        <p>Fundada en 1993, NVIDIA es una empresa líder en tecnología especializada en tarjetas gráficas, inteligencia artificial 
+            y computación de alto rendimiento. Con su icónica línea de GPUs GeForce, NVIDIA ha revolucionado la industria del gaming, 
+            el diseño y la ciencia computacional.
+            Desde la invención de la GPU en 1999, la compañía ha impulsado avances en gráficos en tiempo real, inteligencia artificial 
+            y simulación digital, expandiendo su impacto en áreas como la automatización, la medicina y los centros de datos.</p>
+    </section>
+
+    <div class="contenedor">
+        <button class="boton izquierda" onclick="moverCarrusel(-1)">❮</button>
+        <div class="carrusel" id="carrusel">
+            <div class="cuadro2">
+                <p class="mini-titulo"><b>Gaming y Tecnología Gráfica</b></p>
+                <p class="subtitulo2"><b>NVIDIA<br></p><p>Es sinónimo de calidad en el mundo del gaming. <br>Gracias a sus tecnologías avanzadas<br> los jugadores pueden disfrutar <br>de experiencias más realistas y fluidas.</b></p>
+            </div>
+            <div class="cuadro3">
+                <p class="mini-titulo"><b>Noticias recientes</b></p>
+                <p class="subtitulo2"><b>Lanzamiento de la serie RTX 5000<br></b></p><p><b>La arquitectura Blackwell promete un rendimiento<br> sin precedentes en gaming y productividad.</b></p>
+                    <p class="subtitulo2"><b>Nueva versión de DLSS 4</b></p><p><b>Mejoras en inteligencia artificial para generar fotogramas con mayor calidad y velocidad.</b></p>
+            </div>
+        </div>
+        <button class="boton derecha" onclick="moverCarrusel(1)">❯</button>
+    </div>
+</section>
+
+<section class="barra3">
+    <div class="contenedor">
+    <div class="cuadro">
+        <p class="mini-titulo"><b>Inteligencia Artificial y Centros de Datos</b></p>
+        <p><b>Más allá de los videojuegos, NVIDIA ha liderado la innovación en inteligencia artificial y computación en la nube. Sus GPUs son esenciales en el entrenamiento de modelos de IA, acelerando investigaciones en áreas como la salud, la robótica y la automoción.   <br><br></b>
+            🔸<b>NVIDIA RTX en IA:</b> Utilizado en generación de imágenes, chatbots y asistentes inteligentes.<br> <br>
+            🔸 <b>Data Centers:</b> Potencia los servidores más avanzados con soluciones como NVIDIA DGX y Cloud AI.  <br><br>
+            🔸 <b>Automóviles Autónomos:</b> La plataforma NVIDIA DRIVE ayuda a crear vehículos inteligentes y seguros.</p>
+    </div>
+    <div class="cuadro">
+        <p class="mini-titulo"><b>¿Quieres conocer más? </b></p>
+        <p><b>NVIDIA no solo crea tarjetas gráficas, sino que impulsa el futuro de la tecnología. Desde el gaming hasta la inteligencia artificial, su impacto en el mundo digital es innegable.<br>
+            <br>Visita la pagina oficial de nvidia  <a href="https://www.nvidia.com" target="_blank" rel="noopener noreferrer">www.nvidia.com</a> y descubre sus últimas innovaciones.</b> <br></p>
+    </div>
+</div>
+</section>
+<button id="btnArriba" title="Volver arriba">⬆</button>
+    <script src="../scripts.js"></script>
+ </body>
+ </html>

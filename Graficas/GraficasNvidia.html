@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBench</title>
+    <link rel="icon" type="image/ico" href="../imagenes/icono.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado con barra de navegación -->
+    <header class="header">
+        <!-- Logo y vínculo a index -->
+        <a href="../index.html">
+            <img src="../imagenes/logo1.jpg" alt="logo1">
+        </a>
+        <!-- Barra de navegación -->
+        <nav class="nav">
+            <!-- Vínculo a Inicio -->
+            <div class="dropdown">
+            <a href="../index.html" class="dropdown-toggle">Inicio</a>
+            <!-- Menú desplegable de Componentes -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Componentes</a>
+                <div class="dropdown-menu">
+                    <!-- Submenú para Tarjetas Gráficas -->
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Tarjetas Gráficas <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Graficas/GraficasNvidia.html">Nvidia</a>
+                            <a href="../Graficas/GraficasAMD.html">AMD</a>
+                            <a href="../Graficas/GraficasIntel.html">Intel</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Procesadores <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Procesadores/ProcesadoresAMD.html">AMD</a>
+                            <a href="../Procesadores/ProcesadoresIntel.html">Intel</a>
+                        </div>
+                    </div> 
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Tarjetas Madre <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Motherboards/E-ATX.html">E-ATX</a>
+                            <a href="../Motherboards/ATX.html">ATX</a>
+                            <a href="../Motherboards/M-ATX.html">M-ATX</a>
+                            <a href="../Motherboards/mini-ITX.html">mini-ITX</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Dispositivos de Almacenamiento <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../almacenamiento/SSD.html">SSD</a>
+                            <a href="../almacenamiento/HDD.html">HDD</a>
+                            <a href="../almacenamiento/Nvme.html">NVME</a>
+                        </div>
+                    </div>
+
+                    <a href="../Fuentes.html">Fuentes de poder</a>
+
+                    <div class="dropdown">
+                    <a href="#">Memoria RAM <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../RAM/DDR4.html">DDR4</a>
+                            <a href="../RAM/DDR5.html">DDR5</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Ensambles</a>
+                <div class="dropdown-menu">
+                    <a href="../Ensambles/Gama-alta.html">Alto rendimiento</a>
+                    <a href="../Ensambles/Gama-media.html">Gama media</a>
+                    <a href="../Ensambles/Gama-baja.html">Tareas domesticas</a>
+                    <a href="../Ensambles/mis-ensambles.html">Mis ensambles</a>
+                </div>
+            </div>
+            <!-- Menú desplegable de Empresas -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Empresas</a>
+                <div class="dropdown-menu">
+                    <a href="../Empresas/nvidiaInfo.html">Nvidia</a>
+                    <a href="../Empresas/IntelInfo.html">Intel</a>
+                    <a href="../Empresas/AMDInfo.html">AMD</a>
+                </div>
+            </div>
+
+            <a href="../preguntas.html">Preguntas frecuentes</a>
+        </nav>
+        <div class="contenedor-buscador">
+            <input type="text" id="busqueda" placeholder="Buscar productos...">
+            <ul id="lista-sugerencias"></ul>
+        </div>
+        
+          <div class="contenido" id="resultado"></div>
+    </header>
+    
+    <p class="titulo">Tarjetas graficas de Nvidia</p>
+    <!-- Fondo gris con el título -->
+
+
+
+    
+    <section class="barra2">
+        <p>Nvidia se ha caracterizado por la creacion tarjetas graficas de alto rendimiento y alta capacidad, hoy en dia es la empresa mas costosa del mundo impulsada 
+            por el desarrollo de inteligencia artificial, implementandolo tambien en sus graficas. Aunque un punto negativo puede ser que sus precios son demasiado elevados exponencialmente
+            con cada modelo.</p>
+            <div class="component2">
+                <input type="checkbox" id="Explicacion">
+                <label for="Explicacion">Explicación de especificaciones <span class="arrow">▶</span></label>
+                <div class="description2">
+                    <div class="component3">
+                        <input type="checkbox" id="Leer">
+                        <label for="Leer">Como leer las graficas<span class="arrow">▶</span></label>
+                        <div class="description3">
+                            <p><ul>
+                                <li><b>NVIDIA GeForce</b> → <span class="letrach">"GeForce" es la línea para gamers y creadores. También existen otras como Quadro (profesional) o Tesla (servidores).</span><br></li>
+                                <li><b>"40"</b> → <span class="letrach">Es la generación. En este caso, 40 = 4000 series, que usa arquitectura Ada Lovelace.</span><br></li> 
+                                <li><b>RTX</b> → <span class="letrach">Significa que la tarjeta soporta Ray Tracing y DLSS. Las tarjetas GTX más antiguas no tienen estas tecnologías.</span></li>
+                                <li><b>"70"</b> → Es el nivel de potencia dentro de la generación. Cuanto más alto el número, más potente:
+                                   <span class="letrach"> <br>🔸 50 = entrada
+                                    <br>🔸 60 = gama media
+                                    <br>🔸 70 = media-alta
+                                    <br>🔸 80 = alta
+                                    <br>🔸 90 = entusiasta</span><br></li>
+                                <li><b>Ti</b> → <span class="letrach">Significa una versión mejorada del modelo normal (más núcleos, más rendimiento).</span><br></li>
+                                <li><b>Super</b> → <span class="letrach">Es una versión especial más potente que la original, pero no llega al siguiente nivel. Ejemplo: 4070 Super está entre la 4070 y la 4080.</span><br></li></p>
+                        </ul></div>
+                    </div>
+                    <div class="component3">
+                        <input type="checkbox" id="nucleos">
+                        <label for="nucleos">¿Qué características debo conocer?<span class="arrow">▶</span></label>
+                        <div class="description3">
+                                <div class="texto-cuadro">
+                                        <div class="tabla-container">
+                                            <div class="contenido-scroll">
+                                            <table class="mi-tabla">
+                                              <thead>
+                                                <tr>
+                                                  <th>Especificacion</th>
+                                                  <th>Que hace</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td>VRAM (memoria de video)</td>
+                                                  <td>Es como la RAM pero solo para la tarjeta gráfica. Más VRAM ayuda en juegos pesados, edición de video y resolución 4K.  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>CUDA Cores</td>
+                                                  <td>Son los “núcleos” de la GPU. Más CUDA = más potencia de procesamiento. </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Frecuencia base /boost(MHz)</td>
+                                                  <td>Es la velocidad a la que trabaja la GPU. A más MHz, mayor rendimiento. </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ray Tracing (RT Cores)</td>
+                                                    <td>Simula la luz de forma realista. Muy útil en juegos modernos, pero consume recursos.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DLSS</td>
+                                                    <td>Tecnología que mejora el rendimiento usando IA. Te permite jugar con mejores gráficos y llega hasta cuadriplicar los FPS.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TDP (Watts)</td>
+                                                    <td>Cuánta energía necesita. Es importante para elegir la fuente de poder adecuada.</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            </div>
+                                          </div>
+                            </div></p>
+                        </div>
+                    </div>
+                    <div class="component3">
+                        <input type="checkbox" id="Hilos">
+                        <label for="Hilos">¿Qué debo elegir según mi uso?<span class="arrow">▶</span></label>
+                        <div class="description3">
+                            <div class="texto-cuadro">
+                                <div class="tabla-container">
+                                    <div class="contenido-scroll">
+                                    <table class="mi-tabla">
+                                      <thead>
+                                        <tr>
+                                          <th>Uso</th>
+                                          <th>Que GPU buscar</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>VRAM (memoria de video)</td>
+                                          <td>Es como la RAM pero solo para la tarjeta gráfica. Más VRAM ayuda en juegos pesados, edición de video y resolución 4K.  </td>
+                                        </tr>
+                                        <tr>
+                                          <td>Juegos ligeros (1080p)</td>
+                                          <td>RTX 3050, 4060, 5060 </td>
+                                        </tr>
+                                        <tr>
+                                          <td>Juegos modernos (1440p)</td>
+                                          <td>RTX 3060 Ti, 4070, 5070 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4K y Ray Tracing</td>
+                                            <td>RTX 4080, 4090, 5080/5090</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Edición de video</td>
+                                            <td>4060 Ti en adelante (más VRAM ayuda mucho)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>IA y renderizado</td>
+                                            <td>RTX con muchos CUDA cores y buena VRAM</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    </div>
+                                  </div>
+                    </div></p></p>
+                    </div>
+                    </div>
+                </div>
+    </section>
+    <br>
+    <!--familia de las RTX 5000-->
+    <section class="barra3">
+        <div class="contenedor">
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/RTX5090-img.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 5090</b></p>
+            <p>Lo ultimo en tarjetas graficas, lo mas potente para actividades entusiastas <br><br><b>~$2,000 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX5090">
+                <label for="RTX5090">RTX 5090 <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>32 GB GDDR7</li> 
+                            <li>21,760 núcleos CUDA</li>
+                            <li>Ancho de banda de memoria de 1,792 GB/s</li>
+                            <li>Potencia gráfica total de 575 W.</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/Graficas/RTX5080.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 5080</b></p>
+            <p>Tarjeta grafica de alto rendimiento diseñada para gamers y profesionales exigentes, para juegos en 1440p y 4k<br><b>~$1,000 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 5080">
+                <label for="RTX 5080">RTX 5080 <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>16 GB GDDR7</li> 
+                            <li>10,752 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 960 GB/s</li>
+                            <li>potencia gráfica total de 360 W</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/Graficas/RTX 5070ti.webp"alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 5070 Ti</b></p>
+            <p>Brinda un excelente equilibrio entre precio y rendimiento, ideal para gaming en 1440p y 4K.<br><b>~$750 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 5070ti">
+                <label for="RTX 5070ti">RTX 5070 Ti <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>16 GB GDDR7</li> 
+                            <li>10,752 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 960 GB/s</li>
+                            <li>potencia gráfica total de 360 W</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/RTX 5070.png" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 5070</b></p>
+            <p>Ofrece un rendimiento comparable a la RTX 4090, pero a un precio más accesible<br><br><b>~$550 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 5070">
+                <label for="RTX 5070">RTX 5070<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>16 GB GDDR7</li> 
+                            <li>10,752 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 960 GB/s</li>
+                            <li>potencia gráfica total de 360 W</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+      
+         <!--familia de las RTX 4000-->
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx-4090.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 4090</b></p>
+            <p>Tarjeta grafica de alto rendimiento para<br><br><b>~$1,599 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 4090">
+                <label for="RTX 4090">RTX 4090<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>24 GB GDDR6X</li> 
+                            <li>16384 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 1 TB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>  
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 4080.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 4080</b></p>
+            <p>Tarjeta grafica de alto rendimiento  que cuesta la rededor de<br><br><b>~$1,199 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 4080">
+                <label for="RTX 4080">RTX 4080<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>16 GB GDDR6X</li> 
+                            <li>9728 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 720 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 4070.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 4070</b></p>
+            <p>Tarjeta grafica de rendimiento medio que cuenta con caracteristicas como:<br><br><b>~$599 USD​</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 4070">
+                <label for="RTX 4070">RTX 4070<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>12 GB GDDR6X</li> 
+                            <li>5888 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 504 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 4070ti.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 4070 Ti</b></p>
+            <p>Tarjeta grafica de rendimiento medio que cuenta con caracteristicas como:<br><br><b>~$799 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 4070Ti">
+                <label for="RTX 4070Ti">RTX 4070 Ti<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>12 GB GDDR6X</li> 
+                            <li>7680 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 504 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 4060ti.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 4060 Ti</b></p>
+            <p>Tarjeta grafica de rendimiento medio que cuenta con caracteristicas como:<br><br><b>~$799 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 4060Ti">
+                <label for="RTX 4060Ti">RTX 4060 Ti<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>12 GB GDDR6X</li> 
+                            <li>7680 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 504 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx-4060.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 4060</b></p>
+            <p>Tarjeta grafica de rendimiento medio que cuenta con caracteristicas como:<br><br><b>~$799 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 4060">
+                <label for="RTX 4060">RTX 4060<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>12 GB GDDR6X</li> 
+                            <li>7680 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 504 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <!--familia de las RTX 3000-->
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 3090.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 3090</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$1,499 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 3090">
+                <label for="RTX 3090">RTX 3090<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>24 GB GDDR6X</li> 
+                            <li>10496 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 936 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 3090ti.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 3090 Ti</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$1,999 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 3090 Ti">
+                <label for="RTX 3090 Ti">RTX 3090 Ti<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>24 GB GDDR6X</li> 
+                            <li>10752 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 1008 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 3080.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 3080</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~ $699 USD​</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 3080">
+                <label for="RTX 3080">RTX 3080<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>10 GB GDDR6X</li> 
+                            <li>8704 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 760 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 3080ti.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 3080 Ti</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$1,199 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 3080 Ti">
+                <label for="RTX 3080 Ti">RTX 3080 Ti<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>12 GB GDDR6X</li> 
+                            <li>10240 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 912 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 3070.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 3070</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~ $499 USD​</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 3070">
+                <label for="RTX 3070">RTX 3070<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>5888 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 448 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 3070ti.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 3070 Ti</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~ $599 USD    </b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 3070 Ti">
+                <label for="RTX 3070 Ti">RTX 3070 Ti<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>4864 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 448 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 3060.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 3060</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$329 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 3060">
+                <label for="RTX 3060">RTX 3060<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>12 GB GDDR6</li> 
+                            <li>3584 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 360 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 3060ti.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 3060 Ti</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$399 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 3060 Ti">
+                <label for="RTX 3060 Ti">RTX 3060 Ti<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>4864 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 448 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 3050.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 3050</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$249 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 3050">
+                <label for="RTX 3050">RTX 3050<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>2560 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 224 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <!--familia de las RTX 2000-->
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 2080.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 2080</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$699 USD​</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 2080">
+                <label for="RTX 2080">RTX 2080<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>2944 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 448 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 2080ti.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 2080 Ti</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~ $999 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 2080 Ti">
+                <label for="RTX 2080 Ti">RTX 2080 Ti<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>11 GB GDDR6</li> 
+                            <li>4352 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 616 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 2080 super.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 2080 super</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$699 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 2080 super">
+                <label for="RTX 2080 super">RTX 2080 super<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>3072 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 496 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 2070.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 2070</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$499 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 2070">
+                <label for="RTX 2070">RTX 2070<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>2304 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 448 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 2070 super.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 2070 super</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~ $499 USD​</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 2070 super">
+                <label for="RTX 2070 super">RTX 2070 super<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>2560 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 448 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 2060.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 2060</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$349 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 2060">
+                <label for="RTX 2060">RTX 2060<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>6 GB GDDR6</li> 
+                            <li>1920 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 336 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/rtx 2060 super.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RTX 2060 super</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$399 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RTX 2060 super">
+                <label for="RTX 2060 super">RTX 2060 super<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>2176 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 448 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <!--familia de las GTX 1600-->
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/gtx 1660.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>GTX 1660</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$219 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="GTX 1660">
+                <label for="GTX 1660">GTX 1660<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>6 GB GDDR5</li> 
+                            <li>1408 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 192 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/gtx 1660 super.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>GTX 1660 super</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$229 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="GTX 1660 super">
+                <label for="GTX 1660 super">GTX 1660 super<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>6 GB GDDR6</li> 
+                            <li>1408 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 336 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/gtx 1660ti.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>GTX 1660 Ti</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$279 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="GTX 1660 Ti">
+                <label for="GTX 1660 Ti">GTX 1660 Ti<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>6 GB GDDR6</li> 
+                            <li>1408 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 336 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/gtx 1650.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>GTX 1650</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$149 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="GTX 1650">
+                <label for="GTX 1650">GTX 1650<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>4 GB GDDR5</li> 
+                            <li>896 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 128 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/gtx 1650 super.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>GTX 1650 super</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$159 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="GTX 1650 super">
+                <label for="GTX 1650 super">GTX 1650 super<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>4 GB GDDR6</li> 
+                            <li>1280 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 192 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <!--familia de las GTX 1000-->
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/gtx 1080.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>GTX 1080</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$599 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="GTX 1080">
+                <label for="GTX 1080">GTX 1080<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR5X</li> 
+                            <li>2560 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 320 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/gtx 1080ti.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>GTX 1080 Ti</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$699 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="GTX 1080 Ti">
+                <label for="GTX 1080 Ti">GTX 1080 Ti<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>11 GB GDDR5X</li> 
+                            <li>3584 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 484 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/gtx 1070.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>GTX 1070</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$379 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="GTX 1070">
+                <label for="GTX 1070">GTX 1070<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR5</li> 
+                            <li>1920 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 256 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/gtx 1070ti.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>GTX 1070 Ti</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$449 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="GTX 1070 Ti">
+                <label for="GTX 1070 Ti">GTX 1070 Ti<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR5</li> 
+                            <li>2432 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 256 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/gtx 1060.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>GTX 1060</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$299 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="GTX 1060">
+                <label for="GTX 1060">GTX 1060<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>6 GB GDDR5</li> 
+                            <li>1280 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 192 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/gtx 1050.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>GTX 1050</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$109 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="GTX 1050">
+                <label for="GTX 1050">GTX 1050<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>2 GB GDDR5</li> 
+                            <li>640 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 112 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cuadro2">
+            <img src="../imagenes/Graficas/gtx 1050ti.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>GTX 1050 Ti</b></p>
+            <p>Tarjeta grafica de alto rendimiento que cuenta con caracteristicas como:<br><br><b>~$139 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="GTX 1050 Ti">
+                <label for="GTX 1050 Ti">GTX 1050 Ti<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>4 GB GDDR5</li> 
+                            <li>768 núcleos CUDA</li>
+                            <li>ancho de banda de memoria de 112 GB/s.</li>
+                            <li>potencia gráfica total de </li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+
+        <button id="btnArriba" title="Volver arriba">⬆</button>
+        <!-- Derechos de autor -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechBench. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+        <script src="scripts.js"></script> 
+</body>
+</html>

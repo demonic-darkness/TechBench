@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBench</title>
+    <link rel="icon" type="image/ico" href="imagenes/icono.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado con barra de navegación -->
+    <header class="header">
+        <!-- Logo y vínculo a index -->
+        <a href="index.html">
+            <img src="imagenes/logo1.jpg" alt="logo1">
+        </a>
+        <!-- Barra de navegación -->
+        <nav class="nav">
+            <!-- Vínculo a Inicio -->
+            <div class="dropdown">
+            <a href="index.html" class="dropdown-toggle">Inicio</a>
+            <!-- Menú desplegable de Componentes -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Componentes</a>
+                <div class="dropdown-menu">
+                    <!-- Submenú para Tarjetas Gráficas -->
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Tarjetas Gráficas <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="Graficas/GraficasNvidia.html">Nvidia</a>
+                            <a href="Graficas/GraficasAMD.html">AMD</a>
+                            <a href="Graficas/GraficasIntel.html">Intel</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Procesadores <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="Procesadores/ProcesadoresAMD.html">AMD</a>
+                            <a href="Procesadores/ProcesadoresIntel.html">Intel</a>
+                        </div>
+                    </div> 
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Tarjetas Madre <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="Motherboards/E-ATX.html">E-ATX</a>
+                            <a href="Motherboards/ATX.html">ATX</a>
+                            <a href="Motherboards/M-ATX.html">M-ATX</a>
+                            <a href="Motherboards/mini-ITX.html">mini-ITX</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Dispositivos de Almacenamiento <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="almacenamiento/SSD.html">SSD</a>
+                            <a href="almacenamiento/HDD.html">HDD</a>
+                            <a href="almacenamiento/Nvme.html">NVME</a>
+                        </div>
+                    </div>
+
+                    <a href="Fuentes.html">Fuentes de poder</a>
+
+                    <div class="dropdown">
+                    <a href="#">Memoria RAM <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="RAM/DDR4.html">DDR4</a>
+                            <a href="RAM/DDR5.html">DDR5</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Ensambles</a>
+                <div class="dropdown-menu">
+                    <a href="Ensambles/Gama-alta.html">Alto rendimiento</a>
+                    <a href="Ensambles/Gama-media.html">Gama media</a>
+                    <a href="Ensambles/Gama-baja.html">Tareas domesticas</a>
+                    <a href="../Ensambles/mis-ensambles.html">Mis ensambles</a>
+                </div>
+            </div>
+            <!-- Menú desplegable de Empresas -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Empresas</a>
+                <div class="dropdown-menu">
+                    <a href="Empresas/nvidiaInfo.html">Nvidia</a>
+                    <a href="Empresas/IntelInfo.html">Intel</a>
+                    <a href="Empresas/AMDInfo.html">AMD</a>
+                </div>
+            </div>
+
+            <a href="preguntas.html">Preguntas frecuentes</a>
+    </header>
+
+    <p class="titulo">Preguntas Frecuentes</p>
+    
+</nav>
+    <section class="barra2">
+        <div class="component2">
+            <input type="checkbox" id="Velocidad o numero de nucleos">
+            <label for="Velocidad o numero de nucleos"><b>¿Velocidad o numero de nucleos?</b><span class="arrow">▶</span>
+                <div class="description2">Si tu PC es principalmente para gaming, lo ideal es un procesador con mayor velocidad de reloj (GHz)
+                    ya que la mayoría de los juegos aprovechan pocos núcleos, pero requieren altas frecuencias.
+                    Si planeas hacer edición de video, streaming o multitarea intensa, más núcleos pueden ser útiles. <br><br>
+                    📌Ejemplo: Para gaming, un Intel Core i5 14600K o un Ryzen 5 7600X con alta frecuencia es una gran opción.
+                    Para edición de video y streaming, un Ryzen 7 7800X3D o un Intel Core i7 14700K con más núcleos es recomendable.
+                    </div>
+                </label>
+            </div>
+    </section>
+    <section class="barra3">
+        <div class="component">
+            <input type="checkbox" id="más RAM o una mejor tarjeta gráfica?">
+            <label for="más RAM o una mejor tarjeta gráfica?"><b>Más RAM o una mejor tarjeta gráfica?</b><span class="arrow">▶</span>
+                <div class="description">Depende del uso de tu PC:<br>  
+                    ✔ Gaming 🎮 → Mejor tarjeta gráfica. Una GPU potente mejora la calidad visual y los FPS. Con 16GB de RAM es suficiente para la mayoría de los juegos. <br><br> 
+                    ✔ Multitarea, edición o programación  → Más RAM. Si usas muchas aplicaciones a la vez o trabajas con edición de video, 32GB pueden ser ideales.  <br><br>
+                    
+                    📌 Ejemplo: Para gaming, es mejor invertir en una RTX 4060 Ti o superior antes de aumentar la RAM. Si haces edición de video, más RAM (32GB o más) será mejor. 
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra2">
+        <div class="component2">
+            <input type="checkbox" id="SSD o HDD">
+            <label for="SSD o HDD"><b>¿Qué es mejor: SSD o HDD?</b><span class="arrow">▶</span>
+                <div class="description2">✔ SSD (Estado Sólido): Mucho más rápido, ideal para el sistema operativo y juegos.  
+                    ✔ HDD (Disco Duro Mecánico): Más barato y con mayor capacidad, ideal para almacenamiento masivo de archivos.  
+                    
+                    <br>📌 Recomendación: Un SSD NVMe de 1TB para el sistema y juegos + un HDD de 2TB o más para archivos grandes.
+                    </div>
+                </label>
+            </div>
+    </section>
+    <section class="barra3">
+        <div class="component">
+            <input type="checkbox" id="Qué fuente de poder">
+            <label for="Qué fuente de poder"><b>¿Qué fuente de poder necesito?</b><span class="arrow">▶</span>
+                <div class="description">Depende de tu hardware. Usa una fuente con certificación 80 Plus (Bronze, Gold, Platinum) y suficiente potencia para tu GPU y CPU.  
+
+                    <br>📌 Ejemplo:  
+                    <br>- PC básica: 500W (sin tarjeta gráfica dedicada).  
+                    <br>- PC gaming con RTX 4060/4070: 650-750W.  
+                    <br>- PC con RTX 4080/4090: 850-1000W.  
+                    
+                    <br>Usa una calculadora de fuentes como la de Cooler Master o MSI para estimar mejor. 
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra2">
+        <div class="component2">
+            <input type="checkbox" id="tarjeta madre cara">
+            <label for="tarjeta madre cara"><b>¿Necesito una tarjeta madre cara para mi PC?</b><span class="arrow">▶</span>
+                <div class="description2">✔ Si vas a hacer overclocking, necesitas una motherboard con buenas fases de alimentación (como una B650 o Z790).  
+                    <br>✔ Si no harás overclock, una opción más económica con los puertos y compatibilidad adecuados es suficiente.  
+                    
+                    <br>📌 Ejemplo: Para un Ryzen 5 7600X, una B650M es una excelente opción sin gastar de más.
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra3">
+        <div class="component">
+            <input type="checkbox" id="más ventiladores o refrigeración líquida">
+            <label for="más ventiladores o refrigeración líquida"><b>¿Qué es mejor: más ventiladores o refrigeración líquida?</b><span class="arrow">▶</span>
+                <div class="description">  
+                    ✔ Si tu gabinete tiene buena ventilación, los ventiladores son suficientes.  
+                    <br>✔ La refrigeración líquida es útil si tienes un procesador muy potente* y quieres temperaturas más bajas o menor ruido.  
+                    
+                    <br><br>📌 Recomendación: Un buen disipador por aire (como el DeepCool AK620 o Noctua NH-U12S) es más que suficiente para la mayoría.
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra2">
+        <div class="component2">
+            <input type="checkbox" id="Cuánta VRAM">
+            <label for="Cuánta VRAM"><b>¿Cuánta VRAM necesito en mi tarjeta gráfica?</b><span class="arrow">▶</span>
+                <div class="description2">✔ 8GB VRAM: Suficiente para 1080p en calidad alta o 1440p en calidad media.  
+                    <br>✔ 12GB VRAM: Ideal para 1440p con Ray Tracing y juegos futuros.  
+                    <br>✔ 16GB VRAM o más: Para 4K o tareas profesionales como renderizado en 3D.  
+                    
+                    <br><br>📌 Ejemplo: Una RTX 4060 Ti (8GB) es buena para 1080p, pero una RTX 4070 Super (12GB) es mejor para 1440p con Ray Tracing.
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra3">
+        <div class="component">
+            <input type="checkbox" id="latencia de la RAM">
+            <label for="latencia de la RAM"><b>¿Qué tan importante es la latencia de la RAM?</b><span class="arrow">▶</span>
+                <div class="description">  
+                    ✔ Para gaming, la frecuencia (MHz) y la latencia (CL) afectan el rendimiento, pero no es lo más crítico.  
+                    <br>✔ Ryzen se beneficia más de RAM rápida (6000 MHz CL30 es ideal en DDR5).  
+
+                    <br><br>📌 Ejemplo: Para Ryzen 7000, 6000 MHz CL30 es una gran opción; para Intel, 5600 MHz CL36 es suficiente.
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra2">
+        <div class="component2">
+            <input type="checkbox" id="tarjeta de sonido">
+            <label for="tarjeta de sonido"><b>¿Necesito una tarjeta de sonido o tarjeta de red aparte?</b><span class="arrow">▶</span>
+                <div class="description2">✔ No, a menos que seas un profesional del audio o necesites Wi-Fi de última generación.
+                    <br>✔ La mayoría de placas madres tienen buen sonido y Wi-Fi 6 integrado en modelos modernos.
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra3">
+        <div class="component">
+            <input type="checkbox" id="mezclar marcas">
+            <label for="mezclar marcas"><b>¿Puedo mezclar marcas o modelos de RAM?</b><span class="arrow">▶</span>
+                <div class="description">  
+                    ✔ Sí, pero no es recomendable. Aunque en teoría puedes mezclar módulos de diferentes marcas o velocidades, podrían funcionar a la velocidad del módulo más lento o generar inestabilidad en el sistema. 
+                    <br><br>📌 Recomendación: Usa mismos módulos en marca, capacidad y frecuencia para mejor compatibilidad.
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra2">
+        <div class="component2">
+            <input type="checkbox" id="pasta térmica">
+            <label for="pasta térmica"><b>¿Cuánta pasta térmica debo aplicar en el procesador?</b><span class="arrow">▶</span>
+                <div class="description2">✔ No pongas demasiada. Solo una pequeña cantidad (del tamaño de un grano de arroz o un guisante) en el centro es suficiente.  
+                    <br><br>📌 Consejo: Usa pasta térmica de buena calidad como Thermal Grizzly Kryonaut o Noctua NT-H1.
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra3">
+        <div class="component">
+            <input type="checkbox" id="Necesito una tarjeta gráfica dedicada">
+            <label for="Necesito una tarjeta gráfica dedicada"><b>¿Necesito una tarjeta gráfica dedicada o puedo usar la integrada?</b><span class="arrow">▶</span>
+                <div class="description">  
+                    ✔ Si solo usarás la PC para tareas básicas (ofimática, internet, multimedia), una GPU integrada (como las de los Ryzen G o Intel con gráficos Iris Xe) es suficiente.  
+                    <br>✔ Para gaming, edición o modelado 3D, una tarjeta gráfica dedicada es necesaria.  
+
+                    <br><br>📌 Ejemplo: Un Ryzen 7 5700G tiene gráficos integrados decentes para juegos ligeros, pero para juegos AAA necesitas una RTX 4060 o superior.  
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra2">
+        <div class="component2">
+            <input type="checkbox" id="Es necesario hacer overclock">
+            <label for="Es necesario hacer overclock"><b>¿Es necesario hacer overclock al procesador o la tarjeta gráfica?</b><span class="arrow">▶</span>
+                <div class="description2">✔ No es obligatorio. Overclockear puede aumentar el rendimiento, pero también el consumo, el calor y el desgaste del hardware.  
+                    <br>✔ En GPU, el overclock suele dar un 5-10% más de rendimiento, pero el undervolt puede ser más útil para reducir temperatura y consumo sin perder rendimiento.  
+                    
+                    <br><br>📌 Recomendación: Si tienes un buen disipador y quieres más rendimiento, haz overclock en CPU/GPU con precaución.
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra3">
+        <div class="component">
+            <input type="checkbox" id="licencia de Windows">
+            <label for="licencia de Windows"><b>¿Necesito una licencia de Windows original?</b><span class="arrow">▶</span>
+                <div class="description">  
+                    ✔ Windows se puede usar sin activarlo, pero mostrará una marca de agua y algunas opciones estarán bloqueadas.  
+                    <br>✔ Puedes comprar licencias económicas en tiendas de terceros si quieres activar tu sistema sin gastar mucho.  
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra2">
+        <div class="component2">
+            <input type="checkbox" id="Qué monitores">
+            <label for="Qué monitores"><b>¿Qué monitores son mejores para gaming?</b><span class="arrow">▶</span>
+                <div class="description2">✔ Resolución: 1080p para competitivo, 1440p para calidad visual, 4K si tienes una GPU potente.  
+                    <br>✔ Frecuencia de actualización: 144Hz o más para juegos rápidos como shooters.  
+                    <br>✔ Tiempo de respuesta: 1-3ms para evitar ghosting.  
+                    
+                    <br><br>📌 Ejemplo: Un monitor 1440p 165Hz con panel IPS es excelente para gaming y calidad de imagen.  
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra3">
+        <div class="component">
+            <input type="checkbox" id="licencia de Windows">
+            <label for="licencia de Windows"><b>¿Necesito un No-Break o Regulador para mi PC?</b><span class="arrow">▶</span>
+                <div class="description">  
+                    <br>✔ Un regulador no es recomendable, mejor usa un UPS (No-Break). 
+                    <br>✔ Un No-Break protege tu PC de apagones y mantiene el sistema encendido por unos minutos en caso de cortes de luz.  
+
+                    <br><br>📌 Recomendación: Un UPS de 600VA o más es suficiente para una PC de gama media.  
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra2">
+        <div class="component2">
+            <input type="checkbox" id="Qué monitores">
+            <label for="Qué monitores"><b>¿Qué monitores son mejores para gaming?</b><span class="arrow">▶</span>
+                <div class="description2">✔ Resolución: 1080p para competitivo, 1440p para calidad visual, 4K si tienes una GPU potente.  
+                    <br>✔ Frecuencia de actualización: 144Hz o más para juegos rápidos como shooters.  
+                    <br>✔ Tiempo de respuesta: 1-3ms para evitar ghosting.  
+                    
+                    <br><br>📌 Ejemplo: Un monitor 1440p 165Hz con panel IPS es excelente para gaming y calidad de imagen.  
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra3">
+        <div class="component">
+            <input type="checkbox" id="gráfica NVIDIA">
+            <label for="gráfica NVIDIA"><b>¿Puedo usar una tarjeta gráfica NVIDIA en una PC con procesador AMD?</b><span class="arrow">▶</span>
+                <div class="description">  
+                    <br>✔ Sí, no hay problema. Puedes usar una GPU NVIDIA en una PC con procesador AMD e incluso aprovechar tecnologías como NVIDIA DLSS y Ray Tracing sin importar la marca del procesador.  
+                    <br><br>📌 Dato curioso: También puedes usar una GPU AMD con un procesador Intel sin problemas.  
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra2">
+        <div class="component2">
+            <input type="checkbox" id="Cuánto almacenamiento">
+            <label for="Cuánto almacenamiento"><b>¿Cuánto almacenamiento necesito en mi PC?</b><span class="arrow">▶</span>
+                <div class="description2">✔ Gaming: 1TB SSD mínimo (algunos juegos ocupan más de 100GB).  
+                    <br>✔ Edición de video/diseño: 2TB SSD + HDD si trabajas con archivos pesados.  
+                    <br>✔ Uso normal: 500GB - 1TB SSD suele ser suficiente.  
+                    
+                    <br><br>📌 Recomendación: Un SSD NVMe + HDD es la mejor combinación para velocidad y capacidad.  
+                    </div>
+            </label>
+        </div>
+    </section>
+    <section class="barra3">
+        <div class="component">
+            <input type="checkbox" id="gabinete">
+            <label for="gabinete"><b>¿Cómo saber si mi gabinete es compatible con mi tarjeta gráfica?</b><span class="arrow">▶</span>
+                <div class="description">  
+                    <br>✔ Mide el espacio disponible en tu gabinete y compáralo con el largo de la GPU.  
+                    <br>✔ Verifica que el gabinete tenga suficiente ventilación para evitar sobrecalentamiento.  
+                    
+                    <br><br>📌 Ejemplo: Algunas RTX 4080/4090 son muy grandes y no caben en todos los gabinetes.  
+                    </div>
+            </label>
+        </div>
+    </section>
+    <button id="btnArriba" title="Volver arriba">⬆</button>
+    <script src="scripts.js"></script>
+</body>
+</html>

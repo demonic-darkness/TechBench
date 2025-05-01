@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBench</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-intel.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+
+    <!-- Encabezado con barra de navegación -->
+    <header class="header">
+        <!-- Logo y vínculo a index -->
+        <a href="../index.html">
+            <img src="../imagenes/logo1.jpg" alt="logo1">
+        </a>
+        <!-- Barra de navegación -->
+        <nav class="nav">
+            <!-- Vínculo a Inicio -->
+            <div class="dropdown">
+            <a href="../index.html" class="dropdown-toggle">Inicio</a>
+            <!-- Menú desplegable de Componentes -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Componentes</a>
+                <div class="dropdown-menu">
+                    <!-- Submenú para Tarjetas Gráficas -->
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Tarjetas Gráficas <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Graficas/GraficasNvidia.html">Nvidia</a>
+                            <a href="../Graficas/GraficasAMD.html">AMD</a>
+                            <a href="../Graficas/GraficasIntel.html">Intel</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Procesadores <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Procesadores/ProcesadoresAMD.html">AMD</a>
+                            <a href="../Procesadores/ProcesadoresIntel.html">Intel</a>
+                        </div>
+                    </div> 
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Tarjetas Madre <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Motherboards/E-ATX.html">E-ATX</a>
+                            <a href="../Motherboards/ATX.html">ATX</a>
+                            <a href="../Motherboards/M-ATX.html">M-ATX</a>
+                            <a href="../Motherboards/mini-ITX.html">mini-ITX</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Dispositivos de Almacenamiento <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../almacenamiento/SSD.html">SSD</a>
+                            <a href="../almacenamiento/HDD.html">HDD</a>
+                            <a href="../almacenamiento/Nvme.html">NVME</a>
+                        </div>
+                    </div>
+
+                    <a href="../Fuentes.html">Fuentes de poder </a>
+
+                    <div class="dropdown">
+                    <a href="#">Memoria RAM <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../RAM/DDR4.html">DDR4</a>
+                            <a href="../RAM/DDR5.html">DDR5</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Ensambles</a>
+                <div class="dropdown-menu">
+                    <a href="../Ensambles/Gama-alta.html">Alto rendimiento</a>
+                    <a href="../Ensambles/Gama-media.html">Gama media</a>
+                    <a href="../Ensambles/Gama-baja.html">Tareas domesticas</a>
+                    <a href="../Ensambles/mis-ensambles.html">Mis ensambles</a>
+                </div>
+            </div>
+            <!-- Menú desplegable de Empresas -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Empresas</a>
+                <div class="dropdown-menu">
+                    <a href="../Empresas/nvidiaInfo.html">Nvidia</a>
+                    <a href="../Empresas/IntelInfo.html">Intel</a>
+                    <a href="../Empresas/AMDInfo.html">AMD</a>
+                </div>
+            </div>
+
+            <a href="../preguntas.html">Preguntas frecuentes</a>
+        </nav>
+    </header>
+    
+    <p class="titulo">Pagina de Intel</p>
+    <section class="carrucel">
+    <section class="barra2">
+        <p class="subtitulo"><b>Sobre Intel</b></p>
+        <p>Desde 1968, Intel ha sido el pilar de la industria de los semiconductores, fabricando algunos de los procesadores más potentes y eficientes del mundo. Con sus series Core i y Xeon, ha impulsado la evolución de las computadoras personales, servidores y centros de datos.  
+            Intel no solo se enfoca en CPUs, sino que también ha expandido su alcance a tarjetas gráficas con Intel Arc, inteligencia artificial y conectividad 5G.</p>
+    </section>
+
+    <div class="contenedor">
+        <button class="boton izquierda" onclick="moverCarrusel(-1)">❮</button>
+        <div class="carrusel" id="carrusel">
+            <div class="cuadro2">
+                <p class="mini-titulo"><b>Noticias Recientes</b></p>
+                <p class="subtitulo2"><br><b>Lanzamiento de Core Ultra 200</b></p><p>con mejoras en rendimiento e inteligencia artificial.</b></p><br>
+                <p class="subtitulo2"><b>Arc Battlemage: Nueva generación de GPUs <br>para competir en gaming y productividad</b></p>
+                <p class="subtitulo2"><b>Inversión en fábricas de chips</b></p>
+            </div>
+            <div class="cuadro3">
+                <p class="mini-titulo"><b>Procesadores para Todas las Necesidades</b></p><br>
+                <p class="subtitulo2"><b>Core Ultra y Core i<br></b></p>
+                <p class="subtitulo2"><b>Xeon para Servidores</b></p>
+                <p class="subtitulo2"><b>Intel NPU e IA</b></p>
+            </div>
+        </div>
+        <button class="boton derecha" onclick="moverCarrusel(1)">❯</button>
+    </div>
+</section>
+
+<section class="barra3">
+    <div class="contenedor">
+    <div class="cuadro">
+        <p class="mini-titulo"><b>Intel y Gaming: Más Allá de las CPUs</b></p>
+        <p><b>Intel ha entrado en el mercado gráfico con su línea Intel Arc, compitiendo con NVIDIA y AMD.   <br><br></b>
+            🔸<b>Intel Arc GPUs:</b> Tarjetas gráficas con soporte para Ray Tracing y aceleración de IA.<br> <br>
+            🔸 <b>Intel XeSS:</b> Tecnología de escalado para mejorar el rendimiento y calidad de imagen  <br><br>
+            🔸 <b>Intel Extreme Tuning Utility:</b> Herramientas avanzadas para overclocking y optimización.</p>
+    </div>
+    <div class="cuadro">
+        <p class="mini-titulo"><b>¿Quieres conocer más? </b></p>
+        <p><b>Intel sigue siendo una empresa clave en la industria tecnológica, ofreciendo procesadores de alto rendimiento, tarjetas gráficas innovadoras y soluciones de IA para el futuro de la computación.<br>
+            <br>Visita <a href="https://www.intel.com" target="_blank" rel="noopener noreferrer">https://www.intel.com</a> y descubre sus últimas innovaciones.</b> <br></p>
+    </div>
+</div>
+</section>
+<button id="btnArriba" title="Volver arriba">⬆</button>
+    <script src="../scripts.js"></script>
+</body>
+</html>

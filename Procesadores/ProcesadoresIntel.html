@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBench</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado con barra de navegación -->
+    <header class="header">
+        <!-- Logo y vínculo a index -->
+        <a href="../index.html">
+            <img src="../imagenes/logo1.jpg" alt="logo1">
+        </a>
+        <!-- Barra de navegación -->
+        <nav class="nav">
+            <!-- Vínculo a Inicio -->
+            <div class="dropdown">
+            <a href="../index.html" class="dropdown-toggle">Inicio</a>
+            <!-- Menú desplegable de Componentes -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Componentes</a>
+                <div class="dropdown-menu">
+                    <!-- Submenú para Tarjetas Gráficas -->
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Tarjetas Gráficas <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Graficas/GraficasNvidia.html">Nvidia</a>
+                            <a href="../Graficas/GraficasAMD.html">AMD</a>
+                            <a href="../Graficas/GraficasIntel.html">Intel</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Procesadores <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Procesadores/ProcesadoresAMD.html">AMD</a>
+                            <a href="../Procesadores/ProcesadoresIntel.html">Intel</a>
+                        </div>
+                    </div> 
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Tarjetas Madre <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Motherboards/E-ATX.html">E-ATX</a>
+                            <a href="../Motherboards/ATX.html">ATX</a>
+                            <a href="../Motherboards/M-ATX.html">M-ATX</a>
+                            <a href="../Motherboards/mini-ITX.html">mini-ITX</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Dispositivos de Almacenamiento <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../almacenamiento/SSD.html">SSD</a>
+                            <a href="../almacenamiento/HDD.html">HDD</a>
+                            <a href="../almacenamiento/Nvme.html">NVME</a>
+                        </div>
+                    </div>
+
+                    <a href="../Fuentes.html">Fuentes de poder </a>
+
+                    <div class="dropdown">
+                    <a href="#">Memoria RAM <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../RAM/DDR4.html">DDR4</a>
+                            <a href="../RAM/DDR5.html">DDR5</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Ensambles</a>
+                <div class="dropdown-menu">
+                    <a href="../Ensambles/Gama-alta.html">Alto rendimiento</a>
+                    <a href="../Ensambles/Gama-media.html">Gama media</a>
+                    <a href="../Ensambles/Gama-baja.html">Tareas domesticas</a>
+                    <a href="../Ensambles/mis-ensambles.html">Mis ensambles</a>
+                </div>
+            </div>
+            <!-- Menú desplegable de Empresas -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Empresas</a>
+                <div class="dropdown-menu">
+                    <a href="../Empresas/nvidiaInfo.html">Nvidia</a>
+                    <a href="../Empresas/IntelInfo.html">Intel</a>
+                    <a href="../Empresas/AMDInfo.html">AMD</a>
+                </div>
+            </div>
+
+            <a href="../preguntas.html">Preguntas frecuentes</a>
+        </nav>
+    </header>
+    <p class="titulo">Procesadores de Intel</p>
+   
+    <div class="contenedor-buscador">
+        <input type="text" id="busqueda" placeholder="Buscar...">
+        <ul id="lista-sugerencias"></ul>
+    </div>
+
+    <section class="barra2">
+        <p>Intel ha sido una de las marcas mas grandes en el mercado de procesadores durante toda su historia,
+            especializado para tareas del dia a dia y tareas mucho mas pesadas en rendimiento centrado en procesamiento
+            multi-nucleo para varias tareas.
+        </p>
+        <div class="component2">
+            <input type="checkbox" id="Explicacion">
+            <label for="Explicacion">Explicación de especificaciones <span class="arrow">▶</span></label>
+            <div class="description2">
+                <div class="component3">
+                    <input type="checkbox" id="Leer">
+                    <label for="Leer">Como leer los procesadores<span class="arrow">▶</span></label>
+                    <div class="description3">
+                        <p><ul>
+                            <li><b>Intel Core</b> → <spam class="letrach">Es la familia del procesador. Intel también tiene otras como Pentium o Celeron, pero "Core" es la principal para gaming y productividad.</spam><br></li>
+                            <li><b>"i5"</b> → Es el numero de nucleos. Cuanto mayor el número, más potente:
+                                <spam class="letrach"><br>🔹 i3 = básico con 4 nucleos
+                                <br>🔹 i5 = gama media con 6 nucleos
+                                <br>🔹 i7 = gama alta con  8 nucleos
+                                <br>🔹 i9 = entusiasta/profesional con 10-16 nucleos</spam><br></li>
+                            <li><b>"14"</b> → <spam class="letrach">Es la generación del procesador. En este caso, 14ª generación. Cuanto más nuevo, mejores mejoras en rendimiento y eficiencia.</spam><br></li> 
+                            <li><b>"600"</b> → <spam class="letrach">Es el modelo dentro de esa generación. Un número más alto generalmente implica más núcleos, velocidad o funciones.</spam><br></li>
+                            <li><b>K</b> → <spam class="letrach">Significa que está desbloqueado para overclock, o sea, puedes subir su velocidad si tienes buena refrigeración.</spam><br></li>
+                            <li><b>F</b> → <spam class="letrach">No tiene gráficos integrados, por lo que necesitas una tarjeta gráfica dedicada para usarlo.</spam><br></li>
+                            <li><b>T</b> → <spam class="letrach">Bajo consumo</spam></li>
+                            <li><b>E</b> → <spam class="letrach">Para sistemas integrados (no común en PC de escritorio).</spam></li>
+                            <li><b>KS</b> → <spam class="letrach">Versión especial con frecuencias más altas que el K normal.</spam></li></p>
+                    </ul></div>
+                </div>
+                <div class="component3">
+                    <input type="checkbox" id="nucleos">
+                    <label for="nucleos">nucleos<span class="arrow">▶</span></label>
+                    <div class="description3">
+                        ✔ Son los “cerebros” del procesador.<br>
+                        ✔ Más núcleos permiten ejecutar más tareas al mismo tiempo.<br>
+                        ✔ Ejemplo: Ryzen 7 7800X tiene 8 núcleos.<br>
+    
+                        📌 <b>Para gaming:</b> 6-8 núcleos son ideales.<br>
+                        📌 <b>Para edición de video/renderizado:</b> 8-16 núcleos o más.</p>
+                    </div>
+                </div>
+                <div class="component3">
+                    <input type="checkbox" id="Hilos">
+                    <label for="Hilos">Hilos (Threads)<span class="arrow">▶</span></label>
+                    <div class="description3">
+                        ✔ Son los procesos que un núcleo puede manejar a la vez.<br>
+                        ✔ Más hilos = mejor multitarea.<br>
+                        ✔ SMT (Simultaneous Multithreading) permite que un núcleo maneje 2 hilos.<br>
+                        <b>Ejemplo:</b> Un Ryzen 7 7700X tiene 8 núcleos y 16 hilos.</p>
+                    </div>
+                </div>
+                <div class="component3">
+                    <input type="checkbox" id="Velocidad de reloj">
+                    <label for="Velocidad de reloj">Velocidad de reloj (Clock Speed)<span class="arrow">▶</span></label>
+                    <div class="description3">
+                        ✔ Medida en GHz (gigahercios).<br>
+                        ✔ Indica cuántas operaciones hace el procesador por segundo.<br>
+                        ✔ Más GHz = mayor velocidad en tareas individuales.<br>
+                        📌 <b>Ejemplo:</b> "3.5 GHz" significa que el procesador realiza 3,500 millones de ciclos por segundo.</p>
+                    </div>
+                </div>
+                <div class="component3">
+                    <input type="checkbox" id="Caché">
+                    <label for="Caché">Caché<span class="arrow">▶</span></label>
+                    <div class="description3">
+                        ✔ Memoria ultrarrápida dentro del procesador para acceder a datos sin usar la RAM.<br>
+                        ✔ Se divide en L1, L2 y L3 (L3 es la más grande).<br>
+                        ✔ Más caché mejora el rendimiento en juegos y apps exigentes.<br>
+                        <b>Ejemplo:</b> Ryzen 7 7800X3D tiene 96MB de caché L3, lo que mejora el gaming.</p>
+                    </div>
+                </div>
+                <div class="component3">
+                    <input type="checkbox" id="TDP">
+                    <label for="TDP">TDP (Thermal Design Power)<span class="arrow">▶</span></label>
+                    <div class="description3">
+                        ✔ Consumo y calor generado por el procesador, medido en watts (W).<br>
+                        ✔ Un TDP alto significa que necesita mejor disipación térmica.<br>
+                        ✔ Más caché mejora el rendimiento en juegos y apps exigentes.<br>
+                        📌 <b>Ejemplo:</b> Un Ryzen 9 7950X tiene 170W, requiere un buen enfriamiento.</p>
+                    </div>
+                </div>
+                <div class="component3">
+                    <input type="checkbox" id="Overclocking">
+                    <label for="Overclocking">Overclocking (OC)<span class="arrow">▶</span></label>
+                    <div class="description3">
+                        ✔ Aumenta la velocidad del procesador manualmente para mejorar el rendimiento.<br>
+                        ✔ Procesadores con "X" en su nombre están optimizados para esto.<br>
+                        ✔ Necesita un buen disipador y una fuente de poder estable.<br>
+                        📌 <b>Ejemplo:</b> Un Ryzen 5 7600X puede overclockearse para mejorar FPS en juegos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <div class="contenedor">
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/1.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i9-1400k</b></p>
+        <p>Destinado a entusiastas y creadores de contenido que buscan lo último en rendimiento para gaming y aplicaciones exigentes.<br><br><b>~$589 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i9-1400k">
+            <label for="Intel Core i9-1400k">i9-1400k <span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.2 GHz hasta 5.8 GHz</li> 
+                        <li>TDP predeterminada 125W</li>
+                        <li>12 núcleos / 24 hilos</li>
+                        <li>Cache 36 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/2.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i9-13900K</b></p>
+        <p>Diseñado para usuarios que requieren altos niveles de rendimiento tanto en juegos como en tareas de productividad intensiva.<br><br><b>~$589 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i9-13900K">
+            <label for="Intel Core i9-13900K">i9-13900K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.0 GHz hasta 5.8 GHz</li> 
+                        <li>TDP predetermrinada 125W</li>
+                        <li>12 núcleos / 24 hilos</li>
+                        <li>Cache 36 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/3.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-13700K</b></p>
+        <p>Ideal para gamers y profesionales creativos que necesitan un equilibrio entre rendimiento en tareas de un solo hilo y multitarea.<br><br><b>~$409 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-13700K">
+            <label for="Intel Core i7-13700K">i7-13700K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.4 GHz hasta 5.1 GHz</li> 
+                        <li>TDP predeterminada 125W</li>
+                        <li>8 núcleos / 16 hilos</li>
+                        <li>Cache 30 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/4.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i5-13600K</b></p>
+        <p>Un procesador de gama media-alta que ofrece excelentes prestaciones en juegos sin sacrificar la eficiencia energética.<br><br><b>~$319 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i5-13600K">
+            <label for="Intel Core i5-13600K">i5-13600K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.5 GHz hasta 5.1 GHz</li> 
+                        <li>TDP predeterminada 125W</li>
+                        <li>7 núcleos / 14hilos</li>
+                        <li>Cache 20 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/5.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i9-12900K</b></p>
+        <p>Enfocado en el mercado de alto rendimiento, perfecto para gaming de alta resolución y cargas de trabajo intensivas.<br><br><b>~$599 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i9-12900K">
+            <label for="Intel Core i9-12900K">i9-12900K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.2 GHz hasta 5.2 GHz</li> 
+                        <li>TDP predeterminada 125W</li>
+                        <li>8 núcleos / 16hilos</li>
+                        <li>Cache 30 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/6.1.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-12700K</b></p>
+        <p>Una opción robusta para gamers y usuarios avanzados, que combina potencia en tareas mono-hilo y procesamiento paralelo.<br><br><b>~$449 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-12700K">
+            <label for="Intel Core i7-12700K">i7-12700K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.6 GHz hasta 5.0 GHz</li> 
+                        <li>TDP predeterminada 125W</li>
+                        <li>6 núcleos / 12 hilos</li>
+                        <li>Cache 25 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/7.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i5-12600K</b></p>
+        <p>Equilibrado para el segmento medio, ofreciendo un gran rendimiento en juegos y aplicaciones diarias a un precio competitivo.<br><br><b>~$342 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i5-12600K">
+            <label for="Intel Core i5-12600K">i5-12600K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.7 GHz hasta 4.9 GHz</li> 
+                        <li>TDP predeterminada 125W</li>
+                        <li>5 núcleos / 10 hilos</li>
+                        <li>Cache 20 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/8.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i9-11900K</b></p>
+        <p>Aunque de una generación anterior, está pensado para quienes buscan altas velocidades en juegos y rendimiento sobresaliente en tareas puntuales.<br><br><b>~$399 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i9-11900K">
+            <label for="Intel Core i9-11900K">i9-11900K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.6 GHz hasta 5.0 GHz</li> 
+                        <li>TDP predeterminada 125W</li>
+                        <li>8 núcleos / 16 hilos</li>
+                        <li>Cache 16 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/9.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-11700K</b></p>
+        <p>Apropiado para usuarios que desean un rendimiento consistente en juegos y tareas multitarea sin llegar al segmento extremo.<br><br><b>~$399 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-11700K">
+            <label for="Intel Core i7-11700K">i7-11700K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.6 GHz hasta 5.0 GHz</li> 
+                        <li>TDP predeterminada 125W</li>
+                        <li>8 núcleos / 16 hilos</li>
+                        <li>Cache 16 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/10.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i5-11600K</b></p>
+        <p>Ideal para gamers con presupuesto moderado que buscan una buena relación precio/rendimiento en aplicaciones de juego.<br><br><b>~$399 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i5-11600K">
+            <label for="Intel Core i5-11600K">i5-11600K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.9 GHz hasta 4.9 GHz</li> 
+                        <li>TDP predeterminada 125W</li>
+                        <li>6 núcleos / 12 hilos</li>
+                        <li>Cache 12 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/11.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i9-10900K</b></p>
+        <p>Un clásico de alto rendimiento que fue muy popular para gaming intensivo y tareas de multitarea en su momento.<br><br><b>~$515 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i9-10900K">
+            <label for="Intel Core i9-10900K">i9-10900K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.7 GHz hasta 5.3 GHz</li> 
+                        <li>TDP predeterminada 125W</li>
+                        <li>10 núcleos / 20 hilos</li>
+                        <li>Cache 20 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/12.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-10700K</b></p>
+        <p>Enfocado en usuarios que requieren un rendimiento sólido para juegos y edición de contenido sin llegar a los extremos.<br><br><b>~$370 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-10700K">
+            <label for="Intel Core i7-10700K">i7-10700K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.8 GHz hasta 5.1 GHz</li> 
+                        <li>TDP predeterminada 125W</li>
+                        <li>8 núcleos / 16 hilos</li>
+                        <li>Cache 16 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/13.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i5-10600K</b></p>
+        <p>Destinado a jugadores que desean buenos resultados en juegos gracias a su fuerte rendimiento en operaciones de un solo hilo.<br><br><b>~$255 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i5-10600K">
+            <label for="Intel Core i5-10600K">i5-10600K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 4.1 GHz hasta 4.8 GHz</li> 
+                        <li>TDP predeterminada 125W</li>
+                        <li>6 núcleos / 12 hilos</li>
+                        <li>Cache 12 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/14.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i9-9900K</b></p>
+        <p>Conocido por marcar una época en gaming, ofrece altas velocidades de reloj para experiencias de juego fluidas.<br><br><b>~$365 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i9-9900K">
+            <label for="Intel Core i9-9900K">i9-9900K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.6 GHz hasta 5.0 GHz</li> 
+                        <li>TDP predeterminada 95W</li>
+                        <li>8 núcleos / 16 hilos</li>
+                        <li>Cache 16 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/15.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-9700K</b></p>
+        <p>Orientado a gamers que valoran el rendimiento puro en juegos, aunque carece de hyperthreading.<br><br><b>~$233 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-9700K">
+            <label for="Intel Core i7-9700K">i7-9700K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.6 GHz hasta 4.9 GHz</li> 
+                        <li>TDP predeterminada 95W</li>
+                        <li>8 núcleos / 8 hilos</li>
+                        <li>Cache 12 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/16.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i5-9600K</b></p>
+        <p>Una opción intermedia para configuraciones gaming que buscan eficiencia y buen rendimiento en títulos actuales.<br><br><b>~$149 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i5-9600K">
+            <label for="Intel Core i5-9600K">i5-9600K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.7 GHz hasta 4.6 GHz</li> 
+                        <li>TDP predeterminada 95W</li>
+                        <li>6 núcleos / 6 hilos</li>
+                        <li>Cache 9 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/17.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-8700K</b></p>
+        <p>Muy apreciado en su momento por entusiastas y gamers, combina buen rendimiento multi-hilo y altas velocidades de reloj.<br><br><b>~$170 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-8700K">
+            <label for="Intel Core i7-8700K">i7-8700K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.7 GHz hasta 4.7 GHz</li> 
+                        <li>TDP predeterminada 95W</li>
+                        <li>6 núcleos / 12 hilos</li>
+                        <li>Cache 12 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/18.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i5-8600K</b></p>
+        <p>Procesador sólido para gaming, popular entre quienes buscan overclockear y obtener un buen rendimiento en juegos.<br><br><b>~$160 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i5-8600K">
+            <label for="Intel Core i5-8600K">i5-8600K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.6 GHz hasta 4.3 GHz</li> 
+                        <li>TDP predeterminada 95W</li>
+                        <li>6 núcleos / 6 hilos</li>
+                        <li>Cache 9 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/19.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-7700K</b></p>
+        <p>A pesar de tener menos núcleos, era muy valorado en su época por sus altas frecuencias, ideal para juegos exigentes.<br><br><b>~$229 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-7700K">
+            <label for="Intel Core i7-7700K">i7-7700K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 4.2 GHz hasta 4.5 GHz</li> 
+                        <li>TDP predeterminada 91W</li>
+                        <li>4 núcleos / 8 hilos</li>
+                        <li>Cache 8 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/20.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i5-7600K</b></p>
+        <p>Diseñado para sistemas gaming de presupuesto medio, ofreciendo suficiente potencia para la mayoría de los títulos.<br><br><b>~$225 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i5-7600K">
+            <label for="Intel Core i5-7600K">i5-7600K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.8 GHz hasta 4.2 GHz</li> 
+                        <li>TDP predeterminada 91W</li>
+                        <li>4 núcleos / 4 hilos</li>
+                        <li>Cache 6 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/21.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i5-6600K</b></p>
+        <p>Un clásico de la generación Skylake, equilibrado para juegos y tareas diarias, muy usado en PCs de alto rendimiento.<br><br><b>~$115 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i5-6600K">
+            <label for="Intel Core i5-6600K">i5-6600K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 4.0 GHz hasta 4.2 GHz</li> 
+                        <li>TDP predeterminada 91W</li>
+                        <li>4 núcleos / 4 hilos</li>
+                        <li>Cache 6 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/22.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-4790K</b></p>
+        <p>Destinado a gamers y usuarios que valoran la alta velocidad de reloj en la generacion Haswell, aun siendo de hace varios años.<br><br><b>~$229 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-4790K">
+            <label for="Intel Core i7-4790K">i7-4790K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 4.0 GHz hasta 4.4 GHz</li> 
+                        <li>TDP predeterminada 88W</li>
+                        <li>4 núcleos / 8 hilos</li>
+                        <li>Cache 8 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/23.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i5-4690K</b></p>
+        <p>Una opccion eficiente para gamers en la era Haswell, muy utilizado en equipos de rendimiento moderado.<br><br><b>~$299 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i5-4690K">
+            <label for="Intel Core i5-4690K">i5-4690K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.5 GHz hasta 3.9 GHz</li> 
+                        <li>TDP predeterminada 88W</li>
+                        <li>4 núcleos / 4 hilos</li>
+                        <li>Cache 6 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/24.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-3770K</b></p>
+        <p>Procesador orientado a las personas que buscan buena capacidad de multimedia y rendimiento en juegos clasicos.<br><br><b>~$165 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-3770K">
+            <label for="Intel Core i7-3770K">i7-3770K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.5 GHz hasta 3.9 GHz</li> 
+                        <li>TDP predeterminada 77W</li>
+                        <li>4 núcleos / 8 hilos</li>
+                        <li>Cache 8 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/25.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i5-3570K</b></p>
+        <p>Este procesador ofrece un redimiento solido para configuraciones gaming.<br><br><b>~$139 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i5-3570K">
+            <label for="Intel Core i5-3570K">i5-3570K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.4 GHz hasta 3.8 GHz</li> 
+                        <li>TDP predeterminada 77W</li>
+                        <li>4 núcleos / 4 hilos</li>
+                        <li>Cache 6 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/26.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-2600K</b></p>
+        <p>Es legendario en el mundo de gaming por su exelente rendimiento en tareas mono-hilo, ideal para jugadores entusisastas.<br><br><b>~$100 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-2600K">
+            <label for="Intel Core i7-2600K">i7-2600K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.4 GHz hasta 3.8 GHz</li> 
+                        <li>TDP predeterminada 95W</li>
+                        <li>4 núcleos / 8 hilos</li>
+                        <li>Cache 8 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/27.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i5-2500K</b></p>
+        <p>Es popular entrelos gamers por su estabilidad y capacidad de rendimiento.<br><br><b>~$50 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i5-2500K">
+            <label for="Intel Core i5-2500K">i5-2500K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.3 GHz hasta 3.7 GHz</li> 
+                        <li>TDP predeterminada 95W</li>
+                        <li>4 núcleos / 4 hilos</li>
+                        <li>Cache 6 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/28.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-2600K</b></p>
+        <p>Nos brinda un rendimiento confiable en los juegos y la productividad, siendo una opcción solida.<br><br><b>~$49 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-2600K">
+            <label for="Intel Core i7-2600K">i7-2600K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.4 GHz hasta 3.8 GHz</li> 
+                        <li>TDP predeterminada 95W</li>
+                        <li>4 núcleos / 8 hilos</li>
+                        <li>Cache 8 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/29.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i5-2400K</b></p>
+        <p>Orientado a usuarios que buscan una opcción economica para gaming sin requerir el maximo rendimiento.<br><br><b>~$46 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i5-2400K">
+            <label for="Intel Core i5-2400K">i5-2400K<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.1 GHz hasta 3.4 GHz</li> 
+                        <li>TDP predeterminada 95W</li>
+                        <li>4 núcleos / 4 hilos</li>
+                        <li>Cache 6 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/30.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-990X Extreme Edition</b></p>
+        <p>Pensado para personas que necesitan numerosos hilos y un alto rendimiento en muntitareas y aplicaciones profecionales.<br><br><b>~$70 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-990X Extreme Edition">
+            <label for="Intel Core i7-990X Extreme Edition">i7-990X Extreme Edition<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.4 GHz hasta 4.0 GHz</li> 
+                        <li>TDP predeterminada 165W</li>
+                        <li>6 núcleos / 12 hilos</li>
+                        <li>Cache 15 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/30.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-980X Extreme Edition</b></p>
+        <p>Esta dirigido a usuarios que exigen altos recuentos de nucleos para tareas de renderizado y edicion.<br><br><b>~$59 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-980X Extreme Edition">
+            <label for="Intel Core i7-980X Extreme Edition">i7-980X Extreme Edition<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.3 GHz hasta 4.0 GHz</li> 
+                        <li>TDP predeterminada 170W</li>
+                        <li>6 núcleos / 12 hilos</li>
+                        <li>Cache 15 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/30.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-970X Extreme Edition</b></p>
+        <p>Diseñado para personas que requieren un buen rendimieto en cargas de trabajo muy exigentes.<br><br><b>~$40 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-970X Extreme Edition">
+            <label for="Intel Core i7-970X Extreme Edition">i7-970X Extreme Edition<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.2 GHz hasta 3.7 GHz</li> 
+                        <li>TDP predeterminada 170W</li>
+                        <li>6 núcleos / 12 hilos</li>
+                        <li>Cache 15 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/procesadores/30.webp" height="170px" alt="Información detallada">
+        <p class="mini-titulo"><b>Intel Core i7-920X Extreme Edition</b></p>
+        <p>Ideal para usuarios que buscan con con figuraciones de alto rendimiento.<br><br><b>~$35 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="Intel Core i7-920X Extreme Edition">
+            <label for="Intel Core i7-920X Extreme Edition">i7-920X Extreme Edition<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>Velocidad de reloj de 3.3 GHz hasta 3.8 GHz</li> 
+                        <li>TDP predeterminada 130W</li>
+                        <li>4 núcleos / 8 hilos</li>
+                        <li>Cache 8 MB</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </div>
+    </div>
+    <button id="btnArriba" title="Volver arriba">⬆</button>
+    <!-- Derechos de autor -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 TechBench. Todos los derechos reservados.</p>
+    </div>
+</footer>
+    <script src="../Graficas/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBench</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-intel.css">
+</head>
+<body>
+
+    <!-- Encabezado con barra de navegación -->
+    <header class="header">
+        <!-- Logo y vínculo a index -->
+        <a href="../index.html">
+            <img src="../imagenes/logo1.jpg" alt="logo1">
+        </a>
+        <!-- Barra de navegación -->
+        <nav class="nav">
+            <!-- Vínculo a Inicio -->
+            <div class="dropdown">
+            <a href="../index.html" class="dropdown-toggle">Inicio</a>
+            <!-- Menú desplegable de Componentes -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Componentes</a>
+                <div class="dropdown-menu">
+                    <!-- Submenú para Tarjetas Gráficas -->
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Tarjetas Gráficas <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Graficas/GraficasNvidia.html">Nvidia</a>
+                            <a href="../Graficas/GraficasAMD.html">AMD</a>
+                            <a href="../Graficas/GraficasIntel.html">Intel</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Procesadores <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Procesadores/ProcesadoresAMD.html">AMD</a>
+                            <a href="../Procesadores/ProcesadoresIntel.html">Intel</a>
+                        </div>
+                    </div> 
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Tarjetas Madre <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Motherboards/E-ATX.html">E-ATX</a>
+                            <a href="../Motherboards/ATX.html">ATX</a>
+                            <a href="../Motherboards/M-ATX.html">M-ATX</a>
+                            <a href="../Motherboards/mini-ITX.html">mini-ITX</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Dispositivos de Almacenamiento <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../almacenamiento/SSD.html">SSD</a>
+                            <a href="../almacenamiento/HDD.html">HDD</a>
+                            <a href="../almacenamiento/Nvme.html">NVME</a>
+                        </div>
+                    </div>
+
+                    <a href="../Fuentes.html">Fuentes de poder</a>
+
+                    <div class="dropdown">
+                    <a href="#">Memoria RAM <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../RAM/DDR4.html">DDR4</a>
+                            <a href="../RAM/DDR5.html">DDR5</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Ensambles</a>
+                <div class="dropdown-menu">
+                    <a href="../Ensambles/Gama-alta.html">Alto rendimiento</a>
+                    <a href="../Ensambles/Gama-media.html">Gama media</a>
+                    <a href="../Ensambles/Gama-baja.html">Tareas domesticas</a>
+                    <a href="../Ensambles/mis-ensambles.html">Mis ensambles</a>
+                </div>
+            </div>
+            <!-- Menú desplegable de Empresas -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Empresas</a>
+                <div class="dropdown-menu">
+                    <a href="../Empresas/nvidiaInfo.html">Nvidia</a>
+                    <a href="../Empresas/IntelInfo.html">Intel</a>
+                    <a href="../Empresas/AMDInfo.html">AMD</a>
+                </div>
+            </div>
+
+            <a href="../preguntas.html">Preguntas frecuentes</a>
+        </nav>
+    </header>
+    
+    <p class="titulo">Tarjetas graficas de Intel</p>
+    <!-- Fondo gris con el título -->
+
+    <div class="contenedor-buscador">
+        <input type="text" id="busqueda" placeholder="Buscar...">
+        <ul id="lista-sugerencias"></ul>
+    </div>
+
+    <section class="barra2">
+        <p>Intel, conocida por su liderazgo en procesadores, ha expandido su dominio al mundo de las tarjetas 
+            gráficas con su línea Intel Arc y soluciones integradas Iris Xe. Diseñadas para ofrecer un 
+            equilibrio entre rendimiento, eficiencia y accesibilidad, las GPUs de Intel están orientadas 
+            tanto a jugadores como a creadores de contenido y profesionales.</p>
+            <div class="component2">
+                <input type="checkbox" id="Explicacion">
+                <label for="Explicacion">Explicación de especificaciones <span class="arrow">▶</span></label>
+                <div class="description2">
+                    <div class="component3">
+                        <input type="checkbox" id="Leer">
+                        <label for="Leer">Como leer las graficas<span class="arrow">▶</span></label>
+                        <div class="description3">
+                            <p><ul>
+                                <span style="font-size: 31px;"><b>Ejemplo: Intel Arc A770</b></span>
+                                <li><b>Intel Arc</b> → <span class="letrach">La línea de tarjetas gráficas dedicadas para gaming y creación de contenido.</span><br></li>
+                                <li><b>"A"</b> → Serie o generación. La letra indica la familia de arquitectura:
+                                    <br><span class="letrach">🔹 A = Primera generación (Alchemist)
+                                    <br>🔹 Futuras letras: B = Battlemage, C = Celestial, etc.</span><br></li> 
+                                <li><b>"770"</b> → Modelo específico. Cuanto más alto el número, mayor rendimiento.
+                                    <span class="letrach">
+                                    <br>🔸 300 = Gama baja
+                                    <br>🔸 500 = Media
+                                    <br>🔸 700 = Alta</span></li></p>
+                        </ul></div>
+                    </div>
+                    <div class="component3">
+                        <input type="checkbox" id="nucleos">
+                        <label for="nucleos">¿Qué características debo conocer?<span class="arrow">▶</span></label>
+                        <div class="description3">
+                                <div class="texto-cuadro">
+                                        <div class="tabla-container">
+                                            <div class="contenido-scroll">
+                                            <table class="mi-tabla">
+                                              <thead>
+                                                <tr>
+                                                  <th>Especificacion</th>
+                                                  <th>Que hace</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td>VRAM (memoria de video)</td>
+                                                  <td>Es como la RAM pero solo para la tarjeta gráfica. Más VRAM ayuda en juegos pesados, edición de video y resolución 4K.  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Xe-Cores</td>
+                                                  <td>Núcleos gráficos. Más = mejor rendimiento </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Frecuencia base /boost(MHz)</td>
+                                                  <td>Es la velocidad a la que trabaja la GPU. A más MHz, mayor rendimiento. </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ray Tracing Units</td>
+                                                    <td>Núcleos para trazado de rayos</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>XMX Engines</td>
+                                                    <td>Núcleos dedicados a tareas de IA y escalado (usados por XeSS)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>XeSS</td>
+                                                    <td>Escalado inteligente tipo DLSS/FSR. Mejora FPS en juegos con IA.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TDP (Watts)</td>
+                                                    <td>Cuánta energía necesita. Es importante para elegir la fuente de poder adecuada.</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            </div>
+                                          </div>
+                            </div></p>
+                        </div>
+                    </div>
+                    <div class="component3">
+                        <input type="checkbox" id="Hilos">
+                        <label for="Hilos">¿Qué debo elegir según mi uso?<span class="arrow">▶</span></label>
+                        <div class="description3">
+                            <div class="texto-cuadro">
+                                <div class="tabla-container">
+                                    <div class="contenido-scroll">
+                                    <table class="mi-tabla">
+                                      <thead>
+                                        <tr>
+                                          <th>Uso</th>
+                                          <th>Que GPU buscar</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>720p – básico</td>
+                                          <td>A310</td>
+                                        </tr>
+                                        <tr>
+                                          <td>1080p bajo</td>
+                                          <td>A380 </td>
+                                        </tr>
+                                        <tr>
+                                          <td>1080p alto / 1440p medio</td>
+                                          <td>A580 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1440p alto</td>
+                                            <td>A750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1440p ultra / 4K medio</td>
+                                            <td>A770</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    </div>
+                                  </div>
+                    </div></p></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="barra3">
+        <div class="contenedor">
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/graficas/INTEL1.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>Intel Arc B580</b></p>
+            <p>Se espera que sea una opccion de alto rendimiento en las zonas de gaming y creacion de contenido. <br><br><b>~$400 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Intel Arc B580">
+                <label for="Intel Arc B580">Arc B580<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>512 procesadores</li>
+                            <li>Ancho de banda de memoria de 512 GB/s</li>
+                            <li>Potencia gráfica total de 200 W.</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/graficas/INTEL2.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>Intel Arc B570</b></p>
+            <p>Diseñana para ofrecer un exelente rendimiento en juegos 1080p y 1440p. <br><br><b>~$350 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Intel Arc B570">
+                <label for="Intel Arc B570"> Arc B570<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>512 procesadores</li>
+                            <li>Ancho de banda de memoria de 480 GB/s</li>
+                            <li>Potencia gráfica total de 180 W.</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/graficas/INTEL3.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>Intel Arc A770 (16 GB)</b></p>
+            <p>Destinada a usuarios que buscan alto rendimientoen juegos 1440p y 4K. <br><br><b>~$400 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Intel Arc A770 (16 GB)">
+                <label for="Intel Arc A770 (16 GB)">ArcA770(16GB)<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>16 GB GDDR6</li> 
+                            <li>512 procesadores</li>
+                            <li>Ancho de banda de memoria de 512 GB/s</li>
+                            <li>Potencia gráfica total de 225 W.</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/graficas/INTEL3.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>Intel Arc A770 (8 GB)</b></p>
+            <p>Ofrece un exelente rendimiento de juegos a 1080p y 1440p. <br><br><b>~$270 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Intel Arc A770 (8 GB)">
+                <label for="Intel Arc A770 (8 GB)">   Arc A770 (8GB)<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>512 procesadores</li>
+                            <li>Ancho de banda de memoria de 512 GB/s</li>
+                            <li>Potencia gráfica total de 225 W.</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/graficas/INTEL5.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>Intel Arc A750</b></p>
+            <p>Ofrece un redimiento exelente para juegos 1080p y 1440p y muy accesible. <br><br><b>~$250 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Intel Intel Arc A750">
+                <label for="Intel Arc A750">Arc A750<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>384 procesadores</li>
+                            <li>Ancho de banda de memoria de 512 GB/s</li>
+                            <li>Potencia gráfica total de 225 W.</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/graficas/INTEL6.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>Intel Arc A770</b></p>
+            <p>Nos ofrece un buen rendimiento para tareas como gaming en 1080p y aplicaciones de productividad liegera.<br><br><b>~$200 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Intel Intel Arc A770">
+                <label for="Intel Arc A770">Arc A770<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>8 GB GDDR6</li> 
+                            <li>384 procesadores</li>
+                            <li>Ancho de banda de memoria de 512 GB/s</li>
+                            <li>Potencia gráfica total de 150 W.</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/graficas/INTEL7.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>Intel Arc A380</b></p>
+            <p>Tiene un buen rendimiento para juegos en resolucion 1080p.<br><br><b>~$160 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Intel Intel Arc A380">
+                <label for="Intel Arc A380">Arc A380<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>6 GB GDDR6</li> 
+                            <li>128 procesadores</li>
+                            <li>Ancho de banda de memoria de 192 GB/s</li>
+                            <li>Potencia gráfica total de 75 W.</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+         <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/graficas/INTEL8.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>Intel Arc A310</b></p>
+            <p>Ideal para usuarios que buscan un rendimiento basico para juegos en 1080p y tareas diarias.<br><br><b>~$120 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Intel Intel Arc A310">
+                <label for="Intel Arc A310">Arc A310<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>4 GB GDDR6</li> 
+                            <li>128 procesadores</li>
+                            <li>Ancho de banda de memoria de 192 GB/s</li>
+                            <li>Potencia gráfica total de 75 W.</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+        <button id="btnArriba" title="Volver arriba">⬆</button>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechBench. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+        <script src="scripts.js"></script>
+</body>
+</html>

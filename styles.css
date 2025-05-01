@@ -1,96 +1,156 @@
-/* Variables globales */
+/* Variables globales: Definen colores reutilizables en todo el CSS */
 :root {
-  --color-primario: #ffee00;      /* Amarillo eléctrico (color principal) */
-  --fondo-oscuro: #1A1A1A;        /* Fondo oscuro */
-  --texto-blanco: #FFFFFF;        /* Texto principal */
+  --color-primario: #fc72fc;   /* Color principal morado */
+  --fondo-oscuro: #0f0c24;     /* Color de fondo oscuro */
+  --texto-blanco: #FFFFFF;     /* Color del texto principal */
 }
 
-/* Estilos Generales */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--fondo-oscuro);
-  color: var(--texto-blanco);
+/* Estilo para subtítulos pequeños */
+.mini-titulo{
+  color: var(--color-primario); /* Usa el color primario definido en :root */
+  font-size: 25px !important;   /* Tamaño de fuente 25px, !important para evitar sobrescritura */
+  margin-bottom: 0px;           /* Sin margen inferior */
 }
 
-/* Estilo del título */
-.titulo {
-  font-family: 'Poppins', serif;
-  font-size: 80px;
-  color: var(--color-primario);
+.subtitulo-black {
+  font-size: 50px;
+  color: #9c4a9c;
   text-align: center;
   margin-top: 10px;
+  text-shadow: 0 0 20px #880fb8; /* Efecto de sombra en el texto */
 }
 
-/* Barra de navegación */
+/* Estilos generales del cuerpo de la página */
+body {
+  margin: 10;                      /* Margen general */
+  margin-top: 0px;
+  font-family: 'Nunito', sans-serif; /* Fuente principal */
+  background-color: var(--fondo-oscuro); /* Fondo oscuro */
+  color: var(--texto-blanco);      /* Color del texto en blanco */
+  line-height: 1.5;                /* Espaciado entre líneas */
+  font-size: 30px;                 /* Tamaño del texto */
+  text-align: center;              /* Centrar todo el contenido */
+}
+.body1 {
+  margin-left: 60px;                      /* Margen general */
+  margin-right: 90px;
+  font-family: 'Nunito', sans-serif; /* Fuente principal */
+  background-color: var(--fondo-oscuro); /* Fondo oscuro */
+  color: var(--texto-blanco);      /* Color del texto en blanco */
+  line-height: 1.5;                /* Espaciado entre líneas */
+  font-size: 27px;                 /* Tamaño del texto */
+  text-align: justify;              /* Centrar todo el contenido */
+}
+
+
+/* Contenedor de la barra de desplazamiento */
+.barra-desplazable {
+  background-color: #78308a; /* Fondo negro */
+  color: #fff;               /* Texto blanco */
+  position: relative;        /* Posición relativa para posicionamiento flexible */
+  padding: 2px 0;            /* Espaciado vertical */
+  margin-left: -10px;        /* Ajuste del margen izquierdo */
+  margin-right: -10px;       /* Ajuste del margen derecho */
+  padding-top: 10px;         /* Espaciado superior */
+}
+
+/* Estilo del título principal */
+.titulo {
+  font-size: 80px;              /* Tamaño de fuente grande */
+  color: var(--color-primario); /* Color principal */
+  text-align: center;           /* Centrar el texto */
+  margin-top: 10px;             /* Margen superior */
+  text-shadow: 0 0 20px #880fb8; /* Efecto de sombra en el texto */
+}
+
+/* Barra de navegación superior */
 .header {
-  padding: 30px;
-  background-color: #000000;
-  border-bottom: 2px solid var(--color-primario);
+  padding: 30px;                     /* Espaciado interno */
+  background-color: #000000;          /* Fondo negro */
+  border-bottom: 2px solid var(--color-primario); /* Borde inferior con el color principal */
+  margin-left: -10px;                 /* Ajuste del margen izquierdo */
+  margin-top: -10px;                  /* Ajuste del margen superior */
+  margin-right: -10px;                 /* Ajuste del margen derecho */
+  position: sticky;
+  display: flex;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Estilo de la imagen del logo */
+
+/* Estilo de la imagen del logo dentro del header */
 .header img {
-  width: 70px;
-  height: 70px;
-  float: left;
-  margin-right: 0px;
+  width: 70px;      /* Ancho de la imagen */
+  height: 70px;     /* Alto de la imagen */
+  float: left;      /* Alinear a la izquierda */
+  margin-right: 40px; /* Espacio entre la imagen y los demás elementos */
 }
 
+/* Estilos de la barra de navegación */
 .nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: black; 
-  padding: 10px 0;
+  display: flex;                  /* Usa flexbox para alinear elementos */
+  justify-content: flex-start;    /* Alinear elementos al inicio */
+  align-items: left;            /* Centrar verticalmente */
+  background-color: black;        /* Fondo negro */
+  padding: 10px 0;                /* Espaciado vertical */
+  flex-wrap: wrap;
 }
 
-/* Estilo de los enlaces */
+/* Estilos de los enlaces de la barra de navegación */
 .nav a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 16px;
-  font-size: 18px;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
+  color: white;                    /* Texto blanco */
+  text-decoration: none;            /* Sin subrayado */
+  padding: 8px 16px;                /* Espaciado interno */
+  font-size: 18px;                  /* Tamaño de fuente */
+  font-weight: bold;                /* Texto en negrita */
+  transition: color 0.3s ease-in-out; /* Transición de color al pasar el mouse */
 }
 
-/* Menú desplegable */
+/* Contenedor del menú desplegable */
 .dropdown {
-  position: relative;
+  position: relative;  /* Posición relativa para posicionamiento absoluto de submenús */
+  display: inline-block; /* Mostrar en línea */
+}
+.arrow {
   display: inline-block;
+  transition: transform 0.3s ease;
 }
 
-/* Submenú oculto por defecto */
+/* Cuando se pasa el mouse sobre el enlace que contiene la flecha */
+.dropdown > a:hover .arrow {
+  transform: rotate(90deg);
+}
+/* Estilos para los submenús desplegables */
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: black;
-  border: 1px solid var(--color-primario);
-  width: 200px;
-  flex-direction: column;
-  padding: 10px 0;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  display: none;                     /* Oculto por defecto */
+  position: absolute;                 /* Posición absoluta para desplegarse correctamente */
+  top: 100%;                          /* Aparece justo debajo del contenedor */
+  left: 0;                            /* Alineado a la izquierda */
+  background-color: black;            /* Fondo negro */
+  border: 1px solid var(--color-primario); /* Borde del color principal */
+  width: 200px;                       /* Ancho del menú */
+  flex-direction: column;              /* Mostrar elementos en columna */
+  padding: 10px 0;                    /* Espaciado interno */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para efecto de elevación */
+  z-index: 1000;                      /* Asegurar que esté por encima de otros elementos */
 }
 
-/* Estilo de los enlaces del submenú */
+/* Estilos de los enlaces dentro del submenú */
 .dropdown-menu a {
-  display: block;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  transition: background 0.3s ease-in-out;
+  display: block;          /* Mostrar como bloque */
+  color: white;            /* Color del texto */
+  padding: 10px;           /* Espaciado interno */
+  text-align: center;      /* Centrar texto */
+  transition: background 0.3s ease-in-out; /* Efecto de cambio de fondo */
 }
 
-/* Mostrar el submenú al hacer hover */
+/* Mostrar el submenú cuando el usuario pasa el mouse */
 .dropdown:hover > .dropdown-menu {
-  display: flex;
-  flex-direction: column;
+  display: flex;          /* Mostrar en formato de flexbox */
+  flex-direction: column; /* Alinear en columna */
 }
 
-/* Estilos para submenús anidados */
+/* Submenús anidados dentro del menú principal */
 .dropdown-menu .dropdown {
   position: relative;
 }
@@ -100,7 +160,7 @@ body {
   display: none;
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 100%; /* Posiciona el submenú a la derecha */
   background-color: black;
   border: 1px solid var(--color-primario);
   width: 200px;
@@ -108,46 +168,378 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Mostrar los submenús anidados al hacer hover sobre su contenedor */
+/* Mostrar los submenús anidados al pasar el mouse */
 .dropdown-menu .dropdown:hover > .dropdown-menu {
   display: block;
 }
 
-/* Cambio de color al pasar el mouse o si está activo */
+/* Cambios de color al pasar el mouse */
 .nav a:hover,
 .nav a[data-active="true"] {
-  color: var(--color-primario);
+  color: var(--color-primario); /* Cambia a color primario */
   text-decoration: none;
 }
 
-/* Cambiar color de los enlaces del submenú al pasar el mouse */
+/* Cambio de fondo en enlaces de submenú al pasar el mouse */
 .dropdown-menu a:hover {
   background-color: var(--color-primario);
-  color: black !important;
+  color: black !important; /* Forzar cambio de color del texto */
 }
 
 
 
 
-/*filtro de busqueda*/
-#filtroBusqueda {
-  width: 100%;
+/* Barra con estilo personalizado */
+.barra2 {
+  background-color: #afadad; /* Color de fondo gris claro */
+  padding: 10px;             /* Espaciado general */
+  padding-left: 20px;        /* Espaciado izquierdo */
+  padding-right: 20px;       /* Espaciado derecho */
+  padding-bottom: 5px;       /* Espaciado inferior */
+  margin-top: 10px;          /* Margen superior */
+  color: black;              /* Color del texto */
+  margin-left: -10px;        /* Ajuste de margen izquierdo */
+  margin-right: -10px;       /* Ajuste de margen derecho */
+  font-size: 33px;           /* Tamaño del texto */
+}
+
+/* Barra con estilo personalizado */
+.barra3 {
+  background-color: #0e0e0e; /* Color de fondo gris claro */
+  padding: 10px;             /* Espaciado general */
+  padding-left: 20px;        /* Espaciado izquierdo */
+  padding-right: 20px;       /* Espaciado derecho */
+  padding-bottom: 5px;       /* Espaciado inferior */
+  margin-top: 10px;          /* Margen superior */
+  color: rgb(255, 255, 255);              /* Color del texto */
+  margin-left: -10px;        /* Ajuste de margen izquierdo */
+  margin-right: -10px;       /* Ajuste de margen derecho */
+  font-size: 33px;           /* Tamaño del texto */
+}
+
+/* Contenedor principal que aloja los elementos del carrusel */
+.contenedor {
+  display: flex;             /* Usa flexbox para alinear elementos */
+  justify-content: center;   /* Centra los elementos horizontalmente */
+  align-items: center;       /* Centra los elementos verticalmente */
+  width: 90%;                /* Ocupa el 90% del ancho disponible */
+  background-color: none;    /* Sin color de fondo */
+  overflow: hidden;          /* Oculta cualquier contenido desbordado */
+  position: relative;        /* Posición relativa para posicionar elementos secundarios */
+  margin-top: 50px;          /* Margen superior */         
+  flex-wrap: wrap;           /* Permite que los elementos se ajusten en varias líneas */
+  gap: 20px;                 /* Espacio entre elementos */
+  max-width: 1200px;         /* Ancho máximo */
+}
+
+/* Carrusel con desplazamiento horizontal */
+.carrusel {
+  display: flex;                /* Usa flexbox para distribuir elementos */
+  gap: 20px;                    /* Espacio entre elementos */
+  overflow-x: auto;             /* Habilita desplazamiento horizontal */
+  scroll-behavior: smooth;      /* Desplazamiento suave */
+  white-space: nowrap;          /* Evita que los elementos se ajusten en múltiples líneas */
+  padding: 20px;                /* Espaciado interno */
+  width: 90%;                   /* Ocupa el 90% del ancho disponible */
+  max-width: 1200px;            /* Ancho máximo */
+  background-color: transparent; /* Fondo transparente */
+}
+
+/* Botones de navegación del carrusel */
+.boton {
+  position: absolute;          /* Posición absoluta para fijar su ubicación */
+  top: 50%;                    /* Centrar verticalmente */
+  transform: translateY(-50%); /* Ajuste preciso del centrado vertical */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  color: white;                /* Texto en blanco */
+  border: none;                /* Sin borde */
+  cursor: pointer;             /* Cursor en forma de mano */
+  padding: 10px;               /* Espaciado interno */
+  font-size: 20px;             /* Tamaño del texto */
+  z-index: 100;                /* Asegurar que esté por encima de otros elementos */
+}
+
+.izquierda {
+  left: 10px; /* Ubicación del botón izquierdo */
+}
+
+.derecha {
+  right: 10px; /* Ubicación del botón derecho */
+}
+
+/* Efecto al pasar el mouse sobre los cuadros del carrusel */
+.cuadro:hover {
+  transform: scale(1.1);         /* Aumenta el tamaño */
+  background-color: #f0f0f0;     /* Cambia el color de fondo */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Aumenta la sombra */
+  color: black;                  /* Cambia el color del texto */
+}
+
+/* Estilo general para cada cuadro del carrusel */
+.cuadro {
+  flex: 0 0 300px;               /* Mantiene un tamaño fijo de 300px */
+  width: 91vw;                   /* Ancho relativo a la ventana del navegador */
+  padding: 20px;                 /* Espaciado interno */
+  background-color: #4e4972;      /* Color de fondo */
+  border-radius: 15px;           /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  text-align: center;            /* Centra el contenido */
+  margin: 20px;                  /* Margen alrededor del cuadro */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Efectos de transición */
+  scroll-snap-align: center;     /* Ajusta cada cuadro al centro del carrusel */
+  flex-wrap: wrap;               /* Permite que los elementos se ajusten en varias líneas */
+  color: white;                  /* Texto en color blanco */
+}
+
+/* Estilos para imágenes dentro de los cuadros */
+.cuadro img {
+  max-width: 100%;    /* Ancho máximo del 100% */
+  max-height: 50%;    /* Altura máxima del 50% del contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para el texto dentro de los cuadros */
+.cuadro p {
+  white-space: normal;       /* Permite saltos de línea en el texto */
+  word-wrap: break-word;     /* Rompe palabras largas si es necesario */
+  text-align: center;        /* Centra el texto */
+  font-size: 20px;           /* Ajusta el tamaño del texto */
+  padding: 10px;             /* Espaciado interno */
+  margin: 0;                 /* Elimina margen predeterminado */
+}
+
+
+ /* Estilo de la imagen de fondo 1 en el index */
+.background1 {
+  position: relative;            /* Posición relativa para posicionar elementos internos */
+  max-width: 1200px;             /* Limita el ancho del fondo */
+  width: 90%;                    /* Ajuste flexible para diferentes pantallas */
+  height: auto;                  /* Altura automática según contenido */
+  background-image: url('imagenes/img2.jpeg'); /* Imagen de fondo */
+  background-size: cover;         /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center;    /* Centra la imagen de fondo */
+  background-repeat: no-repeat;   /* Evita la repetición de la imagen */
+  display: flex;                  /* Usa flexbox para alinear el contenido */
+  flex-direction: column;         /* Alineación en columna */
+  justify-content: center;        /* Centra verticalmente el contenido */
+  align-items: center;            /* Centra horizontalmente el contenido */
+  color: white;                   /* Texto en color blanco */
+  font-size: 40px;                /* Tamaño del texto */
+  font-weight: bold;              /* Texto en negrita */
+  text-align: center;             /* Centra el texto */
+  margin: 20px auto;              /* Margen automático para centrar horizontalmente */
+  padding: 40px 20px;             /* Espaciado interno */
+  border-radius: 15px;            /* Bordes redondeados */
+}
+
+/*texto que se despliega*/
+.component {
+  background-color: #0e0e0e;
+  padding: 15px;
+  margin: 5px 0;
+  cursor: pointer;
+  border: 1px solid rgb(218, 218, 218);
+  position: relative;
+  justify-content: left;
+  border: 3px solid var(--color-primario);
+  border-radius: 15px;
+}
+.component input[type="checkbox"] {
+  display: none;
+}
+.component .arrow {
+  position: absolute;
+  right: 15px;
+  transition: transform 0.3s;
+}
+.description {
+  display: none;
   padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  background-color: #0c0c0c;
+  border: 3px solid var(--color-primario);
+  text-align: left; /* Asegura que el texto se alinee a la izquierda */
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+}
+.component input[type="checkbox"]:checked + label .description {
+  display: block;
+}
+.component input[type="checkbox"]:checked + label .arrow {
+  transform: rotate(90deg);
 }
 
-#lista {
-  list-style-type: none;
+
+/*texto que se despliega*/
+.component2 {
+  background-color: #e6e4e4;
+  padding: 15px;
+  margin: 5px 0;
+  cursor: pointer;
+  border: 1px solid rgb(218, 218, 218);
+  position: relative;
+  justify-content: left;
+  border: 3px solid var(--fondo-oscuro);
+  border-radius: 15px;
+}
+.component2 input[type="checkbox"] {
+  display: none;
+}
+.component2 .arrow {
+  position: absolute;
+  right: 15px;
+  transition: transform 0.3s;
+}
+.description2 {
+  display: none;
+  padding: 10px;
+  background-color: #d4d0d0;
+  border: 3px solid var(--color-primario);
+  text-align: left; /* Asegura que el texto se alinee a la izquierda */
+  color: black;
+  border-radius: 15px;
+}
+
+.component2 input[type="checkbox"]:checked + label .description2 {
+  display: block;
+}
+.component2 input[type="checkbox"]:checked + label .arrow {
+  transform: rotate(90deg);
+}
+
+/* Estilo para imágenes con clase .imagen */
+.imagen {
+  width: 10px;  /* Ancho de la imagen */
+  height: 10px; /* Altura de la imagen */
+}
+
+
+
+
+
+
+
+
+
+
+/*buscador global*/
+.contenedor-buscador {
+  margin-left: auto;          /* lo empuja a la derecha */
+  width: 30%;
+  max-width: 500px;
+  min-width: 50px;
+  margin-top: 10px;
+}
+
+#busqueda {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+#lista-sugerencias {
+  position: absolute;
+  background: rgb(26, 26, 26);
+  border: 1px solid #ccc;
+  max-height: 300px;
+  width: 390px;
+  overflow-y: auto; /* Scroll interno */
+  display: none;
+  list-style: none;
   padding: 0;
+  margin: 0;
+  z-index: 1000;
+  border-radius: 10px; /* Bordes redondeados */
 }
 
-#lista li {
+#lista-sugerencias li {
   padding: 8px;
-  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px; /* Bordes redondeados */
 }
 
-#lista li:last-child {
-  border-bottom: none;
+#lista-sugerencias li:hover {
+  background: #f0f0f0;
+  color: var(--color-primario);
+}
+
+.contenido {
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+/* Botón de ir arriba */
+#btnArriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4e4972;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.7s ease, opacity 0.3s ease;
+  transform: scale(0);
+}
+#btnArriba.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1); /* escala normal visible */
+}
+
+#btnArriba.show:hover {
+  background-color: #880fb8;
+  transform: scale(1.2);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Estilos generales del footer */
+.footer {
+  background-color: #0f0c24; /* Color de fondo oscuro */
+  color: white;              /* Texto en color blanco */
+  padding: 40px 20px;        /* Espaciado interno */
+  font-family: 'Nunito', sans-serif; /* Fuente personalizada */
+  border-top: 2px solid #a350a3; /* Borde superior con color primario */
+}
+
+/* Contenedor del contenido del footer */
+.footer-content {
+  padding-top: 100px;          /* Espaciado superior */
+  display: flex;               /* Usa flexbox para organizar contenido */
+  justify-content: space-around; /* Distribuye el contenido de forma equilibrada */
+  flex-wrap: wrap;             /* Permite que los elementos se ajusten en múltiples líneas */
+  max-width: 1200px;           /* Ancho máximo del footer */
+  margin: 0 auto;              /* Centra el contenido horizontalmente */
+}
+
+/* Estilos para cada sección del footer */
+.footer-section {
+  margin-bottom: 20px;         /* Margen inferior entre secciones */
+  flex: 1 1 200px;            /* Ajuste flexible para adaptarse a pantallas pequeñas */
+  padding: 0 20px;            /* Espaciado lateral dentro de cada sección */
+}
+
+/* Estilos para la sección de derechos de autor en el footer */
+.footer-bottom {
+  text-align: center;        /* Centra el texto */
+  margin-top: 100px;         /* Margen superior grande */
+  padding-top: 20px;        /* Espaciado interno superior */
+  border-top: 1px solid #333; /* Línea divisoria sutil */
+  font-size: 14px;          /* Tamaño del texto más pequeño */
 }

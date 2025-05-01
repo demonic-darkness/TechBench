@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBench</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-amd.css">
+</head>
+<body>
+
+    <!-- Encabezado con barra de navegación -->
+    <header class="header">
+        <!-- Logo y vínculo a index -->
+        <a href="../index.html">
+            <img src="../imagenes/logo1.jpg" alt="logo1">
+        </a>
+        <!-- Barra de navegación -->
+        <nav class="nav">
+            <!-- Vínculo a Inicio -->
+            <div class="dropdown">
+            <a href="../index.html" class="dropdown-toggle">Inicio</a>
+            <!-- Menú desplegable de Componentes -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Componentes</a>
+                <div class="dropdown-menu">
+                    <!-- Submenú para Tarjetas Gráficas -->
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Tarjetas Gráficas <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Graficas/GraficasNvidia.html">Nvidia</a>
+                            <a href="../Graficas/GraficasAMD.html">AMD</a>
+                            <a href="../Graficas/GraficasIntel.html">Intel</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Procesadores <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Procesadores/ProcesadoresAMD.html">AMD</a>
+                            <a href="../Procesadores/ProcesadoresIntel.html">Intel</a>
+                        </div>
+                    </div> 
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Tarjetas Madre <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../Motherboards/E-ATX.html">E-ATX</a>
+                            <a href="../Motherboards/ATX.html">ATX</a>
+                            <a href="../Motherboards/M-ATX.html">M-ATX</a>
+                            <a href="../Motherboards/mini-ITX.html">mini-ITX</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Dispositivos de Almacenamiento <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../almacenamiento/SSD.html">SSD</a>
+                            <a href="../almacenamiento/HDD.html">HDD</a>
+                            <a href="../almacenamiento/Nvme.html">NVME</a>
+                        </div>
+                    </div>
+
+                    <a href="../Fuentes.html">Fuentes de poder</a>
+
+                    <div class="dropdown">
+                    <a href="#">Memoria RAM <span class="arrow">▶</span></a>
+                        <div class="dropdown-menu">
+                            <a href="../RAM/DDR4.html">DDR4</a>
+                            <a href="../RAM/DDR5.html">DDR5</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Ensambles</a>
+                <div class="dropdown-menu">
+                    <a href="../Ensambles/Gama-alta.html">Alto rendimiento</a>
+                    <a href="../Ensambles/Gama-media.html">Gama media</a>
+                    <a href="../Ensambles/Gama-baja.html">Tareas domesticas</a>
+                    <a href="../Ensambles/mis-ensambles.html">Mis ensambles</a>
+                </div>
+            </div>
+            <!-- Menú desplegable de Empresas -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Empresas</a>
+                <div class="dropdown-menu">
+                    <a href="../Empresas/nvidiaInfo.html">Nvidia</a>
+                    <a href="../Empresas/IntelInfo.html">Intel</a>
+                    <a href="../Empresas/AMDInfo.html">AMD</a>
+                </div>
+            </div>
+
+            <a href="../preguntas.html">Preguntas frecuentes</a>
+        </nav>
+    </header>
+    <!-- Fondo gris con el título -->
+    <p class="titulo">Tarjetas graficas de AMD</p>
+
+    <div class="contenedor-buscador">
+        <input type="text" id="busqueda" placeholder="Buscar...">
+        <ul id="lista-sugerencias"></ul>
+    </div>
+
+    <section class="barra2">
+        <p>AMD es una empresa que se enfocaba en procesadores, pero desde 2006 empezo a fabricar tarjetas graficas
+            hoy en dia compitiendo directamente en el mercado contra Nvidia. Aunque AMD no tiene la misma calidad
+            y potencia que Nvidia, AMD es una opción más económica y accesible para aquellos que buscan una tarjeta gráfica
+            calidad precio, ademas de que envejecen mucho mejor que las de Nvidia.
+            <div class="component2">
+                <input type="checkbox" id="Explicacion">
+                <label for="Explicacion">Explicación de especificaciones <span class="arrow">▶</span></label>
+                <div class="description2">
+                    <div class="component3">
+                        <input type="checkbox" id="Leer">
+                        <label for="Leer">Como leer las graficas<span class="arrow">▶</span></label>
+                        <div class="description3">
+                            <p><ul>
+                                <span style="font-size: 31px;"><b>Ejemplo: RX 7800 XT</b></span>
+                                <li><b>AMD Radeon</b> → <span class="letrach">Es la marca y línea de GPUs de AMD. "Radeon" es para gaming y creación de contenido.</span><br></li>
+                                <li><b>RX</b> → <span class="letrach">Indica que es parte de la línea para gamers. (La "R" viene de Radeon, la "X" de alto rendimiento).</span><br></li> 
+                                <li><b>RTX</b> → <span class="letrach">Significa que la tarjeta soporta Ray Tracing y DLSS. Las tarjetas GTX más antiguas no tienen estas tecnologías.</span></li>
+                                <li><b>"7000"</b> → Es la generación.
+                                    <span class="letrach"><br>🔸 6000 series = arquitectura RDNA 4
+                                    <br>🔸 7000 series = RDNA 3
+                                    <br>🔸 6000 series = RDNA 2
+                                    <br>🔸 5000 series = RDNA 1</span></li>
+                                <li><b>"800"</b> → Nivel de potencia dentro de la generación de RDNA 1 a 3
+                                    <span class="letrach"><br>🔸 500–600 = gama media
+                                    <br>🔸 700–800 = gama alta
+                                    <br>🔸 900 = gama entusiasta</span><br></li>
+                                <li><b>"070"</b> → Nivel de potencia dentro de la generación de RDNA 4 como la RX 9070
+                                    <span class="letrach"><br>🔸 060 = gama de entrada
+                                    <br>🔸 070 = gama media
+                                    <br>🔸 080 = gama alta
+                                    <br>🔸 090 = gama entusiasta</span><br></li>
+                                   <li><b>XT</b> → <span class="letrach">Mejora respecto al modelo base.</span></li> 
+                                <li><b>XTX</b> → <span class="letrach">Es una versión tope de gama, más potente que la XT o la base.</span><br></li></p>
+                        </ul></div>
+                    </div>
+                    <div class="component3">
+                        <input type="checkbox" id="nucleos">
+                        <label for="nucleos">¿Qué características debo conocer?<span class="arrow">▶</span></label>
+                        <div class="description3">
+                                <div class="texto-cuadro">
+                                        <div class="tabla-container">
+                                            <div class="contenido-scroll">
+                                            <table class="mi-tabla">
+                                              <thead>
+                                                <tr>
+                                                  <th>Especificacion</th>
+                                                  <th>Que hace</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <td>VRAM (memoria de video)</td>
+                                                  <td>Es como la RAM pero solo para la tarjeta gráfica. Más VRAM ayuda en juegos pesados, edición de video y resolución 4K.  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Stream Processors</td>
+                                                  <td>Son los “núcleos” de la GPU. Como los núcleos CUDA de NVIDIA. Más = más potencia. </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Frecuencia base /boost(MHz)</td>
+                                                  <td>Es la velocidad a la que trabaja la GPU. A más MHz, mayor rendimiento. </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ray Accelerators</td>
+                                                    <td>Simula la luz de forma realista. Núcleos dedicados a Ray Tracing</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>FSR</td>
+                                                    <td>permite subir FPS usando escalado inteligente (como DLSS). En RDNA 3 y RDNA 4 funciona muy bien con FSR 2 y FSR 3.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TDP (Watts)</td>
+                                                    <td>Cuánta energía necesita. Es importante para elegir la fuente de poder adecuada.</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            </div>
+                                          </div>
+                            </div></p>
+                        </div>
+                    </div>
+                    <div class="component3">
+                        <input type="checkbox" id="Hilos">
+                        <label for="Hilos">¿Qué debo elegir según mi uso?<span class="arrow">▶</span></label>
+                        <div class="description3">
+                            <div class="texto-cuadro">
+                                <div class="tabla-container">
+                                    <div class="contenido-scroll">
+                                    <table class="mi-tabla">
+                                      <thead>
+                                        <tr>
+                                          <th>Uso</th>
+                                          <th>Que GPU buscar</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>Juegos en 1080p</td>
+                                          <td>RX 6600, RX 7600, RX 7500  </td>
+                                        </tr>
+                                        <tr>
+                                          <td>Juegos en 1440p</td>
+                                          <td>RX 6700 XT, RX 7700 XT, RX 8700 XT </td>
+                                        </tr>
+                                        <tr>
+                                          <td>Ultra/4K y Ray Tracing</td>
+                                          <td>RX 7900 XTX, RX 8900 XT/XTX </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Creatividad (edición/render)</td>
+                                            <td>RX 7900 o superior (más VRAM y potencia)</td>
+                                        </tr>
+                                        <tr>
+                                      </tbody>
+                                    </table>
+                                    </div>
+                                  </div>
+                    </div></p></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </p>    
+    </section>
+
+
+    <section class="barra3">
+        <div class="contenedor">
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/graficas/AMD1.webp" alt="Información detallada">
+            <p class="mini-titulo"><b>RX 7900 XTX</b></p>
+            <p>Diseñada para jugar en 4K ultra con trazados de rayos al maximo. <br><br><b>~$999 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="RX 7900 XTX">
+                <label for="RX 7900 XTX">RX 7900 XTX<span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>24 GB GDDR6</li> 
+                            <li>6,114 procesadores</li>
+                            <li>Ancho de banda de memoria de 960 GB/s</li>
+                            <li>Potencia gráfica total de 355 W.</li></ul>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+   
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD2.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 7600 XT</b></p>
+        <p>Ideal para gamers exigentes que buscan rendimiento fluido en 1440p o 4K si compromisos. <br><br><b>~$749 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 7600 XT">
+            <label for="RX 7600 XT">RX 7600 XT<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>20 GB GDDR6</li> 
+                        <li>5,376 procesadores</li>
+                        <li>Ancho de banda de memoria de 800 GB/s</li>
+                        <li>Potencia gráfica total de 300 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div> 
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD3.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 6950 XT</b></p>
+        <p>Perfecta para quienes buscan rendimiento extremo en 1440p o 4K. <br><br><b>~$699 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 6950 XT">
+            <label for="RX 6950 XT">RX 6950 XT<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>16 GB GDDR6</li> 
+                        <li>5,120 procesadores</li>
+                        <li>Ancho de banda de memoria de 576 GB/s</li>
+                        <li>Potencia gráfica total de 335 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div> 
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD4.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 6900 XT</b></p>
+        <p>Nos ofrece una experiencia de 1440p y 4K a un precio mas competitivo. <br><br><b>~$649 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 6900 XT">
+            <label for="RX 6900 XT">RX 6900 XT<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>16 GB GDDR6</li> 
+                        <li>5,120 procesadores</li>
+                        <li>Ancho de banda de memoria de 512 GB/s</li>
+                        <li>Potencia gráfica total de 300 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+    
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD5.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 7800 XT</b></p>
+        <p>Exelente opccion para juegos AAA en 1440p con ajustes altos. <br><br><b>~$599 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 7800 XT">
+            <label for="RX 7800 XT">RX 7800 XT<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>16 GB GDDR6</li> 
+                        <li>3,840 procesadores</li>
+                        <li>Ancho de banda de memoria de 624.1 GB/s</li>
+                        <li>Potencia gráfica total de 263 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD6.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 7700 XT</b></p>
+        <p>Rendimiemto eficiente para 1440p competitivo y titulos exigentes. <br><br><b>~$599 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 7700 XT">
+            <label for="RX 7700 XT">RX 7700 XT<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>12 GB GDDR6</li> 
+                        <li>3,456 procesadores</li>
+                        <li>Ancho de banda de memoria de 432 GB/s</li>
+                        <li>Potencia gráfica total de 245 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD7.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 6800 XT</b></p>
+        <p>Se enfoca en juegos a 4Kcon altas tasas de refresco. <br><br><b>~$599 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 6800 XT">
+            <label for="RX 6800 XT">RX 6800 XT<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>16 GB GDDR6</li> 
+                        <li>4,608 procesadores</li>
+                        <li>Ancho de banda de memoria de 512 GB/s</li>
+                        <li>Potencia gráfica total de 300 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD8.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 6800 </b></p>
+        <p>Ofrecen rendimiento solido en 1440p y es capaz en 4K <br><br><b>~$599 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 6800 ">
+            <label for="RX 6800 ">RX 6800 <span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>16 GB GDDR6</li> 
+                        <li>3,840 procesadores</li>
+                        <li>Ancho de banda de memoria de 512 GB/s</li>
+                        <li>Potencia gráfica total de 250 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD9.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 6750 XT </b></p>
+        <p>Optima para gaming en 1440p co con figuraciones altas. <br><br><b>~$599 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 6750 XT ">
+            <label for="RX 6750 XT ">RX 6750 XT <span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>12 GB GDDR6</li> 
+                        <li>2,560 procesadores</li>
+                        <li>Ancho de banda de memoria de 432 GB/s</li>
+                        <li>Potencia gráfica total de 250 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD10.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 6700 XT </b></p>
+        <p>Enfocado para juegos en 1440p y 1080p a altas tasas de refreco. <br><br><b>~$479 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 6700 XT ">
+            <label for="RX 6700 XT ">RX 6700 XT <span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>12 GB GDDR6</li> 
+                        <li>2,560 procesadores</li>
+                        <li>Ancho de banda de memoria de 384 GB/s</li>
+                        <li>Potencia gráfica total de 230 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD11.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 6650 XT </b></p>
+        <p>Enfocado para juegos en 1080p con un buen rendimiento en titulos modernos. <br><br><b>~$329 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 6650 XT ">
+            <label for="RX 6650 XT ">RX 6650 XT <span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>8 GB GDDR6</li> 
+                        <li>2,048 procesadores</li>
+                        <li>Ancho de banda de memoria de 256 GB/s</li>
+                        <li>Potencia gráfica total de 180 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD12.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 6600 XT </b></p>
+        <p>Ideal para juegos en 1080p con configuraciones de alta calidad.<br><br><b>~$299 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 6600 XT ">
+            <label for="RX 6600 XT ">RX 6600 XT <span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>8 GB GDDR6</li> 
+                        <li>2,048 procesadores</li>
+                        <li>Ancho de banda de memoria de 256 GB/s</li>
+                        <li>Potencia gráfica total de 160 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD13.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 6600</b></p>
+        <p>Exelente opccion para juegos de 1080p con un buen rendimiento en titulos AAA.<br><br><b>~$249 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 6600">
+            <label for="RX 6600">RX 6600 <span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>8 GB GDDR6</li> 
+                        <li>1,792 procesadores</li>
+                        <li>Ancho de banda de memoria de 224 GB/s</li>
+                        <li>Potencia gráfica total de 132 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD14.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 6500 XT</b></p>
+        <p>Ideal para juegos ligeros en 1080p.<br><br><b>~$199 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 6500 XT">
+            <label for="RX 6500 XT">RX 6500 XT <span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>4 GB GDDR6</li> 
+                        <li>1,024 procesadores</li>
+                        <li>Ancho de banda de memoria de 144 GB/s</li>
+                        <li>Potencia gráfica total de 107 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD15.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 6400</b></p>
+        <p>Ideal para sistemas de entrada y juegos ligeros eb 1080p.<br><br><b>~$169 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 6400">
+            <label for="RX 6400">RX 6400 <span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>4 GB GDDR6</li> 
+                        <li>768 procesadores</li>
+                        <li>Ancho de banda de memoria de 112 GB/s</li>
+                        <li>Potencia gráfica total de 53 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD16.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 5700 XT</b></p>
+        <p>Aprobada para 1440p y 1080p con un alto rendimiento en tiuilos AAA.<br><br><b>~$399 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 5700 XT">
+            <label for="RX 5700 XT">RX 5700 XT <span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>8 GB GDDR6</li> 
+                        <li>2,560 procesadores</li>
+                        <li>Ancho de banda de memoria de 448 GB/s</li>
+                        <li>Potencia gráfica total de 225 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD17.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 5700</b></p>
+        <p>Ideal para juegos en 1440p ofreciendo una buena relacion calidad precio.<br><br><b>~$299 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 5700">
+            <label for="RX 5700">RX 5700 <span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>8 GB GDDR6</li> 
+                        <li>2,304 procesadores</li>
+                        <li>Ancho de banda de memoria de 384 GB/s</li>
+                        <li>Potencia gráfica total de 180 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD18.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 5600 XT</b></p>
+        <p>Gran opccion para 1080p a altas tasas de refresco en juegos de gama media.<br><br><b>~$249 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 5600 XT">
+            <label for="RX 5600 XT">RX 5600 XT <span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>6 GB GDDR6</li> 
+                        <li>2,304 procesadores</li>
+                        <li>Ancho de banda de memoria de 336 GB/s</li>
+                        <li>Potencia gráfica total de 150 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD19.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 5500 XT</b></p>
+        <p>Adecuada para juegos en 1080p con configuraciones medias.<br><br><b>~$179 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 5500 XT">
+            <label for="RX 5500 XT">RX 5500 XT <span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>4 GB GDDR6</li> 
+                        <li>1,408 procesadores</li>
+                        <li>Ancho de banda de memoria de 224 GB/s</li>
+                        <li>Potencia gráfica total de 130 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD20.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 5300</b></p>
+        <p>Ideal para gaming basico 1080p y eSports ligeros.<br><br><b>~$139 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 5300">
+            <label for="RX 300">RX 5300<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>3 GB GDDR6</li> 
+                        <li>1,280 procesadores</li>
+                        <li>Ancho de banda de memoria de 168 GB/s</li>
+                        <li>Potencia gráfica total de 100 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD21.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX Vega 64</b></p>
+        <p>Buena opccion pra 1440p, aunque mas antigua.<br><br><b>~$220 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX Vega 64">
+            <label for="RX Vega 64">RX Vega 64<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>8 GB HBM2</li> 
+                        <li>4,096 procesadores</li>
+                        <li>Ancho de banda de memoria de 484 GB/s</li>
+                        <li>Potencia gráfica total de 295 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD22.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX Vega 56</b></p>
+        <p>Competente en 1080p alto y 1440p medio.<br><br><b>~$180 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX Vega 56">
+            <label for="RX Vega 56">RX Vega 56<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>8 GB HBM2</li> 
+                        <li>3,584 procesadores</li>
+                        <li>Ancho de banda de memoria de 410 GB/s</li>
+                        <li>Potencia gráfica total de 210 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD23.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 590</b></p>
+        <p>Ideal para 1080p en calidad alta.<br><br><b>~$150 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 590">
+            <label for="RX 590">RX 590<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>8 GB GDDR5</li> 
+                        <li>2,304 procesadores</li>
+                        <li>Ancho de banda de memoria de 256 GB/s</li>
+                        <li>Potencia gráfica total de 225 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD24.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 580 (8 GB)</b></p>
+        <p>Muy popular en 1080p fluido en calidad alta.<br><br><b>~$130 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 580 (8 GB)">
+            <label for="RX 580 (8 GB)">RX 580 (8 GB)<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>8 GB GDDR5</li> 
+                        <li>2,304 procesadores</li>
+                        <li>Ancho de banda de memoria de 256 GB/s</li>
+                        <li>Potencia gráfica total de 185 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD24.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 580 (4 GB)</b></p>
+        <p>Rendimientom decente para 1080p en calidad media.<br><br><b>~$110 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 580 (4 GB)">
+            <label for="RX 580 (4 GB)">RX 580 (4 GB)<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>4 GB GDDR5</li> 
+                        <li>2,304 procesadores</li>
+                        <li>Ancho de banda de memoria de 256 GB/s</li>
+                        <li>Potencia gráfica total de 185 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD26.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 570 (8 GB)</b></p>
+        <p>Perfecta para juegos menos exigentes en 1080p.<br><br><b>~$110 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 570 (8 GB)">
+            <label for="RX 570 (8 GB)">RX 570 (8 GB)<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>8 GB GDDR5</li> 
+                        <li>2,048 procesadores</li>
+                        <li>Ancho de banda de memoria de 224 GB/s</li>
+                        <li>Potencia gráfica total de 150 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD26.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 570 (4 GB)</b></p>
+        <p>Buena para 1080p en juegos eSports y ligeros.<br><br><b>~$90 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 570 (4 GB)">
+            <label for="RX 570 (4 GB)">RX 570 (4 GB)<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>4 GB GDDR5</li> 
+                        <li>2,048 procesadores</li>
+                        <li>Ancho de banda de memoria de 224 GB/s</li>
+                        <li>Potencia gráfica total de 150 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD28.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 560 (4 GB)</b></p>
+        <p>Basica para titulos ligeros en 1080p o eSports.<br><br><b>~$90 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 560 (4 GB)">
+            <label for="RX 560 (4 GB)">RX 560 (4 GB)<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>4 GB GDDR5</li> 
+                        <li>1,024 procesadores</li>
+                        <li>Ancho de banda de memoria de 112 GB/s</li>
+                        <li>Potencia gráfica total de 80 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD28.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 560 (2 GB)</b></p>
+        <p>Muy basica para 720p o eSports en bajo. <br><br><b>~$70 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 560 (2 GB)">
+            <label for="RX 560 (2 GB)">RX 560 (2 GB)<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>2 GB GDDR5</li> 
+                        <li>1,024 procesadores</li>
+                        <li>Ancho de banda de memoria de 112 GB/s</li>
+                        <li>Potencia gráfica total de 80 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD30.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 550 (4 GB)</b></p>
+        <p>Apta para multitareas y juegos ligeros en 720p y 1080p.<br><br><b>~$60 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 550 (4 GB)">
+            <label for="RX 550 (4 GB)">RX 550 (4 GB)<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>4 GB GDDR5</li> 
+                        <li>512 procesadores</li>
+                        <li>Ancho de banda de memoria de 96 GB/s</li>
+                        <li>Potencia gráfica total de 50 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD30.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 550 (2 GB)</b></p>
+        <p>Utilizada para ofimatica, multitareas y juefos ligeros a 720p.<br><br><b>~$55 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 550 (2 GB)">
+            <label for="RX 550 (2 GB)">RX 550 (2 GB)<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>2 GB GDDR5</li> 
+                        <li>512 procesadores</li>
+                        <li>Ancho de banda de memoria de 96 GB/s</li>
+                        <li>Potencia gráfica total de 50 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD32.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>R9 Fury X</b></p>
+        <p>Antigua paero aun competetente para 1080p alto.<br><br><b>~$140 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="R9 Fury X">
+            <label for="R9 Fury X">R9 Fury X<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>4 GB HBM</li> 
+                        <li>4,096 procesadores</li>
+                        <li>Ancho de banda de memoria de 512 GB/s</li>
+                        <li>Potencia gráfica total de 275 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD33.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>R9 390X</b></p>
+        <p>Aun funciona para 1080en calidad media alta.<br><br><b>~$120 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="R9 390X">
+            <label for="R9 390X">R9 390X<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>8 GB GDDR5</li> 
+                        <li>2,816procesadores</li>
+                        <li>Ancho de banda de memoria de 384 GB/s</li>
+                        <li>Potencia gráfica total de 275 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD34.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>R9 380X</b></p>
+        <p>Decente para juegos antiguos 1080p.<br><br><b>~$90 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="R9 380X">
+            <label for="R9 380X">R9 380X<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>4 GB GDDR5</li> 
+                        <li>2,048 procesadores</li>
+                        <li>Ancho de banda de memoria de 182 GB/s</li>
+                        <li>Potencia gráfica total de 190 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD35.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>R9 380</b></p>
+        <p>Capaz para titulos ligeros o retros en 1080p.<br><br><b>~$80 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="R9 380">
+            <label for="R9 380">R9 380<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>2/4 GB GDDR5</li> 
+                        <li>1,792 procesadores</li>
+                        <li>Ancho de banda de memoria de 182 GB/s</li>
+                        <li>Potencia gráfica total de 190 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD36.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>R9 285</b></p>
+        <p>Basica para juegos viejos en 1080p medio.<br><br><b>~$70 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="R9 285">
+            <label for="R9 285">R9 285<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>2 GB GDDR5</li> 
+                        <li>1,792 procesadores</li>
+                        <li>Ancho de banda de memoria de 176 GB/s</li>
+                        <li>Potencia gráfica total de 190 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD37.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>R7 370</b></p>
+        <p>Para juegos ligeros y retros en 720p y 1080p.<br><br><b>~$60 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="R7 370">
+            <label for="R7 370">R7 370<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>2/4 GB GDDR5</li> 
+                        <li>1,024 procesadores</li>
+                        <li>Ancho de banda de memoria de 179 GB/s</li>
+                        <li>Potencia gráfica total de 110 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD38.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>R7 360</b></p>
+        <p>Muy basica, juegos livianos o retros.<br><br><b>~$55 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="R7 360">
+            <label for="R7 360">R7 360<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>2 GB GDDR5</li> 
+                        <li>768 procesadores</li>
+                        <li>Ancho de banda de memoria de 104 GB/s</li>
+                        <li>Potencia gráfica total de 100 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD39.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>R7 250X</b></p>
+        <p>Juegos antiguos o muy ligeros.<br><br><b>~$45 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="R7 250X">
+            <label for="R7 250X">R7 250X<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>2 GB GDDR5</li> 
+                        <li>640 procesadores</li>
+                        <li>Ancho de banda de memoria de 72 GB/s</li>
+                        <li>Potencia gráfica total de 95 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/graficas/AMD40.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>R7 250</b></p>
+        <p>Ideales solo para escritorio o titulos muy retros.<br><br><b>~$40 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="R7 250">
+            <label for="R7 250">R7 250<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>1/2 GB GDDR5</li> 
+                        <li>384 procesadores</li>
+                        <li>Ancho de banda de memoria de 73GB/s</li>
+                        <li>Potencia gráfica total de 65 W.</li></ul>
+                </div>
+            </label>
+        </div>
+    </div>
+    </div>
+    <button id="btnArriba" title="Volver arriba">⬆</button>
+    <!-- Derechos de autor -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 TechBench. Todos los derechos reservados.</p>
+    </div>
+</footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

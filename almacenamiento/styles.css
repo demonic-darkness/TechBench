@@ -1,0 +1,543 @@
+/* Variables globales */
+:root {
+  --color-primario: #a350a3;   /* Amarillo eléctrico (color principal) */
+  --fondo-oscuro: #0f0c24;        /* Fondo oscuro */
+  --texto-blanco: #FFFFFF;        /* Texto principal */
+}
+.mini-titulo{
+  color: var(--color-primario);
+  font-size: 25px !important;
+  margin-bottom: 0px;
+}
+
+/* Estilos Generales */
+body {
+  margin: 10;
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--fondo-oscuro);
+  color: var(--texto-blanco);
+  line-height: 1.5;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Contenedor de la barra */
+.barra-desplazable {
+  background-color: #080808; /* Fondo de la barra */
+  color: #fff; /* Color del texto */
+  position: relative;
+  padding: 2px 0; /* Espaciado vertical */
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: 2px;
+  padding-top: 10px;
+}
+
+
+/* Estilo del título */
+.titulo {
+  font-size: 80px;
+  color: var(--color-primario);
+  text-align: center;
+  margin-top: 10px;
+  text-shadow: 0 0 20px #880fb8;
+}
+
+/* Barra de navegación */
+.header {
+  padding: 30px;
+  background-color: #000000;
+  border-bottom: 2px solid var(--color-primario);
+  margin-left: -10px;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+
+/* Estilo de la imagen del logo */
+.header img {
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin-right: 40px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black; 
+  padding: 10px 0;
+}
+
+/* Estilo de los enlaces */
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo para los submenús */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: black;
+  border: 1px solid var(--color-primario);
+  width: 200px;
+  flex-direction: column;
+  padding: 10px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1000;  /* Asegúrate de que este submenú esté por encima de otros elementos */
+}
+
+/* Estilo de los enlaces del submenú */
+.dropdown-menu a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Mostrar el submenú al hacer hover */
+.dropdown:hover > .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para submenús anidados */
+.dropdown-menu .dropdown {
+  position: relative;
+}
+
+/* Ocultar los submenús anidados por defecto */
+.dropdown-menu .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: black;
+  border: 1px solid var(--color-primario);
+  width: 200px;
+  padding: 10px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Mostrar los submenús anidados al hacer hover sobre su contenedor */
+.dropdown-menu .dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Cambio de color al pasar el mouse o si está activo */
+.nav a:hover,
+.nav a[data-active="true"] {
+  color: var(--color-primario);
+  text-decoration: none;
+}
+
+/* Cambiar color de los enlaces del submenú al pasar el mouse */
+.dropdown-menu a:hover {
+  background-color: var(--color-primario);
+  color: black !important;
+}
+
+.barra2{
+  background-color: #afadad;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  color:black;
+  margin-left: -10px;
+  margin-right: -10px;
+  font-size: 33px;
+}
+/*.barra3{
+  background-color: rgb(172, 63, 63);
+  padding: 10px;
+  margin-top: 0px;
+  color:black;
+  height: 806px;
+  text-align: left;
+  margin-left: 30px;
+  margin-right: 30px;
+}*/
+
+.barra3{
+  background-color: var(--fondo-oscuro);
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  color:black;
+  margin-left: -10px;
+  margin-right: -10px;
+  font-size: 33px;
+}
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  background-color: none;
+  overflow: hidden;
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+}
+.carrusel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Permite el desplazamiento horizontal */
+  scroll-behavior: smooth;
+  white-space: nowrap; /* Evita que los cuadros se rompan en varias líneas */
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+  background-color: transparent;
+}
+/* Botones de navegación */
+.boton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  z-index: 100;
+}
+
+.izquierda {
+  left: 10px; 
+}
+
+.derecha {
+  right: 10px;
+}
+
+
+.cuadro:hover {/*hacer mas grande el cuadro con el mouse encima*/
+  transform: scale(1.1); /* Aumenta el tamaño */
+  background-color: #f0f0f0; /* Cambia el color de fondo */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Aumenta la sombra */
+  color: black;
+}
+/* Estilo para el cuadro */
+.cuadro {
+  flex: 0 0 300px; /* Mantiene un tamaño fijo de 300px */
+  width: 91vw;
+  padding: 20px;
+  background-color: #4e4972;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  scroll-snap-align: center; /* Ajusta cada cuadro al centro */
+  flex-wrap: wrap;
+  color: white;
+}
+.cuadro2 {
+  flex: 0 0 300px; /* Mantiene un tamaño fijo de 300px */
+  width: 91vw;
+  padding: 20px;
+  background-color: #4e4972;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  scroll-snap-align: center; /* Ajusta cada cuadro al centro */
+  flex-wrap: wrap;
+  color: white;
+}
+.cuadro2 img {
+  max-width: 100%;
+  max-height: 50%;
+  border-radius: 10px;
+}
+.cuadro img {
+  max-width: 100%;
+  max-height: 50%;
+  border-radius: 10px;
+}
+.cuadro2 p {
+  white-space: normal; /* Permite saltos de línea */
+  word-wrap: break-word; /* Rompe palabras largas si es necesario */
+  text-align: center; /* Centra el texto */
+  font-size: 20px; /* Ajusta el tamaño del texto */
+  padding: 10px;
+  margin: 0; 
+}
+.cuadro p {
+  white-space: normal; /* Permite saltos de línea */
+  word-wrap: break-word; /* Rompe palabras largas si es necesario */
+  text-align: center; /* Centra el texto */
+  font-size: 20px; /* Ajusta el tamaño del texto */
+  padding: 10px;
+  margin: 0; 
+}
+
+.text-bakcground{
+  color: white;
+  font-size: 50px;
+  margin-bottom: 300px;
+}
+ /* Estilo de la imagen de fondo 1 index */
+ .background1 {
+  position: relative;
+  max-width: 1200px; /* Limita el ancho del fondo */
+  width: 90%; /* Para que se ajuste en distintas pantallas */
+  height: auto;
+  background-image: url('imagenes/img2.jpeg'); /* Ruta de la imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px auto; /* Margen automático para centrar */
+  padding: 40px 20px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes redondeados */
+}
+
+ /* Estilo de la página de NVIDIA */
+ .backgroundRTX5090 {
+  position: relative;
+  width: 99vw;
+  height: 90vh;
+  background-image: url('imagenes/RTX5090.jpg'); /* Ruta de la imagen */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -86px;
+  margin-left: -6px;
+}
+
+.text-nvidia {
+  color: rgb(150, 255, 80);
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*texto que se despliega*/
+.component {
+  background-color: #0f0f0f;
+  padding: 15px;
+  margin: 5px 0;
+  display: flex;
+  cursor: pointer;
+  border: 1px solid white;
+  position: relative;
+  justify-content: left;
+  border-radius: 15px;
+}
+.component input[type="checkbox"] {
+  display: none;
+}
+.component .arrow {
+  position: absolute;
+  right: 15px;
+  transition: transform 0.3s;
+}
+.description {
+  display: none;
+  padding: 10px;
+  background-color: #050505;
+  text-align: left; /* Asegura que el texto se alinee a la izquierda */
+  border: 3px solid var(--color-primario);
+  border-radius: 15px;
+  width: 400px;
+  font-size: 20px;
+  max-height: 400px;
+}
+.component input[type="checkbox"]:checked + label .description {
+  display: block;
+}
+.component input[type="checkbox"]:checked + label .arrow {
+  transform: rotate(90deg);
+}
+
+
+/*texto que se despliega*/
+.component2 {
+  background-color: #e6e4e4;
+  padding: 15px;
+  margin: 5px 0;
+  cursor: pointer;
+  border: 1px solid rgb(218, 218, 218);
+  position: relative;
+  justify-content: left;
+  border: 3px solid var(--fondo-oscuro);
+  border-radius: 15px;
+  width: 100%;
+}
+.component2 input[type="checkbox"] {
+  display: none;
+}
+.component2 .arrow {
+  position: absolute;
+  right: 15px;
+  transition: transform 0.3s;
+}
+.description2 {
+  display: none;
+  padding: 10px;
+  background-color: #d4d0d0;
+  border: 3px solid var(--color-primario);
+  text-align: left; /* Asegura que el texto se alinee a la izquierda */
+  color: black;
+  border-radius: 15px;
+}
+
+.component2 input[type="checkbox"]:checked + label .description2 {
+  display: block;
+}
+.component2 input[type="checkbox"]:checked + label .arrow {
+  transform: rotate(90deg);
+}
+
+.imagen{
+  width: 10px;
+  height: 10px;
+}
+
+
+/* Estilos generales del footer */
+.footer {
+  background-color: #0f0c24; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  padding: 40px 20px;
+  font-family: 'Nunito', sans-serif;
+  border-top: 2px solid #a350a3; /* Borde superior con color primario */
+}
+
+/* Contenedor del contenido del footer */
+.footer-content {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos para cada sección del footer */
+.footer-section {
+  margin-bottom: 20px;
+  flex: 1 1 200px; /* Flexbox para hacerlo responsive */
+  padding: 0 20px;
+}
+
+/* Estilos para la sección de derechos de autor */
+.footer-bottom {
+  text-align: center;
+  margin-top: 100px;
+  padding-top: 20px;
+  border-top: 1px solid #333; /* Línea divisoria */
+  font-size: 14px;
+}
+
+
+
+
+
+
+/* Contenedor principal del carrusel */
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin-left: 1100px;
+  margin-top: 10px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+/* Contenedor de los cuadros */
+.carousel {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* Estilo de cada cuadro */
+.carousel-item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #272727;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}
+
+/* Botones de flecha */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Cambios nuevos*/
+.text-nvidia{
+  color: #78bc04;
+  font-size: 30px;
+}

@@ -1,0 +1,662 @@
+/* Variables globales */
+:root {
+  --color-intel: #00d8f5;
+  --fondo-oscuro: #0f0c24;     /* Define el color de fondo oscuro */
+  --texto-blanco: #FFFFFF;     /* Define el color del texto principal (blanco) */
+}
+
+/* Estilo para elementos con la clase .mini-titulo */
+.mini-titulo{
+  color: var(--color-intel); /* Usa el color primario definido */
+  font-size: 30px !important;   /* Tamaño de fuente de 30px (prioridad alta) */
+  margin-bottom: 0px;           /* Elimina el margen inferior */
+}
+
+/* Estilos Generales para el cuerpo del documento */
+body {
+  margin: 10;                   /* Margen de 10px */
+  font-family: 'Nunito', sans-serif; /* Fuente principal */
+  background-color: var(--fondo-oscuro); /* Fondo oscuro */
+  color: var(--texto-blanco);   /* Color del texto (blanco) */
+  line-height: 1.5;             /* Altura de línea */
+  font-size: 30px;              /* Tamaño de fuente de 30px */
+  text-align: center;           /* Alineación del texto al centro */
+}
+
+/* Contenedor de la barra */
+.barra-desplazable {
+  background-color: #080808; /* Fondo de la barra */
+  color: #ffffff; /* Color del texto */
+  position: relative; /* Posicionamiento relativo */
+  padding: 2px 0; /* Espaciado vertical */
+  margin-left: -10px; /* Margen negativo a la izquierda */
+  margin-right: -10px; /* Margen negativo a la derecha */
+  margin-top: 2px; /* Margen superior */
+  padding-top: 10px; /* Espaciado superior */
+}
+
+/* Estilo del título */
+.titulo {
+  font-size: 80px; /* Tamaño de fuente de 80px */
+  color: var(--color-intel); /* Color primario */
+  text-align: center; /* Alineación del texto al centro */
+  margin-top: 10px; /* Margen superior */
+  text-shadow: 0 0 20px var(--color-intel); /* Sombra del texto */
+}
+
+/* Barra de navegación */
+.header {
+  padding: 30px; /* Espaciado interno */
+  background-color: #000000; /* Fondo negro */
+  border-bottom: 2px solid var(--color-intel); /* Borde inferior con color primario */
+  margin-left: -10px; /* Margen negativo a la izquierda */
+  margin-top: -10px; /* Margen negativo superior */
+  margin-right: -10px; /* Margen negativo a la derecha */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Estilo de la imagen del logo */
+.header img {
+  width: 70px; /* Ancho de la imagen */
+  height: 70px; /* Alto de la imagen */
+  float: left; /* Flota a la izquierda */
+  margin-right: 40px; /* Margen derecho */
+}
+
+/* Estilo de la barra de navegación */
+.nav {
+  display: flex; /* Usa flexbox para alinear elementos */
+  justify-content: flex-start; /* Alinea elementos al inicio */
+  align-items: center; /* Centra verticalmente los elementos */
+  background-color: black; /* Fondo negro */
+  padding: 10px 0; /* Espaciado vertical */
+}
+
+/* Estilo de los enlaces en la barra de navegación */
+.nav a {
+  color: white; /* Color del texto (blanco) */
+  text-decoration: none; /* Sin subrayado */
+  padding: 8px 16px; /* Espaciado interno */
+  font-size: 18px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  transition: color 0.3s ease-in-out; /* Transición suave del color */
+}
+
+/* Menú desplegable */
+.dropdown {
+  position: relative; /* Posicionamiento relativo */
+  display: inline-block; /* Muestra en línea */
+}
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Cuando se pasa el mouse sobre el enlace que contiene la flecha */
+.dropdown > a:hover .arrow {
+  transform: rotate(90deg);
+}
+
+/* Estilo para los submenús */
+.dropdown-menu {
+  display: none; /* Oculta el submenú por defecto */
+  position: absolute; /* Posicionamiento absoluto */
+  top: 100%; /* Posición debajo del elemento padre */
+  left: 0; /* Alineación a la izquierda */
+  background-color: black; /* Fondo negro */
+  border: 1px solid var(--color-intel); /* Borde con color primario */
+  width: 200px; /* Ancho del submenú */
+  flex-direction: column; /* Dirección de los elementos en columna */
+  padding: 10px 0; /* Espaciado vertical */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilo de los enlaces del submenú */
+.dropdown-menu a {
+  display: block; /* Muestra como bloque */
+  color: white; /* Color del texto (blanco) */
+  padding: 10px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto al centro */
+  transition: background 0.3s ease-in-out; /* Transición suave del fondo */
+}
+
+/* Mostrar el submenú al hacer hover */
+.dropdown:hover > .dropdown-menu {
+  display: flex; /* Muestra el submenú */
+  flex-direction: column; /* Dirección de los elementos en columna */
+}
+
+/* Estilos para submenús anidados */
+.dropdown-menu .dropdown {
+  position: relative; /* Posicionamiento relativo */
+}
+
+/* Ocultar los submenús anidados por defecto */
+.dropdown-menu .dropdown-menu {
+  display: none; /* Oculta el submenú anidado */
+  position: absolute; /* Posicionamiento absoluto */
+  top: 0; /* Alineación superior */
+  left: 100%; /* Alineación a la derecha */
+  background-color: black; /* Fondo negro */
+  border: 1px solid var(--color-intel); /* Borde con color primario */
+  width: 200px; /* Ancho del submenú */
+  padding: 10px 0; /* Espaciado vertical */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+/* Mostrar los submenús anidados al hacer hover sobre su contenedor */
+.dropdown-menu .dropdown:hover > .dropdown-menu {
+  display: block; /* Muestra el submenú anidado */
+}
+
+/* Cambio de color al pasar el mouse o si está activo */
+.nav a:hover,
+.nav a[data-active="true"] {
+  color: var(--color-intel); /* Cambia el color al primario */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Cambiar color de los enlaces del submenú al pasar el mouse */
+.dropdown-menu a:hover {
+  background-color: var(--color-intel); /* Cambia el fondo al primario */
+  color: black !important; /* Cambia el color del texto a negro */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para la barra 2 */
+.barra2{
+  background-color: var(--color-intel); /* Fondo verde */
+  padding: 10px; /* Espaciado interno */
+  padding-left: 35px; /* Espaciado izquierdo */
+  padding-right: 35px; /* Espaciado derecho */
+  padding-bottom: 5px; /* Espaciado inferior */
+  margin-top: 80  px; /* Margen superior */
+  color:black; /* Color del texto (negro) */
+  margin-left: -10px; /* Margen negativo a la izquierda */
+  margin-right: -10px; /* Margen negativo a la derecha */
+  font-size: 33px; /* Tamaño de fuente */
+  text-align: justify;
+}
+
+/* Estilo para la barra 3 */
+.barra3{
+  background-color: var(--fondo-oscuro); /* Fondo oscuro */
+  padding: 10px; /* Espaciado interno */
+  padding-left: 20px; /* Espaciado izquierdo */
+  padding-right: 20px; /* Espaciado derecho */
+  padding-bottom: 5px; /* Espaciado inferior */
+  margin-top: 10px; /* Margen superior */
+  color:black; /* Color del texto (negro) */
+  margin-left: -10px; /* Margen negativo a la izquierda */
+  margin-right: -10px; /* Margen negativo a la derecha */
+  font-size: 33px; /* Tamaño de fuente */
+}
+
+/* Contenedor principal */
+.contenedor {
+  display: flex; /* Usa flexbox para alinear elementos */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  background-color: none; /* Sin fondo */
+  overflow: hidden; /* Oculta el contenido que se desborda */
+  position: relative; /* Posicionamiento relativo */
+  margin-top: 50px; /* Margen superior */
+  width: 100%; /* Ancho completo */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+  gap: 20px; /* Espacio entre elementos */
+}
+
+/* Carrusel */
+.carrusel {
+  display: flex; /* Usa flexbox para alinear elementos */
+  gap: 20px; /* Espacio entre elementos */
+  overflow-x: auto; /* Permite el desplazamiento horizontal */
+  scroll-behavior: smooth; /* Desplazamiento suave */
+  white-space: nowrap; /* Evita que los elementos se rompan en varias líneas */
+  padding: 20px; /* Espaciado interno */
+  width: 90%; /* Ancho del 90% */
+  max-width: 1200px; /* Ancho máximo */
+  background-color: transparent; /* Fondo transparente */
+}
+
+
+/* Estilo para el cuadro 2 */
+.cuadro2 {
+  flex: 0 0 300px; /* Tamaño fijo de 300px */
+  width: 91vw; /* Ancho del 91% del viewport */
+  padding: 20px; /* Espaciado interno */
+  background-color: #4e4972; /* Fondo morado */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+  text-align: center; /* Alineación del texto al centro */
+  margin: 20px; /* Margen */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+  scroll-snap-align: center; /* Ajusta cada cuadro al centro */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+  color: white; /* Color del texto (blanco) */
+}
+
+/* Estilo para las imágenes dentro de cuadro2 */
+.cuadro2 img {
+  max-width: 100%; /* Ancho máximo del 100% */
+  max-height: 220px; /* Altura máxima */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo para los párrafos dentro de cuadro2 */
+.cuadro2 p {
+  white-space: normal; /* Permite saltos de línea */
+  word-wrap: break-word; /* Rompe palabras largas si es necesario */
+  text-align: center; /* Alineación del texto al centro */
+  font-size: 20px; /* Tamaño de fuente */
+  padding: 10px; /* Espaciado interno */
+  margin: 0; /* Sin margen */
+}
+
+/* Estilo para los párrafos dentro de cuadro */
+.cuadro p {
+  white-space: normal; /* Permite saltos de línea */
+  word-wrap: break-word; /* Rompe palabras largas si es necesario */
+  text-align: center; /* Alineación del texto al centro */
+  font-size: 20px; /* Tamaño de fuente */
+  padding: 10px; /* Espaciado interno */
+  margin: 0; /* Sin margen */
+}
+
+/* Estilo para el texto con fondo */
+.text-bakcground{
+  color: white; /* Color del texto (blanco) */
+  font-size: 50px; /* Tamaño de fuente */
+  margin-bottom: 300px; /* Margen inferior */
+}
+
+/* Estilo de la imagen de fondo 1 */
+.background1 {
+  position: relative; /* Posicionamiento relativo */
+  max-width: 1200px; /* Ancho máximo */
+  width: 90%; /* Ancho del 90% */
+  height: auto; /* Altura automática */
+  background-image: url('imagenes/img2.jpeg'); /* Ruta de la imagen */
+  background-size: cover; /* Cubre todo el espacio */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* No repite la imagen */
+  display: flex; /* Usa flexbox para alinear elementos */
+  flex-direction: column; /* Dirección de los elementos en columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  color: white; /* Color del texto (blanco) */
+  font-size: 40px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  text-align: center; /* Alineación del texto al centro */
+  margin: 20px auto; /* Margen automático para centrar */
+  padding: 40px 20px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Estilo para el texto de NVIDIA */
+.text-nvidia {
+  color: var(--color-intel); /* Color verde */
+  font-size: 24px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilo para los componentes desplegables */
+.component {
+  background-color: #0f0f0f; /* Fondo oscuro */
+  padding: 15px; /* Espaciado interno */
+  margin: 5px 0; /* Margen vertical */
+  display: flex; /* Usa flexbox para alinear elementos */
+  cursor: pointer; /* Cursor de puntero */
+  border: 1px solid white; /* Borde blanco */
+  position: relative; /* Posicionamiento relativo */
+  justify-content: left; /* Alineación a la izquierda */
+  border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Oculta los checkboxes */
+.component input[type="checkbox"] {
+  display: none; /* Oculta el checkbox */
+}
+
+/* Estilo para la flecha */
+.component .arrow {
+  position: absolute; /* Posicionamiento absoluto */
+  right: 15px; /* Alineación a la derecha */
+  transition: transform 0.3s; /* Transición suave */
+}
+
+/* Estilo para la descripción */
+.description {
+  display: none; /* Oculta la descripción por defecto */
+  padding: 10px; /* Espaciado interno */
+  background-color: #050505; /* Fondo oscuro */
+  text-align: left; /* Alineación del texto a la izquierda */
+  border: 3px solid var(--color-intel); /* Borde con color primario */
+  border-radius: 15px; /* Bordes redondeados */
+  width: 270px; /* Ancho fijo */
+  font-size: 20px; /* Tamaño de fuente */
+}
+
+/* Muestra la descripción cuando el checkbox está marcado */
+.component input[type="checkbox"]:checked + label .description {
+  display: block; /* Muestra la descripción */
+}
+
+/* Rota la flecha cuando el checkbox está marcado */
+.component input[type="checkbox"]:checked + label .arrow {
+  transform: rotate(90deg); /* Rota 90 grados */
+}
+
+/* Estilo para los componentes desplegables 2 */
+.component2 {
+  background-color: #e6e4e4; /* Fondo gris claro */
+  padding: 15px; /* Espaciado interno */
+  margin: 5px 0; /* Margen vertical */
+  cursor: pointer; /* Cursor de puntero */
+  border: 1px solid rgb(218, 218, 218); /* Borde gris */
+  position: relative; /* Posicionamiento relativo */
+  justify-content: left; /* Alineación a la izquierda */
+  border: 3px solid var(--fondo-oscuro); /* Borde con fondo oscuro */
+  border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Oculta los checkboxes */
+.component2 input[type="checkbox"] {
+  display: none; /* Oculta el checkbox */
+}
+
+/* Estilo para la flecha */
+.component2 .arrow {
+  position: absolute; /* Posicionamiento absoluto */
+  right: 15px; /* Alineación a la derecha */
+  transition: transform 0.3s; /* Transición suave */
+}
+
+/* Estilo para la descripción 2 */
+.description2 {
+  display: none; /* Oculta la descripción por defecto */
+  padding: 10px; /* Espaciado interno */
+  background-color: #d4d0d0; /* Fondo gris claro */
+  border: 3px solid var(--color-intel); /* Borde con color primario */
+  text-align: left; /* Alineación del texto a la izquierda */
+  color: black; /* Color del texto (negro) */
+  border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Muestra la descripción cuando el checkbox está marcado */
+.component2 input[type="checkbox"]:checked ~ .description2 {
+  display: block; /* Muestra la descripción */
+}
+
+/* Rota la flecha cuando el checkbox está marcado */
+.component2 input[type="checkbox"]:checked ~ label .arrow {
+  transform: rotate(90deg); /* Rota 90 grados */
+}
+
+/* Estilo para los componentes desplegables 2 */
+.component3 {
+  background-color: #0f0f0f; /* Fondo gris claro */
+  padding: 15px; /* Espaciado interno */
+  margin: 5px 0; /* Margen vertical */
+  cursor: pointer; /* Cursor de puntero */
+  color: white;
+  border: 2px solid var(--color-intel); /* Borde gris */
+  position: relative; /* Posicionamiento relativo */
+  justify-content: left; /* Alineación a la izquierda */
+  border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Oculta los checkboxes */
+.component3 input[type="checkbox"] {
+  display: none; /* Oculta el checkbox */
+}
+
+/* Estilo para la flecha */
+.component3 .arrow {
+  position: absolute; /* Posicionamiento absoluto */
+  right: 15px; /* Alineación a la derecha */
+  transition: transform 0.3s; /* Transición suave */
+}
+
+/* Estilo para la descripción 2 */
+.description3 {
+  display: none; /* Oculta la descripción por defecto */
+  padding: 10px; /* Espaciado interno */
+  background-color: #383838; /* Fondo gris claro */
+  border: 3px solid var(--color-intel); /* Borde con color primario */
+  text-align: left; /* Alineación del texto a la izquierda */
+  color: white; /* Color del texto (negro) */
+  border-radius: 15px; /* Bordes redondeados */
+  font-size: 28px;
+}
+
+/* Muestra la descripción cuando el checkbox está marcado */
+.component3 input[type="checkbox"]:checked ~ .description3 {
+  display: block; /* Muestra la descripción */
+}
+
+/* Rota la flecha cuando el checkbox está marcado */
+.component3 input[type="checkbox"]:checked ~ label .arrow {
+  transform: rotate(90deg); /* Rota 90 grados */
+}
+
+.letrach{
+  font-size: 25px;
+}
+
+
+
+
+/* Estilo para las imágenes */
+.imagen{
+  width: 10px; /* Ancho fijo */
+  height: 10px; /* Alto fijo */
+}
+
+
+
+
+.tabla-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 0px;
+}
+
+.mi-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f4f4f441;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0px;
+  min-width: 500px;
+}
+
+.mi-tabla thead {
+  background-color: #e0ddee;
+  color: white;
+}
+
+.mi-tabla th{
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+  color: #ffffff;
+  background-color: var(--color-intel);
+}
+.mi-tabla td {
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+  color: rgb(255, 255, 255);
+}
+
+
+
+
+.contenido-scroll {
+  margin-top: 10px;
+  overflow-y: auto;
+  max-height: 250px;
+}
+
+.contenido-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contenido-scroll th,
+.contenido-scroll td {
+  padding: 5px;
+  font-size: 24px;
+}
+
+
+@media (max-width: 600px) {
+  .mi-tabla th,
+  .mi-tabla td {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .cuadro2 {
+    margin-left: 10px;
+    padding: 10px;
+  }
+}
+
+
+
+
+
+/* Botón de ir arriba */
+#btnArriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4e4972;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.7s ease, opacity 0.3s ease;
+  transform: scale(0);
+}
+#btnArriba.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1); /* escala normal visible */
+}
+
+#btnArriba.show:hover {
+  background-color: #880fb8;
+  transform: scale(1.2);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+/* Estilos generales del footer */
+.footer {
+  background-color: #0f0c24; /* Fondo oscuro */
+  color: white; /* Color del texto (blanco) */
+  padding: 40px 20px; /* Espaciado interno */
+  font-family: 'Nunito', sans-serif; /* Fuente */
+  border-top: 2px solid #a350a3; /* Borde superior con color primario */
+}
+
+/* Contenedor del contenido del footer */
+.footer-content {
+  padding-top: 100px; /* Espaciado superior */
+  display: flex; /* Usa flexbox para alinear elementos */
+  justify-content: space-around; /* Distribuye el espacio alrededor */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Margen automático para centrar */
+}
+
+/* Estilos para cada sección del footer */
+.footer-section {
+  margin-bottom: 20px; /* Margen inferior */
+  flex: 1 1 200px; /* Flexbox para hacerlo responsive */
+  padding: 0 20px; /* Espaciado interno */
+}
+
+/* Estilos para la sección de derechos de autor */
+.footer-bottom {
+  text-align: center; /* Alineación del texto al centro */
+  margin-top: 100px; /* Margen superior */
+  padding-top: 20px; /* Espaciado superior */
+  border-top: 1px solid #333; /* Línea divisoria */
+  font-size: 14px; /* Tamaño de fuente */
+  color: white;
+  padding-bottom: 2px;
+}
+
+
+.contenedor-buscador {
+  position: relative;
+  display: inline-block;
+  border-radius: 10px; /* Bordes redondeados */
+  margin-bottom: 20px;
+}
+
+#busqueda {
+  padding: 10px;
+  width: 500px;
+  font-size: 16px;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+#lista-sugerencias {
+  position: absolute;
+  background: rgb(26, 26, 26);
+  border: 1px solid #ccc;
+  max-height: 300px;
+  width: 520px;
+  overflow-y: auto; /* Scroll interno */
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+#lista-sugerencias li {
+  padding: 8px;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+#lista-sugerencias li:hover {
+  background: #f0f0f0;
+  color: var(--color-amd);
+}
+
+.contenido {
+  margin-top: 20px;
+}
