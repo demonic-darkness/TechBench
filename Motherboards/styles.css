@@ -1,6 +1,6 @@
 /* Variables globales */
 :root {
-  --color-primario: #a350a3;   /* Amarillo eléctrico (color principal) */
+  --color-primario: #fc72fc;   /* Amarillo eléctrico (color principal) */
   --fondo-oscuro: #0f0c24;        /* Fondo oscuro */
   --texto-blanco: #FFFFFF;        /* Texto principal */
 }
@@ -200,7 +200,6 @@ body {
   width: 100%;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 1200px;
 }
 .carrusel {
   display: flex;
@@ -379,7 +378,7 @@ body {
   text-align: left; /* Asegura que el texto se alinee a la izquierda */
   border: 3px solid var(--color-primario);
   border-radius: 15px;
-  width: 400px;
+  width: 300px;
   font-size: 20px;
   max-height: 400px;
 }
