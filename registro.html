@@ -121,9 +121,21 @@
     
     <!-- Fondo gris con el título -->
         <p class="titulo">Registrate</p>
-        <div class="contenedor">
-            <div class="cuadro-iniciar"></div>
-        </div>
+       
+                <form class="formulario-login">
+                    <input type="name" class="campo-texto" placeholder="Nombre" required />
+                    <input type="email" class="campo-texto" placeholder="Correo electrónico" required />
+                    <div class="campo-password">
+                        <input type="password" id="contrasena" class="campo-texto" placeholder="Contraseña" required />
+                        <span class="toggle-visor" id="toggleVisor">&#128065;</span>
+                      </div>
+                      
+                    
+                    <button type="submit" class="boton-enviar">Enviar</button>
+                </form>
+                <div class="barra-completado">
+                    <div id="mensajeExito" class="mensaje-exito">Completado</div>
+                </div>
         
 
             <!-- Derechos de autor -->
@@ -132,6 +144,7 @@
             </div>
         </footer>
         <button id="btnArriba" title="Volver arriba">⬆</button>
-        <script src="scripts.js"></script>
-</body>
+        <script src="scripts.js" defer></script>
+        <div class="fondo-oscuro" id="fondoOscuro"></div>
+    </body>
 </html>

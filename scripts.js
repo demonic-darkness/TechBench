@@ -149,4 +149,60 @@ window.addEventListener("scroll", function () {
       intentarResaltar();
     }
   });
+
+
+  
+
+
+
+  // Espera a que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", () => {
+  // Obtiene referencias a elementos del DOM
+  const input = document.getElementById("contrasena");
+  const visor = document.getElementById("toggleVisor");
+  const formulario = document.querySelector(".formulario-login");
+  const overlay = document.getElementById("fondoOscuro");
+
+  // Variable para rastrear si la contraseña es visible
+  let visible = false;
+
+  // Agrega evento click al icono de visor
+  visor.addEventListener("click", () => {
+      // Alterna el estado de visibilidad
+      visible = !visible;
+
+      // Cambia el tipo de input entre password/text
+      input.type = visible ? "text" : "password";
+
+      // Cambia estilos del formulario según visibilidad
+      formulario.style.backgroundColor = visible ? "#4a2e4a" : "#f9f9f9";
+      formulario.style.color = visible ? "#fff" : "#000";
+
+      // Controla el overlay oscuro
+      overlay.style.opacity = visible ? "1" : "0";
+      overlay.style.pointerEvents = visible ? "auto" : "none";
+
+      // Aplica/remueve clase destacado al input
+      input.classList.toggle("destacado", visible);
+  });
+});
+
+// Segundo listener para el DOM cargado (mejor agruparlos)
+document.addEventListener("DOMContentLoaded", () => {
+  // Obtiene referencias al formulario y mensaje de éxito
+  const formulario = document.querySelector(".formulario-login");
+  const mensaje = document.getElementById("mensajeExito");
+
+  // Agrega evento submit al formulario
+  formulario.addEventListener("submit", (e) => {
+      e.preventDefault(); // Previene envío por defecto
+      
+      // Oculta formulario y muestra mensaje de éxito
+      formulario.style.display = "none";
+      mensaje.style.display = "block";
+  });
+});
+  
+  
+
   
