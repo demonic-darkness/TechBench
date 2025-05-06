@@ -46,13 +46,14 @@ body {
 
 /* Barra de navegación */
 .header {
-  padding: 30px; /* Espaciado interno */
-  background-color: #000000; /* Fondo negro */
-  border-bottom: 2px solid var(--color-nvidia); /* Borde inferior con color primario */
-  margin-left: -10px; /* Margen negativo a la izquierda */
-  margin-top: -10px; /* Margen negativo superior */
-  margin-right: -10px; /* Margen negativo a la derecha */
+  padding: 30px;                     /* Espaciado interno */
+  background-color: #000000;          /* Fondo negro */
+  border-bottom: 2px solid var(--color-nvidia); /* Borde inferior con el color principal */
+  margin-left: -10px;                 /* Ajuste del margen izquierdo */
+  margin-top: -10px;                  /* Ajuste del margen superior */
+  margin-right: -10px;                 /* Ajuste del margen derecho */
   position: sticky;
+  display: flex;
   top: 0;
   z-index: 1000;
 }
@@ -616,10 +617,11 @@ body {
 /*buscador global*/
 .contenedor-buscador {
   margin-left: auto;          /* lo empuja a la derecha */
-  width: 30%;
+  width: 18%;
   max-width: 500px;
   min-width: 50px;
-  margin-top: -60px;
+  margin-top: 10px;
+  position: relative;
 }
 
 #busqueda {
@@ -633,14 +635,14 @@ body {
   position: absolute;
   background: rgb(26, 26, 26);
   border: 1px solid #ccc;
-  max-height: 300px;
-  width: 500px;
+  max-height: 200px;
+  width: 100%; /* Esto hace que tome el ancho del input */
   overflow-y: auto; /* Scroll interno */
   display: none;
   list-style: none;
   padding: 0;
   margin: 0;
-  z-index: 1000;
+  z-index: 10;
   border-radius: 10px; /* Bordes redondeados */
 }
 
@@ -654,9 +656,68 @@ body {
 
 #lista-sugerencias li:hover {
   background: #f0f0f0;
-  color: var(--color-primario);
+  color: var(--color-nvidia);
 }
 
 .contenido {
   margin-top: 20px;
+}
+
+
+
+.inicio-sesion-boton {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-top: 13px;
+  margin-left: 20px;
+  font-size: 16px;
+  height: 50px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-position 0.5s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #6a5acd 50%, #4e4cb3 50%);
+  background-position: left bottom;
+  background-size: 200% 100%;
+}
+
+.inicio-sesion-boton:hover {
+  background-color: #5848e5;
+  transform: scale(1.05);
+  background-position: right bottom;
+}
+
+.registro-boton {
+  padding: 6px 10px;
+  font-size: 16px;
+  border: none;
+  height: 50px;
+  margin-top: 13px;
+  margin-left: 10px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff7f50 50%, #ff4500 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: white;
+  cursor: pointer;
+  transition: background-position 0.5s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.registro-boton:hover {
+  background-position: left bottom;
+  transform: scale(1.05);
+}
+
+.inicio-sesion-boton,
+.registro-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  height: 40px;
+  line-height: 1; /* Evita salto vertical */
+  font-family: inherit; /* Asegura tipografía consistente */
 }
