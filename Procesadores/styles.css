@@ -46,13 +46,14 @@ body {
 
 /* Barra de navegación */
 .header {
-  padding: 30px; /* Espaciado interno */
-  background-color: #000000; /* Fondo negro */
-  border-bottom: 2px solid var(--color-amd); /* Borde inferior con color primario */
-  margin-left: -10px; /* Margen negativo a la izquierda */
-  margin-top: -10px; /* Margen negativo superior */
-  margin-right: -10px; /* Margen negativo a la derecha */
+  padding: 30px;                     /* Espaciado interno */
+  background-color: #000000;          /* Fondo negro */
+  border-bottom: 2px solid var(--color-amd); /* Borde inferior con el color principal */
+  margin-left: -10px;                 /* Ajuste del margen izquierdo */
+  margin-top: -10px;                  /* Ajuste del margen superior */
+  margin-right: -10px;                 /* Ajuste del margen derecho */
   position: sticky;
+  display: flex;
   top: 0;
   z-index: 1000;
 }
@@ -67,21 +68,22 @@ body {
 
 /* Estilo de la barra de navegación */
 .nav {
-  display: flex; /* Usa flexbox para alinear elementos */
-  justify-content: flex-start; /* Alinea elementos al inicio */
-  align-items: center; /* Centra verticalmente los elementos */
-  background-color: black; /* Fondo negro */
-  padding: 10px 0; /* Espaciado vertical */
+  display: flex;                  /* Usa flexbox para alinear elementos */
+  justify-content: flex-start;    /* Alinear elementos al inicio */
+  align-items: left;            /* Centrar verticalmente */
+  background-color: black;        /* Fondo negro */
+  padding: 10px 0;                /* Espaciado vertical */
+  flex-wrap: wrap;
 }
 
-/* Estilo de los enlaces en la barra de navegación */
+/* Estilos de los enlaces de la barra de navegación */
 .nav a {
-  color: white; /* Color del texto (blanco) */
-  text-decoration: none; /* Sin subrayado */
-  padding: 8px 16px; /* Espaciado interno */
-  font-size: 18px; /* Tamaño de fuente */
-  font-weight: bold; /* Texto en negrita */
-  transition: color 0.3s ease-in-out; /* Transición suave del color */
+  color: white;                    /* Texto blanco */
+  text-decoration: none;            /* Sin subrayado */
+  padding: 8px 16px;                /* Espaciado interno */
+  font-size: 18px;                  /* Tamaño de fuente */
+  font-weight: bold;                /* Texto en negrita */
+  transition: color 0.3s ease-in-out; /* Transición de color al pasar el mouse */
 }
 
 /* Contenedor del menú desplegable */
@@ -548,32 +550,35 @@ body {
 
 
 
+/*buscador global*/
 .contenedor-buscador {
+  margin-left: auto;          /* lo empuja a la derecha */
+  width: 18%;
+  max-width: 500px;
+  min-width: 50px;
+  margin-top: 10px;
   position: relative;
-  display: inline-block;
-  border-radius: 10px; /* Bordes redondeados */
-  margin-bottom: 20px;
 }
 
 #busqueda {
+  width: 100%;
+  box-sizing: border-box;
   padding: 10px;
-  width: 500px;
   font-size: 16px;
-  border-radius: 10px; /* Bordes redondeados */
+  border-radius: 10px;
 }
-
 #lista-sugerencias {
   position: absolute;
   background: rgb(26, 26, 26);
   border: 1px solid #ccc;
-  max-height: 300px;
-  width: 520px;
+  max-height: 200px;
+  width: 100%; /* Esto hace que tome el ancho del input */
   overflow-y: auto; /* Scroll interno */
   display: none;
   list-style: none;
   padding: 0;
   margin: 0;
-  z-index: 1000;
+  z-index: 10;
   border-radius: 10px; /* Bordes redondeados */
 }
 
@@ -587,9 +592,82 @@ body {
 
 #lista-sugerencias li:hover {
   background: #f0f0f0;
-  color: var(--color-amd);
+  color: var(--color-primario);
 }
 
 .contenido {
   margin-top: 20px;
+}
+
+
+
+.inicio-sesion-boton {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-top: 13px;
+  margin-left: 20px;
+  font-size: 16px;
+  height: 50px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-position 0.5s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #6a5acd 50%, #4e4cb3 50%);
+  background-position: left bottom;
+  background-size: 200% 100%;
+}
+
+.inicio-sesion-boton:hover {
+  background-color: #5848e5;
+  transform: scale(1.05);
+  background-position: right bottom;
+}
+
+.registro-boton {
+  padding: 6px 10px;
+  font-size: 16px;
+  border: none;
+  height: 50px;
+  margin-top: 13px;
+  margin-left: 10px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff7f50 50%, #ff4500 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: white;
+  cursor: pointer;
+  transition: background-position 0.5s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.registro-boton:hover {
+  background-position: left bottom;
+  transform: scale(1.05);
+}
+
+.inicio-sesion-boton,
+.registro-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  height: 40px;
+  line-height: 1; /* Evita salto vertical */
+  font-family: inherit; /* Asegura tipografía consistente */
+}
+
+.cuadro-iniciar{
+  flex: 0 0 300px;               /* Mantiene un tamaño fijo de 300px */
+  width: 91vw;                   /* Ancho relativo a la ventana del navegador */
+  padding: 20px;                 /* Espaciado interno */
+  background-color: #4e4972;      /* Color de fondo */
+  border-radius: 15px;           /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  text-align: center;            /* Centra el contenido */
+  margin: 20px;                  /* Margen alrededor del cuadro */
+  scroll-snap-align: center;     /* Ajusta cada cuadro al centro del carrusel */
+  flex-wrap: wrap;               /* Permite que los elementos se ajusten en varias líneas */
+  color: white;                  /* Texto en color blanco */
 }
