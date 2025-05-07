@@ -205,7 +205,7 @@ body {
 
 /* Barra con estilo personalizado */
 .barra3 {
-  background-color: #0e0e0e; /* Color de fondo gris claro */
+  background-color: var(--fondo-oscuro); /* Color de fondo gris claro */
   padding: 10px;             /* Espaciado general */
   padding-left: 20px;        /* Espaciado izquierdo */
   padding-right: 20px;       /* Espaciado derecho */
@@ -229,7 +229,6 @@ body {
   margin-top: 50px;          /* Margen superior */         
   flex-wrap: wrap;           /* Permite que los elementos se ajusten en varias líneas */
   gap: 20px;                 /* Espacio entre elementos */
-  max-width: 1200px;         /* Ancho máximo */
 }
 
 /* Carrusel con desplazamiento horizontal */
@@ -360,6 +359,8 @@ body {
   text-align: left; /* Asegura que el texto se alinee a la izquierda */
   color: rgb(255, 255, 255);
   border-radius: 15px;
+  font-size: 20px;
+  width: 500px;
 }
 .component input[type="checkbox"]:checked + label .description {
   display: block;
@@ -723,4 +724,73 @@ body {
   padding-top: 20px;        /* Espaciado interno superior */
   border-top: 1px solid #333; /* Línea divisoria sutil */
   font-size: 14px;          /* Tamaño del texto más pequeño */
+}
+
+
+.cuadro2 {
+  flex: 0 0 500px; /* Mantiene un tamaño fijo de 300px */
+  width: 91vw;
+  padding: 20px;
+  background-color: #4e4972;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  scroll-snap-align: center; /* Ajusta cada cuadro al centro */
+  flex-wrap: wrap;
+  color: white;
+}
+.cuadro2 img {
+  max-width: 100%;
+  max-height: 50%;
+  border-radius: 10px;
+}
+.cuadro img {
+  max-width: 100%;
+  max-height: 50%;
+  border-radius: 10px;
+}
+.cuadro2 p {
+  white-space: normal; /* Permite saltos de línea */
+  word-wrap: break-word; /* Rompe palabras largas si es necesario */
+  text-align: center; /* Centra el texto */
+  font-size: 20px; /* Ajusta el tamaño del texto */
+  padding: 10px;
+  margin: 0; 
+}
+
+.tabla-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 0px;
+}
+
+.mi-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f4f4f441;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0px;
+  min-width: 500px;
+}
+
+.mi-tabla thead {
+  background-color: #e0ddee;
+  color: white;
+}
+
+.mi-tabla th{
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+  color: #ffffff;
+  background-color: #b342b3;
+}
+.mi-tabla td {
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+  color: rgb(255, 255, 255);
 }
