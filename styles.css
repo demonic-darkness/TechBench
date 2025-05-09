@@ -398,6 +398,7 @@ body {
   text-align: left; /* Asegura que el texto se alinee a la izquierda */
   color: black;
   border-radius: 15px;
+  font-size: 27px;
 }
 
 .component2 input[type="checkbox"]:checked + label .description2 {
@@ -793,4 +794,49 @@ body {
   text-align: left;
   border-bottom: 1px solid #000000;
   color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.description-preguntas {
+  display: none;
+  padding: 10px;
+  background-color: #0c0c0c;
+  border: 3px solid var(--color-primario);
+  text-align: left; /* Asegura que el texto se alinee a la izquierda */
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+  font-size: 27px;
+}
+
+
+.component input[type="checkbox"]:checked + label .description-preguntas {
+  display: block;
+}
+.component input[type="checkbox"]:checked + label .arrow {
+  transform: rotate(90deg);
+}
+
+
+.caja-scroll {
+  width: 1650px;         /* Ancho fijo */
+  height: 600px;        /* Altura fija */
+  margin-top: 150px;
+  margin-left: 100px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: auto;       /* Scroll si se excede */
+  font-size: 16px;
+  color: #333;
 }
