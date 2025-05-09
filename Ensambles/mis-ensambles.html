@@ -115,30 +115,29 @@
 
 
     <p class="titulo">Arma tu propia PC</p>
-    <p class="mini-titulo"><sapn style="color: #cf34cf"><b>1.-</b></sapn>Marca del procesador</p>
-    <div class="contenedor">
-        <div class="cuadro2">
-            <img class="imagenes" src="../imagenes/armar/AMD-logo.webp" height="170px" alt="Información detallada">
-            <p class="mini-titulo"><b>AMD</b></p>
-            <p>Recomendados para gaming y tareas mononucleo</b></p>
-            <button class="boton">Seleccionar</button>
-        </div>
-
-        <div class="cuadro2">
-            <img style="width: auto; height: auto;" src="../imagenes/armar/intel-logo.webp" height="170px" alt="Información detallada">
-            <p class="mini-titulo"><b>Intel</b></p>
-            <br><p>Recomendados para multitarea y multinucleo<br></p>
-            <button class="boton">Seleccionar</button>
-        </div>      
+    <p class="mini-titulo"><span style="color: #cf34cf"><b>1.-</b></span> Marca del procesador</p>
+<div class="contenedor" id="step1">
+    <div class="cuadro2">
+        <img class="imagenes" src="../imagenes/armar/AMD-logo.webp" height="170px">
+        <p class="mini-titulo"><b>AMD</b></p>
+        <p>Recomendado para gaming y tareas mononúcleo</p>
+        <button class="boton" onclick="seleccionarMarca('AMD')">Seleccionar</button>
     </div>
+    <div class="cuadro2">
+        <img src="../imagenes/armar/intel-logo.webp" height="170px">
+        <p class="mini-titulo"><b>Intel</b></p>
+        <p>Recomendado para multitarea y multinúcleo</p>
+        <button class="boton" onclick="seleccionarMarca('Intel')">Seleccionar</button>
+    </div>
+</div>
 
 
 
 
 
-    <p class="mini-titulo"><sapn style="color: #cf34cf"><b>2.-</b></sapn>Procesador</p>
-    <div class="contenedor">
-        <div class="cuadro2">
+    <p class="mini-titulo"><span style="color: #cf34cf"><b>2.-</b></span> Procesador</p>
+    <div class="contenedor oculto" id="step2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 9 9950x3d.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen 9 9950X3d</b></p>
             <p>El ultimo procesador de AMD ryzen dirigido no a juegos si no a tareas extremas<br><br><br><b>~$699 USD</b></p>
@@ -157,10 +156,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-
-
-
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 9 9950X.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  9 9950X</b></p>
             <p>Nos ofrece un alto rendimiento en gaming, creacion de contenido y en la productividad.<br><br><b>~$649 USD</b></p>
@@ -180,7 +176,7 @@
             <button class="boton">Seleccionar</button>
         </div>   
         
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 9 9950x3d.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  9 9900X</b></p>
             <p>Potente, versátil, ideal para entusiastas.<br><br><br><br><b>~$499 USD</b></p>
@@ -200,7 +196,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 7 9800x3d.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen 7 9800X3D</b></p>
             <p>Optimizado para gaming, eficiente.<br><br><br><br><b>~$479 USD</b></p>
@@ -220,7 +216,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 7 9700x.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen 7 9700X</b></p>
             <p>Equilibrado, buen desempeño en general.<br><br><b>~$359 USD</b></p>
@@ -240,7 +236,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 5 9600x.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen 5 9600X  </b></p>
             <p>Accesible, pensado para tareas cotidianas.<br><br><b>~$279 USD</b></p>
@@ -260,7 +256,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 9 7950x3d.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen 9 7950X3D</b></p>
             <p>Tope de gama, excelente para creadores.<br><br><b>~$699 USD</b></p>
@@ -280,7 +276,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 9 7900x3d.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen 9 7900X3D</b></p>
             <p>Rendimiento mejorado en juegos, ágil.<br><br><b>~$599 USD</b></p>
@@ -300,7 +296,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 9 7900x.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen 9 7900X</b></p>
             <p>Potente y confiable para múltiples tareas.<br><br><b>~$549 USD</b></p>
@@ -320,7 +316,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 9 7900.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  9 7900</b></p>
             <p>Alto rendimiento, ideal para productividad.<br><br><b>~$429 USD</b></p>
@@ -340,7 +336,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 7 7800x3d.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  7 7800X3D</b></p>
             <p>Gaming optimizado, gran rendimiento, y el mejor procesador hecho para juegos.<br><br><b>~$449 USD</b></p>
@@ -360,7 +356,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 7 7700x.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  7 7700X</b></p>
             <p>Fuerte en juegos y trabajo exigente.<br><br><b>~$399 USD</b></p>
@@ -380,7 +376,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 7 7700.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  7 7700</b></p>
             <p>Versátil, adecuado para diversas tareas.<br><br><b>~$329 USD</b></p>
@@ -400,7 +396,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 5 7600x3d.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  5 7600X3D</b></p>
             <p>Buen rendimiento con tecnología avanzada.<br><br><b>~$299 USD</b></p>
@@ -420,7 +416,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 5 7600x.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  5 7600X</b></p>
             <p>Eficiente y rápido para gaming.<br><br><b>~$299 USD</b></p>
@@ -440,7 +436,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 5 7600.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  5 7600</b></p>
             <p>Opción equilibrada para usuarios generales.<br><br><b>~$229 USD</b></p>
@@ -460,7 +456,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 7 8700g.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  7 8700G</b></p>
             <p>Buen desempeño con gráficos integrados.<br><br><b>~$322 USD</b></p>
@@ -480,7 +476,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 5 8600g.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  5 8600G</b></p>
             <p>Asequible, ideal para usuarios sin GPU dedicada.<br><br><b>~$350 USD</b></p>
@@ -500,7 +496,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 5 8500g.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  5 8500G</b></p>
             <p>Funcional, pensado para tareas diarias.<br><br><b>~$229 USD</b></p>
@@ -520,7 +516,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 9 5950x.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  9 5950X</b></p>
             <p>Poder extremo, ideal para profesionales.<br><br><b>~$799 USD</b></p>
@@ -540,7 +536,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 9 5900x.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  9 5900X</b></p>
             <p>Fuerte en productividad y gaming.<br><br><b>~$749 USD</b></p>
@@ -560,7 +556,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 7 5800x.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  7 5800X</b></p>
             <p>Buen desempeño en gaming y trabajo.<br><br><b>~$449 USD</b></p>
@@ -580,7 +576,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 7 5700.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  7 5700</b></p>
             <p>Rendimiento aceptable, buena relación calidad-precio.<br><br><b>~$179 USD</b></p>
@@ -600,7 +596,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 5 5600x.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  5 5600X</b></p>
             <p>Gran opción gaming con excelente rendimiento en juegos y productividad.<br><br><b>~$199 USD</b></p>
@@ -620,7 +616,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 5 5600x.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  5 5600</b></p>
             <p>Similar al 5600X pero con menor frecuencia, ideal para gaming y multitarea.<br><br><b>~$169 USD</b></p>
@@ -640,7 +636,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 5 5500.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  5 5500</b></p>
             <p>Más económico, buen rendimiento para juegos y tareas diarias.<br><br><b>~$139 USD</b></p>
@@ -660,7 +656,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 amd">
             <img class="imagenes" src="../imagenes/procesadores/ryzen 3 5300g.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>ryzen  3 5300G</b></p>
             <p>Gráficos integrados Vega 6, ideal para PC sin tarjeta de video.<br><br><b>~$499 USD</b></p>
@@ -687,7 +683,7 @@
 
 
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/1.webp" height="170px" alt="Información detallada">
         <p class="mini-titulo"><b>Intel Core i9-1400k</b></p>
         <p>Destinado a entusiastas y creadores de contenido que buscan lo último en rendimiento para gaming y aplicaciones exigentes.<br><br><b>~$589 USD</b></p>
@@ -707,7 +703,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/1.webp" height="170px" alt="Información detallada">
         <p class="mini-titulo"><b>Intel Core i9-1400k</b></p>
         <p>Destinado a entusiastas y creadores de contenido que buscan lo último en rendimiento para gaming y aplicaciones exigentes.<br><br><b>~$589 USD</b></p>
@@ -727,7 +723,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/2.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>Intel Core i9-13900K</b></p>
             <p>Diseñado para usuarios que requieren altos niveles de rendimiento tanto en juegos como en tareas de productividad intensiva.<br><br><b>~$589 USD</b></p>
@@ -747,7 +743,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/3.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>Intel Core i7-13700K</b></p>
             <p>Ideal para gamers y profesionales creativos que necesitan un equilibrio entre rendimiento en tareas de un solo hilo y multitarea.<br><br><b>~$409 USD</b></p>
@@ -767,7 +763,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/4.webp" height="170px" alt="Información detallada">
         <p class="mini-titulo"><b>Intel Core i5-13600K</b></p>
         <p>Un procesador de gama media-alta que ofrece excelentes prestaciones en juegos sin sacrificar la eficiencia energética.<br><br><b>~$319 USD</b></p>
@@ -787,7 +783,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/5.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>Intel Core i9-12900K</b></p>
             <p>Enfocado en el mercado de alto rendimiento, perfecto para gaming de alta resolución y cargas de trabajo intensivas.<br><br><b>~$599 USD</b></p>
@@ -807,7 +803,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/6.1.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>Intel Core i7-12700K</b></p>
             <p>Una opción robusta para gamers y usuarios avanzados, que combina potencia en tareas mono-hilo y procesamiento paralelo.<br><br><b>~$449 USD</b></p>
@@ -827,7 +823,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/7.webp" height="170px" alt="Información detallada">
         <p class="mini-titulo"><b>Intel Core i5-12600K</b></p>
         <p>Equilibrado para el segmento medio, ofreciendo un gran rendimiento en juegos y aplicaciones diarias a un precio competitivo.<br><br><b>~$342 USD</b></p>
@@ -847,7 +843,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/8.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>Intel Core i9-11900K</b></p>
             <p>Aunque de una generación anterior, está pensado para quienes buscan altas velocidades en juegos y rendimiento sobresaliente en tareas puntuales.<br><br><b>~$399 USD</b></p>
@@ -867,7 +863,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/9.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>Intel Core i7-11700K</b></p>
             <p>Apropiado para usuarios que desean un rendimiento consistente en juegos y tareas multitarea sin llegar al segmento extremo.<br><br><b>~$399 USD</b></p>
@@ -887,7 +883,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/10.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>Intel Core i5-11600K</b></p>
             <p>Ideal para gamers con presupuesto moderado que buscan una buena relación precio/rendimiento en aplicaciones de juego.<br><br><b>~$399 USD</b></p>
@@ -907,7 +903,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/11.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>Intel Core i9-10900K</b></p>
             <p>Un clásico de alto rendimiento que fue muy popular para gaming intensivo y tareas de multitarea en su momento.<br><br><b>~$515 USD</b></p>
@@ -927,7 +923,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/12.webp" height="170px" alt="Información detallada">
         <p class="mini-titulo"><b>Intel Core i7-10700K</b></p>
         <p>Enfocado en usuarios que requieren un rendimiento sólido para juegos y edición de contenido sin llegar a los extremos.<br><br><b>~$370 USD</b></p>
@@ -947,7 +943,7 @@
             <button class="boton">Seleccionar</button>
         </div>
 
-        <div class="cuadro2">
+        <div class="cuadro2 intel">
             <img class="imagenes" src="../imagenes/procesadores/13.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>Intel Core i5-10600K</b></p>
             <p>Destinado a jugadores que desean buenos resultados en juegos gracias a su fuerte rendimiento en operaciones de un solo hilo.<br><br><b>~$255 USD</b></p>
@@ -1008,7 +1004,7 @@
 
 
 
-    <div class="contenedor">
+    <div id="paso-3" class="contenedor oculto">
         <div class="cuadro2">
             <img style="width: auto; height: auto;" src="../imagenes/tarjetas madre/M1.webp" height="170px" alt="Información detallada">
             <p class="mini-titulo"><b>E-ATX</b></p>
@@ -1452,6 +1448,512 @@
             <br><p>Version mas nueva y mas rapida de memorias RAM<br></p>
             <button class="boton">Seleccionar</button>
         </div>      
+
+
+
+
+
+
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/DDR4/DDR4-1.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Corsair Vengeance LPX 8GB (1x8GB)</b><br><br></p>
+            <p><b>~$25 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Vengeance LPX 8GB">
+                <label for="Vengeance LPX 8GB">Vengeance LPX 8GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>2400MHz</li> 
+                            <li>CL: 16</li>
+                            <li>Voltaje: 1.2V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/DDR4/DDR4-2.png" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Crucial Ballistix 8GB (1x8GB)</b><br><br></p>
+            <p><b>~$28 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Ballistix 8GB">
+                <label for="Ballistix 8GB">Ballistix 8GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>2666MHz</li> 
+                            <li>CL: 16</li>
+                            <li>Voltaje: 1.2V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>   
+        
+        <div class="cuadro2">
+          <img class="imagenes" src="../imagenes/DDR4/DDR4-3.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Kingston Fury Beast 8GB (1x8GB)</b><br><br></p>
+            <p><b>~$30 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Fury Beast 8GB">
+                <label for="Fury Beast 8GB">Fury Beast 8GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3200MHz</li> 
+                            <li>CL: 16</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>   
+
+        <div class="cuadro2">
+           <img class="imagenes" src="../imagenes/DDR4/DDR4-4.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>G.Skill Ripjaws V 16GB (2x8GB)</b><br><br></p>
+            <p><b>~$55 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Ripjaws V 16GB">
+                <label for="Ripjaws V 16GB">Ripjaws V 16GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>2400MHz</li> 
+                            <li>CL: 15</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>   
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/DDR4/DDR4-5.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>TeamGroup T-Force Vulcan Z 16GB (2x8GB)</b><br><br></p>
+            <p><b>~$60 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="T-Force Vulcan Z 16GB">
+                <label for="T-Force Vulcan Z 16GB">Ripjaws V 16GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3200MHz</li> 
+                            <li>CL: 16</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>   
+
+        <div class="cuadro2">
+             <img class="imagenes" src="../imagenes/DDR4/DDR4-6.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>HyperX Fury RGB 16GB (2x8GB)</b><br><br></p>
+            <p><b>~$70 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="HyperX Fury RGB 16GB">
+                <label for="HyperX Fury RGB 16GB">Fury RGB 16GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>2666MHz</li> 
+                            <li>CL: 16</li>
+                            <li>Voltaje: 1.2V</li>
+                            <li>Con RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>   
+
+        <div class="cuadro2">
+           <img class="imagenes" src="../imagenes/DDR4/DDR4-7.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Patriot Viper Steel 16GB (2x8GB)</b><br><br></p>
+            <p><b>~$75 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Patriot Viper Steel 16GB">
+                <label for="Patriot Viper Steel 16GB">Steel 16GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>2666MHz</li> 
+                            <li>CL: 17</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>   
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/DDR4/DDR4-8.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Corsair Dominator Platinum RGB 16GB (2x8GB)</b><br><br></p>
+            <p><b>~$120 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Platinum RGB 16GB">
+                <label for="Platinum RGB 16GB">Steel 16GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>2666MHz</li> 
+                            <li>CL: 16</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>RGB premium</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>   
+
+        <div class="cuadro2">
+          <img class="imagenes" src="../imagenes/DDR4/DDR4-9.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>G.Skill Aegis 32GB (2x16GB)</b><br><br></p>
+            <p><b>~$90 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Aegis 32GB">
+                <label for="Aegis 32GB">Steel 16GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3000MHz</li> 
+                            <li>CL: 16</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>sin RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>   
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/DDR4/DDR4-10.png" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Crucial Ballistix 32GB (2x16GB)</b><br><br></p>
+            <p><b>~$100 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Ballistix 32GB">
+                <label for="Ballistix 32GB">Steel 16GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3200MHz</li> 
+                            <li>CL: 16</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>sin RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>   
+
+        <div class="cuadro2">
+           <img class="imagenes" src="../imagenes/DDR4/DDR4-12.png" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Corsair Vengeance RGB Pro 32GB (2x16GB)</b><br><br></p>
+            <p><b>~$140 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Corsair Vengeance RGB Pro 32GB">
+                <label for="Corsair Vengeance RGB Pro 32GB">Delta RGB 32GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3200MHz</li> 
+                            <li>CL: 16</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>RGB ICUE</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>   
+
+        <div class="cuadro2">
+          <img class="imagenes" src="../imagenes/DDR4/DDR4-13.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Kingston Fury Renegade 32GB (2x16GB)</b><br><br></p>
+            <p><b>~$150 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Kingston Fury Renegade 32GB">
+                <label for="Kingston Fury Renegade 32GB">Renegade 32GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3600MHz</li> 
+                            <li>CL: 16</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/DDR4/DDR4-14.jpg" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>OLOy WarHawk RGB 32GB (2x16GB)</b><br><br></p>
+            <p><b>~$160 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="OLOy WarHawk RGB 32GB">
+                <label for="OLOy WarHawk RGB 32GB">WarHawk RGB 32GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>4000MHz</li> 
+                            <li>CL: 18</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>RGB Aura Sync</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
+
+        <div class="cuadro2">
+           <img class="imagenes" src="../imagenes/DDR4/DDR4-15.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>G.Skill Trident Z Neo 32GB (2x16GB)</b><br><br></p>
+            <p><b>~$170 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Trident Z Neo 32GB">
+                <label for="Trident Z Neo 32GB">WarHawk RGB 32GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3600MHz</li> 
+                            <li>CL: 16</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>RGB AMD optimizado</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/DDR4/DDR4-16.png" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Corsair Vengeance LPX 64GB (2x32GB)</b><br><br></p>
+            <p><b>~$220 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Vengeance LPX 64GB">
+                <label for="Vengeance LPX 64GB">Vengeance LPX 64GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3200MHz</li> 
+                            <li>CL: 16</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/DDR4/DDR4-17.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>G.Skill Ripjaws V 64GB (2x32GB)</b><br><br></p>
+            <p><b>~$240 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="G.Skill Ripjaws V 64GB">
+                <label for="G.Skill Ripjaws V 64GB">Ripjaws V 64GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3600MHz</li> 
+                            <li>CL: 18</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
+
+        <div class="cuadro2">
+         <img class="imagenes" src="../imagenes/DDR4/DDR4-18.png" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Crucial Ballistix MAX 64GB (2x32GB)</b><br><br></p>
+            <p><b>~$280 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Crucial Ballistix MAX 64GB">
+                <label for="Crucial Ballistix MAX 64GB">Ballistix MAX 64GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>4000MHz</li> 
+                            <li>CL: 18</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
+
+        <div class="cuadro2">
+           <img class="imagenes" src="../imagenes/DDR4/DDR4-19.jpeg" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>TeamGroup Xtreem ARGB 64GB (2x32GB)</b><br><br></p>
+            <p><b>~$300 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="TeamGroup Xtreem ARGB 64GB">
+                <label for="TeamGroup Xtreem ARGB 64GB">Xtreem ARGB 64GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3600MHz</li> 
+                            <li>CL: 18</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/DDR4/DDR4-20.png" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Patriot Viper Steel 64GB (2x32GB)</b><br><br></p>
+            <p><b>~$320 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Viper Steel 64GB">
+                <label for="Viper Steel 64GB">Steel 64GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>4400MHz</li> 
+                            <li>CL: 19</li>
+                            <li>Voltaje: 1.45V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/DDR4/DDR4-21.avif" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Corsair Dominator Platinum RGB 64GB (2x32GB)</b><br><br></p>
+            <p><b>~$400 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Dominator Platinum RGB 64GB">
+                <label for="Dominator Platinum RGB 64GB">Platinum RGB 64GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3600MHz</li> 
+                            <li>CL: 18</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>RGB Premium</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
+
+        <div class="cuadro2">
+           <img class="imagenes" src="../imagenes/DDR4/DDR4-22.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>G.Skill Trident Z Royal 64GB (2x32GB)</b><br><br></p>
+            <p><b>~$450 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Trident Z Royal 64GB">
+                <label for="Trident Z Royal 64GB">Royal 64GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>4000MHz</li> 
+                            <li>CL: 18</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>RGB Lujo (Dorado/Plateado)</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/DDR4/DDR4-23.jpg" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>HyperX Predator 128GB (4x32GB) </b><br><br></p>
+            <p><b>~$600 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Predator 128GB">
+                <label for="Predator 128GB">Ripjaws V 64GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3200MHz</li> 
+                            <li>CL: 16</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
+
+        <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/DDR4/DDR4-24.webp" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>G.Skill Ripjaws V 128GB (4x32GB) </b><br><br></p>
+            <p><b>~$560 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Ripjaws V 128GB">
+                <label for="Ripjaws V 128GB">Ripjaws V 64GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3600MHz</li> 
+                            <li>CL: 18</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
+
+        <div class="cuadro2">
+              <img class="imagenes" src="../imagenes/DDR4/DDR4-16.png" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Corsair Vengeance LPX 16GB (2x8GB) </b><br><br></p>
+            <p><b>~$120 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Vengeance LPX 16GB">
+                <label for="Vengeance LPX 16GB">Vengeance LPX 16GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>3200MHz</li> 
+                            <li>CL: 14</li>
+                            <li>Voltaje: 1.35V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
+
+        <div class="cuadro2">
+          <img class="imagenes" src="../imagenes/DDR4/DDR4-26.jpg" height="170px" alt="Información detallada">
+            <p class="mini-titulo"><b>Patriot Viper 4 Blackout 32GB (2x16GB) </b><br><br></p>
+            <p><b>~$180 USD</b></p>
+            <div class="component">
+                <input type="checkbox" id="Blackout 32GB">
+                <label for="Blackout 32GB">Blackout 32GB <span class="arrow">▶</span>
+                    <div class="description">
+                        <ul>
+                            <li>4400MHz</li> 
+                            <li>CL: 19</li>
+                            <li>Voltaje: 1.45V</li>
+                            <li>Sin RGB</li>
+                        </ul>
+                    </div>
+               </label>
+            </div>
+            <button class="boton">Seleccionar</button>
+        </div>  
     </div>
 
 
@@ -1940,6 +2442,25 @@
         </div>
                 <button class="boton">Seleccionar</button>
             </div>
+
+            <div class="cuadro2">
+            <img class="imagenes" src="../imagenes/graficas/AMD2.webp" alt="Información detallada">
+        <p class="mini-titulo"><b>RX 7600 XT</b></p>
+        <p>Ideal para gamers exigentes que buscan rendimiento fluido en 1440p o 4K si compromisos. <br><br><b>~$749 USD</b></p>
+        <div class="component">
+            <input type="checkbox" id="RX 7600 XT">
+            <label for="RX 7600 XT">RX 7600 XT<span class="arrow">▶</span>
+                <div class="description">
+                    <ul>
+                        <li>20 GB GDDR6</li> 
+                        <li>5,376 procesadores</li>
+                        <li>Ancho de banda de memoria de 800 GB/s</li>
+                        <li>Potencia gráfica total de 300 W.</li></ul>
+                </div>
+            </label>
+        </div>
+            <button class="boton">Seleccionar</button>
+        </div>
 
             <div class="cuadro2">
                 <img class="imagenes" src="../imagenes/graficas/AMD7.webp" alt="Información detallada">
