@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  window.seleccionarMarca = seleccionarMarca; // Exponer función global
+  window.seleccionarMarca = seleccionarMarca;
 
   document.querySelectorAll('#step2 .boton').forEach(boton => {
     boton.addEventListener('click', () => {
@@ -59,6 +59,42 @@ document.addEventListener("DOMContentLoaded", () => {
         const visible = cuadro.classList.contains(ramTipoSeleccionado);
         cuadro.style.display = visible ? 'block' : 'none';
       });
+    });
+  });
+
+  document.querySelectorAll('#step6 .boton').forEach(boton => {
+    boton.addEventListener('click', () => {
+      console.log("Botón del paso 6 presionado");
+      document.getElementById("step6").classList.add("oculto");
+      document.getElementById("step7").classList.remove("oculto");
+    });
+  });
+
+  document.querySelectorAll('#step7 .boton').forEach(boton => {
+    boton.addEventListener('click', () => {
+      document.getElementById("step7").classList.add("oculto");
+      document.getElementById("step8").classList.remove("oculto");
+    });
+  });
+
+  document.querySelectorAll('#step8 .boton').forEach(boton => {
+    boton.addEventListener('click', () => {
+      document.getElementById("step8").classList.add("oculto");
+      document.getElementById("step9").classList.remove("oculto");
+    });
+  });
+
+  document.querySelectorAll('#step9 .boton').forEach(boton => {
+    boton.addEventListener('click', () => {
+      document.getElementById("step9").classList.add("oculto");
+      document.getElementById("step10").classList.remove("oculto");
+    });
+  });
+
+  document.querySelectorAll('#step10 .boton').forEach(boton => {
+    boton.addEventListener('click', () => {
+      document.getElementById("step10").classList.add("oculto");
+      document.getElementById("step11").classList.remove("oculto");
     });
   });
 });
