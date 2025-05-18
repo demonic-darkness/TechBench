@@ -872,3 +872,24 @@
 
 /*Clases especiales de armar*/
 .oculto { display: none; }
+
+.resumen-componentes{
+  display: flex; /* Usa flexbox para alinear elementos */
+    justify-content: flex-start; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    background-color: none; /* Sin fondo */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    position: relative; /* Posicionamiento relativo */
+    margin-top: 50px; /* Margen superior */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    gap: 20px; /* Espacio entre elementos */
+    margin-left: 200px;
+}
+
+.description {
+  display: none;
+}
+
+.description.visible {
+  display: block;
+}
