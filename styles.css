@@ -359,8 +359,7 @@ body {
   text-align: left; /* Asegura que el texto se alinee a la izquierda */
   color: rgb(255, 255, 255);
   border-radius: 15px;
-  font-size: 20px;
-  width: 500px;
+  font-size: 27px;
 }
 .component input[type="checkbox"]:checked + label .description {
   display: block;
