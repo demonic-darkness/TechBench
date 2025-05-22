@@ -218,7 +218,7 @@
     margin-top: 50px; /* Margen superior */
     flex-wrap: wrap; /* Permite que los elementos se envuelvan */
     gap: 20px; /* Espacio entre elementos */
-    margin-left: 200px;
+    margin-left: 50px;
   }
   
   /* Carrusel */
@@ -238,7 +238,7 @@
   /* Estilo para el cuadro 2 */
   .cuadro2 {
     flex: 0 0 300px; /* Tamaño fijo de 300px */
-    width: 91vw; /* Ancho del 91% del viewport */
+    width: 300px; /* Ancho del 91% del viewport */
     padding: 20px; /* Espaciado interno */
     background-color: #4e4972; /* Fondo morado */
     border-radius: 15px; /* Bordes redondeados */
@@ -350,7 +350,6 @@
     text-align: left; /* Alineación del texto a la izquierda */
     border: 3px solid var(--color-amd); /* Borde con color primario */
     border-radius: 15px; /* Bordes redondeados */
-    width: 270px; /* Ancho fijo */
     font-size: 20px; /* Tamaño de fuente */
   }
   
@@ -892,4 +891,89 @@
 
 .description.visible {
   display: block;
+}
+
+
+.tabla-container {
+  overflow-x: auto;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.mi-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f4f4f441;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0px;
+  min-width: 500px;
+  align-items: center;
+}
+
+.mi-tabla thead {
+  background-color: #e0ddee;
+  color: white;
+}
+
+.mi-tabla th{
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+  color: #ffffff;
+  background-color: #b342b3;
+}
+.mi-tabla td {
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+  color: rgb(255, 255, 255);
+}
+
+
+
+
+
+.contenido-scroll {
+  margin-top: 10px;
+  overflow-y: auto;
+  max-height: 250px; /* Este valor lo puedes ajustar */
+}
+
+.contenido-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contenido-scroll th,
+.contenido-scroll td {
+  padding: 5px;
+  font-size: 20px;
+}
+
+
+@media (max-width: 600px) {
+  .mi-tabla th,
+  .mi-tabla td {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .cuadro2 {
+    margin-left: 10px;
+    padding: 10px;
+  }
+}
+
+
+.ensamble-cuadro{
+  display: flex; /* Usa flexbox para alinear elementos */
+  justify-content: flex-start; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  background-color: none; /* Sin fondo */
+  overflow: hidden; /* Oculta el contenido que se desborda */
+  position: relative; /* Posicionamiento relativo */
+  margin-top: 50px; /* Margen superior */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+  gap: 20px; /* Espacio entre elementos */
+  margin-left: 50px;
 }
