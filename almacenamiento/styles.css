@@ -202,7 +202,6 @@ body {
   width: 100%;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 1200px;
 }
 .carrusel {
   display: flex;
@@ -381,7 +380,6 @@ body {
   text-align: left; /* Asegura que el texto se alinee a la izquierda */
   border: 3px solid var(--color-primario);
   border-radius: 15px;
-  width: 400px;
   font-size: 20px;
   max-height: 400px;
 }
